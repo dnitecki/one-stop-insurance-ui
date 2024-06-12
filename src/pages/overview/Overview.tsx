@@ -4,7 +4,9 @@ export const Overview = () => {
   return (
     <div className="overview-container">
       <div className="overview-content">
-        <h1>Overview</h1>
+        <div className="card">
+          <h1>Overview</h1>
+        </div>
       </div>
     </div>
   );

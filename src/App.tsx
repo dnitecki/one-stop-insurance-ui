@@ -1,4 +1,5 @@
 import { Overview } from "./pages/overview/Overview";
+import "./App.scss";
 
 export default function App() {
   return (
