@@ -23,7 +23,13 @@
   background-color: var(--black); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }
-
+html,
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100dvh;
+  width: 100dvw;
+}
 * {
   font-family: "Poppins";
   box-sizing: border-box;

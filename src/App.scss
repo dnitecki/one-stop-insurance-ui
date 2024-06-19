@@ -1,13 +1,10 @@
 .app {
   display: flex;
-  height: 100svh;
+  height: 100%;
   width: 100%;
-  overflow-y: visible;
-  overflow-x: scroll;
 }
 .app-container {
   display: flex;
-  position: absolute;
   height: 100%;
   width: 100%;
 }
