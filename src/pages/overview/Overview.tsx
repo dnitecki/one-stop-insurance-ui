@@ -6,7 +6,7 @@ export const Overview = () => {
       <div className="overview-content">
         <section>
           <div className="section-heading">
-            <h2>First Section</h2>
+            <h1>First Section</h1>
           </div>
           <div className="card">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -19,7 +19,7 @@ export const Overview = () => {
         </section>
         <section>
           <div className="section-heading">
-            <h2>Second Section</h2>
+            <h1>Second Section</h1>
           </div>
           <div className="card">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -32,7 +32,7 @@ export const Overview = () => {
         </section>
         <section>
           <div className="section-heading">
-            <h2>Third Section</h2>
+            <h1>Third Section</h1>
           </div>
           <div className="card">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -45,7 +45,7 @@ export const Overview = () => {
         </section>
         <section>
           <div className="section-heading">
-            <h2>Fourth Section</h2>
+            <h1>Fourth Section</h1>
           </div>
           <div className="card">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
