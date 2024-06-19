@@ -15,10 +15,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 20rem;
-  min-height: 20rem;
+  width: 50%;
+  height: fit-content;
   padding: 1rem;
   background-color: var(--primary-red);
   border-radius: var(--border-radius);
   color: var(--white);
+}
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
 }
