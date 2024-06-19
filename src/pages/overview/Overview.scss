@@ -17,11 +17,11 @@
     display: flex;
     margin: 15px 0;
     width: 75%;
-
     .section-heading {
       flex: 0 0 33%;
       padding: 10px 15px;
       position: sticky;
+      position: -webkit-sticky;
       text-align: right;
       top: 0;
       background-color: var(--white);
