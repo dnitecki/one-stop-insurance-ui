@@ -1,9 +1,11 @@
+import Header from "../../components/header/Header";
 import "./Overview.scss";
 
 export const Overview = () => {
   return (
     <div className="overview-container">
       <div className="overview-content">
+        <Header />
         <section>
           <div className="section-heading">
             <h1>First Section</h1>
