@@ -1,7 +1,15 @@
 .footer-container {
   display: flex;
-  height: 10rem;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
+  justify-content: flex-end;
   margin-top: 5rem;
+}
+.footer-content {
+  display: flex;
   background-color: var(--primary-red);
+  min-height: 5rem;
+  height: 100%;
+  width: 100%;
 }
