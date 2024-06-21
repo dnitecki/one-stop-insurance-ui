@@ -4,17 +4,26 @@
   width: 100%;
   background-color: var(--primary-red);
   z-index: 1;
+  padding: 0.5rem 1rem;
 }
 .header-logo {
   display: flex;
   height: 100%;
   width: fit-content;
   justify-content: flex-start;
-  padding: 1rem;
   align-items: center;
   img {
     display: flex;
     height: auto;
     width: 3rem;
   }
+}
+.header-options {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--white);
+  font-size: 35px;
 }
