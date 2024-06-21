@@ -6,7 +6,6 @@
   background-color: var(--white);
 }
 .overview-content {
-  padding: 2rem;
   display: flex;
   height: 100%;
   justify-content: center;
@@ -17,13 +16,15 @@
     display: flex;
     margin: 15px 0;
     width: 75%;
+    padding-left: 2rem;
+    padding-right: 2rem;
     .section-heading {
       flex: 0 0 33%;
       padding: 10px 15px;
       position: sticky;
       position: -webkit-sticky;
       text-align: right;
-      top: 0;
+      top: var(--header-height);
       background-color: var(--white);
     }
   }
