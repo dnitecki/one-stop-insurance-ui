@@ -24,7 +24,7 @@
       position: sticky;
       position: -webkit-sticky;
       text-align: right;
-      top: 0;
+      top: var(--header-height);
       background-color: var(--white);
     }
   }

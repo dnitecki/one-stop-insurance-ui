@@ -1,4 +1,5 @@
 import Banner from "../../components/banner/Banner";
+import Carousel from "../../components/carousel/Carousel";
 import Footer from "../../components/footer/Footer";
 import { OverviewMapper } from "../../utils/overviewMapper";
 import "./Overview.scss";
@@ -8,6 +9,7 @@ export const Overview = () => {
     <div className="overview-container">
       <div className="overview-content">
         <Banner />
+        <Carousel />
         {OverviewMapper.map((section) => (
           <section id={section.id} key={section.id}>
             <div className="section-heading">
