@@ -8,7 +8,7 @@ export const Overview = () => {
   return (
     <div className="overview-container">
       <div className="overview-content">
-        <Banner />
+        {/* <Banner /> */}
         <Carousel />
         {OverviewMapper.map((section) => (
           <section id={section.id} key={section.id}>
