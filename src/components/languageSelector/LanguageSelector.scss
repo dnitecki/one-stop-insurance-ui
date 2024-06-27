@@ -3,15 +3,21 @@
   width: fit-content;
   justify-content: center;
   align-items: center;
+
   p {
     font-size: 15px;
+  }
+  .clicked {
+    background-color: var(--secondary-red);
   }
 }
 .selector-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  gap: 0.2rem;
+  border-radius: var(--border-radius);
 }
 .selector-dropdown {
   display: flex;
@@ -28,7 +34,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    font-weight: 500;
   }
   .dropdown-button:hover {
     background-color: var(--primary-gray);

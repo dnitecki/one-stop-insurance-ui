@@ -19,7 +19,10 @@ const LanguageSelector = () => {
   };
   return (
     <div className="selector-container">
-      <button className="selector-button" onClick={handleClick}>
+      <button
+        className={`selector-button ${isOpen ? "clicked" : ""}`}
+        onClick={handleClick}
+      >
         <LanguageIcon fontSize="inherit" />
         <p>{language}</p>
       </button>
