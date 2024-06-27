@@ -1,8 +1,8 @@
 import "./Header.scss";
 import logo from "../../assets/OneStopIconWhite.png";
-import PlaceIcon from "@mui/icons-material/Place";
 import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from "@mui/icons-material/Call";
+import LanguageSelector from "../languageSelector/LanguageSelector";
 
 const Header = () => {
   return (
@@ -13,7 +13,7 @@ const Header = () => {
       <div className="header-options">
         <CallIcon fontSize="inherit" />
         <EmailIcon fontSize="inherit" />
-        <PlaceIcon fontSize="inherit" />
+        <LanguageSelector />
       </div>
     </div>
   );
