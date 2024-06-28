@@ -22,7 +22,6 @@
 .selector-dropdown {
   display: flex;
   position: absolute;
-  flex-direction: column;
   top: var(--header-height);
   color: var(--black);
   width: fit-content;
@@ -34,10 +33,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    width: 5rem;
     font-weight: 500;
   }
   .dropdown-button:hover {
     background-color: var(--primary-gray);
   }
+}
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  row-gap: 0.5rem;
 }
