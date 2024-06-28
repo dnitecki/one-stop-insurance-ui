@@ -1,4 +1,4 @@
-import { LanguageEnum } from "../enums/languageEnums";
+import { LanguageEnumShort, LanguageEnumLong } from "../enums/languageEnums";
 
 export type OverviewMapperType = {
   id: string;
@@ -8,7 +8,8 @@ export type OverviewMapperType = {
 
 export type LanguageMapperType = {
   id: string;
-  language: LanguageEnum;
+  language: LanguageEnumLong;
+  code: LanguageEnumShort;
 };
 
 export type ServiceMapperType = {

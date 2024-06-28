@@ -1,17 +1,20 @@
-import { LanguageEnum } from "../enums/languageEnums";
+import { LanguageEnumLong, LanguageEnumShort } from "../enums/languageEnums";
 import { LanguageMapperType } from "../types/types";
 
 export const LanguageMapper: LanguageMapperType[] = [
   {
     id: "english",
-    language: LanguageEnum.ENGLISH,
+    language: LanguageEnumLong.ENGLISH,
+    code: LanguageEnumShort.EN,
   },
   {
     id: "polish",
-    language: LanguageEnum.POLISH,
+    language: LanguageEnumLong.POLISH,
+    code: LanguageEnumShort.PL,
   },
   {
     id: "spanish",
-    language: LanguageEnum.SPANISH,
+    language: LanguageEnumLong.SPANISH,
+    code: LanguageEnumShort.ES,
   },
 ];

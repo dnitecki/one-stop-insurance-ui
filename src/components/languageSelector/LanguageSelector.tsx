@@ -1,19 +1,19 @@
 import { useState } from "react";
 import "./LanguageSelector.scss";
 import LanguageIcon from "@mui/icons-material/Language";
-import { LanguageEnum } from "../../enums/languageEnums";
+import { LanguageEnumShort } from "../../enums/languageEnums";
 import { LanguageMapper } from "../../utils/languageMapper";
 import { LanguageMapperType } from "../../types/types";
 
 const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [language, setLanguage] = useState(LanguageEnum.ENGLISH);
+  const [language, setLanguage] = useState(LanguageEnumShort.EN);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleLanguageSelect = (language: LanguageEnum) => {
+  const handleLanguageSelect = (language: LanguageEnumShort) => {
     setLanguage(language);
     setIsOpen(!isOpen);
   };
@@ -33,7 +33,7 @@ const LanguageSelector = () => {
               <button
                 className="dropdown-button"
                 key={item.id}
-                onClick={() => handleLanguageSelect(item.language)}
+                onClick={() => handleLanguageSelect(item.code)}
               >
                 <p>{item.language}</p>
               </button>
