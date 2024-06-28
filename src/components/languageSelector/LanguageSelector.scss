@@ -21,7 +21,7 @@
 }
 .selector-dropdown {
   display: flex;
-  position: fixed;
+  position: absolute;
   flex-direction: column;
   top: var(--header-height);
   color: var(--black);

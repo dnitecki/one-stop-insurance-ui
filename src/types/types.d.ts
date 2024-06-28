@@ -10,3 +10,9 @@ export type LanguageMapperType = {
   id: string;
   language: LanguageEnum;
 };
+
+export type ServiceMapperType = {
+  id: string;
+  text: string;
+  icon: React.FC;
+};
