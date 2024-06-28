@@ -39,6 +39,7 @@
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "react": "^18.2.0",
+    "react-collapsed": "^4.1.2",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.4"
   }

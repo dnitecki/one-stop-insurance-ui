@@ -1,12 +1,45 @@
+import { useCollapse } from "react-collapsed";
+import "./Services.scss";
+import { ServicesMapper } from "../../utils/servicesMapper";
+import { ServiceMapperType } from "../../types/types";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+const MainServices = ServicesMapper.slice(0, 4);
+const AdditionalService = ServicesMapper.slice(4);
+
 const Services = () => {
+  const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
+
   return (
-    <div className="card">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Enim nulla aliquet
-      porttitor lacus luctus accumsan tortor posuere ac. Dolor sit amet
-      consectetur adipiscing elit pellentesque habitant morbi tristique.
-      Adipiscing commodo elit at imperdiet dui accumsan. Urna id volutpat lacus
-      laoreet non.
+    <div className="services-container">
+      <div className="services-card">
+        <div className="services-content">
+          {MainServices.map((service: ServiceMapperType) => (
+            <div className="service-chip" key={service.id} id={service.id}>
+              <div className="service-icon">
+                <service.icon fontSize="inherit" />
+              </div>
+              <p>{service.text}</p>
+            </div>
+          ))}
+        </div>
+        <div className="services-content" {...getCollapseProps()}>
+          {AdditionalService.map((service: ServiceMapperType) => (
+            <div className="service-chip" key={service.id} id={service.id}>
+              <div className="service-icon">
+                <service.icon fontSize="inherit" />
+              </div>
+              <p>{service.text}</p>
+            </div>
+          ))}
+        </div>
+        <button className="service-toggle" {...getToggleProps()}>
+          <p>{isExpanded ? "Less" : "More"}</p>
+          <div className={`more-chevron ${isExpanded ? "collapse" : "expand"}`}>
+            <ExpandMoreIcon fontSize="inherit" />
+          </div>
+        </button>
+      </div>
     </div>
   );
 };

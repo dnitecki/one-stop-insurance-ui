@@ -57,31 +57,3 @@
     width: 100%;
   }
 }
-.scroller-services {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding-right: 1rem;
-}
-.service-chip {
-  display: flex;
-  height: 2rem;
-  width: fit-content;
-  justify-content: center;
-  align-items: center;
-  padding: 0 0.5rem 0 0.5rem;
-  border-radius: var(--border-radius);
-  gap: 0.5rem;
-  background-color: var(--primary-gray);
-  .service-icon {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    color: var(--tertiary-gray);
-  }
-}

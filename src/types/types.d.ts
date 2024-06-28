@@ -1,3 +1,4 @@
+import { SvgIconProps } from "@mui/material";
 import { LanguageEnumShort, LanguageEnumLong } from "../enums/languageEnums";
 
 export type OverviewMapperType = {
@@ -15,5 +16,5 @@ export type LanguageMapperType = {
 export type ServiceMapperType = {
   id: string;
   text: string;
-  icon: React.FC;
+  icon: React.FC<SvgIconProps>;
 };
