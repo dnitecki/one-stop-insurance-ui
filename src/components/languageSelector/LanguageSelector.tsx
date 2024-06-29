@@ -30,7 +30,16 @@ const LanguageSelector = () => {
         <LanguageIcon fontSize="inherit" />
         <p>{language}</p>
       </button>
-      <div className="selector-dropdown" {...getCollapseProps()}>
+      <div
+        className="selector-dropdown"
+        {...getCollapseProps({
+          style: {
+            boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+            borderBottomLeftRadius: "10px",
+            borderBottomRightRadius: "10px",
+          },
+        })}
+      >
         <div className="dropdown-content">
           {LanguageMapper.map((item: LanguageMapperType) => (
             <button
