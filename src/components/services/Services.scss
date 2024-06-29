@@ -8,28 +8,35 @@
 .services-card {
   display: flex;
   height: 100%;
-  width: fit-content;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   background-color: var(--primary-gray);
   padding: 1rem;
   border-radius: var(--border-radius);
 }
+.services-content-container {
+  display: flex;
+  width: 100%;
+}
 .services-content {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  width: 100%;
   font-size: 25px;
   p {
     font-size: 18px;
   }
 }
+.padding-top {
+  padding-top: 1rem;
+}
 .service-chip {
   display: flex;
-  height: fit-content;
-  width: 8rem;
+  height: 6rem;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -41,34 +48,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 36px;
     color: var(--tertiary-gray);
   }
 }
 .service-toggle {
   display: flex;
   height: 100%;
-  width: fit-content;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  gap: 0.2rem;
+  padding-top: 1rem;
+  p {
+    display: flex;
+    width: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .more-chevron {
   display: flex;
-  width: 100%;
+  width: fit-content;
   height: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 26px;
-  transition: transform 200ms ease-in-out;
+  font-size: 32px;
+  transition: transform 300ms ease-in-out;
 }
 .expand {
   transform: rotate(0deg);
 }
 .collapse {
   transform: rotate(180deg);
-}
-@media (min-width: 600px) {
-  .services-container {
-    width: fit-content;
-  }
 }

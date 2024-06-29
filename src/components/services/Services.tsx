@@ -23,15 +23,17 @@ const Services = () => {
             </div>
           ))}
         </div>
-        <div className="services-content" {...getCollapseProps()}>
-          {AdditionalService.map((service: ServiceMapperType) => (
-            <div className="service-chip" key={service.id} id={service.id}>
-              <div className="service-icon">
-                <service.icon fontSize="inherit" />
+        <div className="services-content-container" {...getCollapseProps()}>
+          <div className="services-content padding-top">
+            {AdditionalService.map((service: ServiceMapperType) => (
+              <div className="service-chip" key={service.id} id={service.id}>
+                <div className="service-icon">
+                  <service.icon fontSize="inherit" />
+                </div>
+                <p>{service.text}</p>
               </div>
-              <p>{service.text}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <button className="service-toggle" {...getToggleProps()}>
           <p>{isExpanded ? "Less" : "More"}</p>
