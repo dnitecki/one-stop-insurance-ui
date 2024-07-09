@@ -29,6 +29,7 @@ const LanguageSelector = () => {
     setExpanded(!isExpanded);
     setSearchParams({ lang: language });
   };
+
   return (
     <div className="selector-container">
       <button
