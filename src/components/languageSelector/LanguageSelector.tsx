@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import "./LanguageSelector.scss";
 import LanguageIcon from "@mui/icons-material/Language";
 import { LanguageEnumShort } from "../../enums/languageEnums";
@@ -8,16 +9,25 @@ import { useCollapse } from "react-collapsed";
 
 const LanguageSelector = () => {
   const [isExpanded, setExpanded] = useState(false);
-  const [language, setLanguage] = useState(LanguageEnumShort.EN);
+  const [searchParams, setSearchParams] = useSearchParams();
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
-
   const handleClick = () => {
     setExpanded(!isExpanded);
   };
 
+  useEffect(() => {
+    setInitLanguage();
+  });
+
+  const setInitLanguage = () => {
+    if (!searchParams.get("lang")) {
+      setSearchParams({ lang: LanguageEnumShort.EN });
+    }
+  };
+
   const handleLanguageSelect = (language: LanguageEnumShort) => {
-    setLanguage(language);
     setExpanded(!isExpanded);
+    setSearchParams({ lang: language });
   };
   return (
     <div className="selector-container">
@@ -28,7 +38,7 @@ const LanguageSelector = () => {
         })}
       >
         <LanguageIcon fontSize="inherit" />
-        <p>{language}</p>
+        <p>{searchParams.get("lang")}</p>
       </button>
       <div
         className="selector-dropdown"
