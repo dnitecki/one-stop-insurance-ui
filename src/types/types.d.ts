@@ -26,8 +26,29 @@ export type ContentMapperType = {
         [index: string]: string;
       };
     };
-    agency: any;
-    services: any;
-    contact: any;
+    agency: {
+      header: {
+        [index: string]: string;
+      };
+      body: {
+        [index: string]: string;
+      };
+    };
+    services: {
+      header: {
+        [index: string]: string;
+      };
+      body: {
+        [index: string]: string;
+      };
+    };
+    contact: {
+      header: {
+        [index: string]: string;
+      };
+      body: {
+        [index: string]: string;
+      };
+    };
   };
 };

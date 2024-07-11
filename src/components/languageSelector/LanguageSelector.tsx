@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./LanguageSelector.scss";
 import LanguageIcon from "@mui/icons-material/Language";
-import { LanguageEnumShort } from "../../enums/languageEnums";
+import { LanguageEnumShort, SeachParamEnum } from "../../enums/languageEnums";
 import { LanguageMapper } from "../../utils/languageMapper";
 import { LanguageMapperType } from "../../types/types";
 import { useCollapse } from "react-collapsed";
@@ -20,14 +20,14 @@ const LanguageSelector = () => {
   });
 
   const setInitLanguage = () => {
-    if (!searchParams.get("lang")) {
-      setSearchParams({ lang: LanguageEnumShort.EN });
+    if (!searchParams.get(SeachParamEnum.LANG)) {
+      setSearchParams({ [SeachParamEnum.LANG]: LanguageEnumShort.EN });
     }
   };
 
   const handleLanguageSelect = (language: LanguageEnumShort) => {
     setExpanded(!isExpanded);
-    setSearchParams({ lang: language });
+    setSearchParams({ [SeachParamEnum.LANG]: language });
   };
 
   return (
@@ -39,7 +39,7 @@ const LanguageSelector = () => {
         })}
       >
         <LanguageIcon fontSize="inherit" />
-        <p>{searchParams.get("lang")}</p>
+        <p>{searchParams.get(SeachParamEnum.LANG)}</p>
       </button>
       <div
         className="selector-dropdown"

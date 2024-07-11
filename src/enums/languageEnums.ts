@@ -9,3 +9,7 @@ export enum LanguageEnumShort {
   PL = "PL",
   ES = "ES",
 }
+
+export enum SeachParamEnum {
+  LANG = "lang",
+}

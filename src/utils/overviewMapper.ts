@@ -19,19 +19,4 @@ export const OverviewMapper: OverviewMapperType[] = [
     header: "Contact Us",
     Component: Contact,
   },
-  {
-    id: "agency",
-    header: "Our Agency",
-    Component: Agency,
-  },
-  {
-    id: "services",
-    header: "Our Services",
-    Component: Services,
-  },
-  {
-    id: "contact",
-    header: "Contact Us",
-    Component: Contact,
-  },
 ];

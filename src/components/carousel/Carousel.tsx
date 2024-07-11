@@ -7,10 +7,11 @@ import travelersLogo from "../../assets/travelers-ins.png";
 import foremostLogo from "../../assets/foremost-ins.png";
 import openlyLogo from "../../assets/openly-ins.png";
 import { ContentMapper } from "../../content/contentMapper";
+import { SeachParamEnum } from "../../enums/languageEnums";
 
 const Carousel = () => {
   const [searchParams] = useSearchParams();
-  const language = searchParams.get("lang");
+  const language = searchParams.get(SeachParamEnum.LANG);
 
   return (
     <div className="scroller-container">
