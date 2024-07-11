@@ -18,3 +18,16 @@ export type ServiceMapperType = {
   text: string;
   icon: React.FC<SvgIconProps>;
 };
+
+export type ContentMapperType = {
+  sections: {
+    partners: {
+      header: {
+        [index: string]: string;
+      };
+    };
+    agency: any;
+    services: any;
+    contact: any;
+  };
+};
