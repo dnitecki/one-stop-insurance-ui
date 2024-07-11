@@ -21,32 +21,11 @@ export type ServiceMapperType = {
 
 export type ContentMapperType = {
   sections: {
-    partners: {
+    [index: string]: {
       header: {
         [index: string]: string;
       };
-    };
-    agency: {
-      header: {
-        [index: string]: string;
-      };
-      body: {
-        [index: string]: string;
-      };
-    };
-    services: {
-      header: {
-        [index: string]: string;
-      };
-      body: {
-        [index: string]: string;
-      };
-    };
-    contact: {
-      header: {
-        [index: string]: string;
-      };
-      body: {
+      body?: {
         [index: string]: string;
       };
     };

@@ -1,12 +1,13 @@
+import { useSearchParams } from "react-router-dom";
+import { SeachParamEnum } from "../../enums/languageEnums";
+import { ContentMapper } from "../../content/contentMapper";
+
 const Agency = () => {
+  const [searchParams] = useSearchParams();
+  const language = searchParams.get(SeachParamEnum.LANG);
   return (
     <div className="card">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Enim nulla aliquet
-      porttitor lacus luctus accumsan tortor posuere ac. Dolor sit amet
-      consectetur adipiscing elit pellentesque habitant morbi tristique.
-      Adipiscing commodo elit at imperdiet dui accumsan. Urna id volutpat lacus
-      laoreet non.
+      {ContentMapper.sections["agency"].body[language]}
     </div>
   );
 };
