@@ -5,6 +5,7 @@ import { OverviewMapper } from "../../utils/overviewMapper";
 import "./Overview.scss";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapper } from "../../content/contentMapper";
+import Banner from "../../components/banner/Banner";
 
 export const Overview = () => {
   const [searchParams] = useSearchParams();
@@ -13,6 +14,7 @@ export const Overview = () => {
   return (
     <div className="overview-container">
       <div className="overview-content">
+        <Banner />
         <Carousel />
         {OverviewMapper.map((section) => (
           <section id={section.id} key={section.id}>

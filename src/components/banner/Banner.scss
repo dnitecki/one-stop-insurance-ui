@@ -1,18 +1,56 @@
 .banner-container {
   display: flex;
   height: fit-content;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 3rem;
   width: 100%;
+}
+.banner-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 1;
+  }
+  h2 {
+    font-weight: 500;
+    line-height: 1.5;
+  }
 }
 .banner-content {
   display: flex;
   height: 100%;
   width: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  img {
+  .group-photo {
     display: flex;
     height: 100%;
-    width: 40%;
+    width: 100%;
+    max-width: 600px;
+    z-index: 1;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0)
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  .logo {
+    display: flex;
+    top: 12rem;
+    position: absolute;
+    height: auto;
+    width: 50%;
+    max-width: 300px;
+    z-index: 0;
   }
 }
