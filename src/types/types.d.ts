@@ -17,6 +17,7 @@ export type ServiceMapperType = {
   id: string;
   text: string;
   icon: React.FC<SvgIconProps>;
+  image?: any;
 };
 
 export type ContentMapperType = {

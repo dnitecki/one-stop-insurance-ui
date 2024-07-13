@@ -13,7 +13,6 @@ const Header = () => {
       <div className="header-options">
         <CallIcon fontSize="inherit" />
         <EmailIcon fontSize="inherit" />
-        <div>|</div>
         <LanguageSelector />
       </div>
     </div>

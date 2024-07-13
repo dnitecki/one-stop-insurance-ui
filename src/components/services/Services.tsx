@@ -18,8 +18,8 @@ const Services = () => {
             <div className="service-chip" key={service.id} id={service.id}>
               <div className="service-icon">
                 <service.icon fontSize="inherit" />
+                <p>{service.text}</p>
               </div>
-              <p>{service.text}</p>
             </div>
           ))}
         </div>
@@ -29,8 +29,8 @@ const Services = () => {
               <div className="service-chip" key={service.id} id={service.id}>
                 <div className="service-icon">
                   <service.icon fontSize="inherit" />
+                  <p>{service.text}</p>
                 </div>
-                <p>{service.text}</p>
               </div>
             ))}
           </div>
