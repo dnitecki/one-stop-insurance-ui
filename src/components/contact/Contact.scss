@@ -24,6 +24,15 @@
 .MuiFormLabel-root.Mui-focused {
   color: var(--white);
 }
+.MuiInputBase-root {
+  &.MuiOutlinedInput-root {
+    &.MuiSelect-root.Mui-focused {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: var(--white);
+      }
+    }
+  }
+}
 .MuiInputLabel-root {
   color: var(--white);
   font-weight: bold;
