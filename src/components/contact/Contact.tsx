@@ -7,14 +7,16 @@ import InputLabel from "@mui/material/InputLabel/InputLabel";
 import Select, { SelectChangeEvent } from "@mui/material/Select/Select";
 import MenuItem from "@mui/material/MenuItem/MenuItem";
 import { useState } from "react";
+import { WHITE } from "../../constants/colors";
+import { EMPTY_STRING } from "../../constants/constants";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
-  const [age, setAge] = useState("");
+  const [policy, setProduct] = useState<string>(EMPTY_STRING);
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string);
+    setProduct(event.target.value as string);
   };
 
   return (
@@ -22,18 +24,34 @@ const Contact = () => {
       <div className="contact-container">
         <form className="form-container">
           <FormControl fullWidth>
-            <InputLabel id="select-label">Age</InputLabel>
+            <InputLabel
+              id="select-label"
+              sx={{
+                "&.Mui-focused": {
+                  color: WHITE,
+                },
+              }}
+            >
+              Policy Type
+            </InputLabel>
             <Select
               labelId="select-label"
               id="simple-select"
-              value={age}
-              label="Age"
+              value={policy}
+              label="Policy Type"
               onChange={handleChange}
               fullWidth
+              sx={{
+                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                  borderColor: WHITE,
+                },
+              }}
             >
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              <MenuItem value="auto">Auto</MenuItem>
+              <MenuItem value="home">Home</MenuItem>
+              <MenuItem value="life">Life</MenuItem>
+              <MenuItem value="business">Business</MenuItem>
+              <MenuItem value="other">Other</MenuItem>
             </Select>
           </FormControl>
         </form>

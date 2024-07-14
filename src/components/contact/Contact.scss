@@ -24,15 +24,6 @@
 .MuiFormLabel-root.Mui-focused {
   color: var(--white);
 }
-.MuiInputBase-root {
-  &.MuiOutlinedInput-root {
-    &.MuiSelect-root.Mui-focused {
-      .MuiOutlinedInput-notchedOutline {
-        border-color: var(--white);
-      }
-    }
-  }
-}
 .MuiInputLabel-root {
   color: var(--white);
   font-weight: bold;
@@ -57,7 +48,6 @@
 .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
   border-color: var(--white);
   border-width: 2px;
-  color: var(--white);
 }
 .MuiSvgIcon-root {
   &.MuiSelect-icon {
