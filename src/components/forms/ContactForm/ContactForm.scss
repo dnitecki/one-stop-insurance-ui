@@ -38,6 +38,8 @@
   font-size: 18px;
   outline: 0;
   width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
 }
 .form-select:focus {
   border: 3px solid var(--focus);
@@ -66,7 +68,7 @@
   align-items: center;
   text-align: center;
   background-color: var(--secondary-red);
-  border: 3px solid white;
+  border: 3px solid var(--secondary-red);
 }
 .form-submit-btn:focus {
   border: 3px solid var(--focus);
