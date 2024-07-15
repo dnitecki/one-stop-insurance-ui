@@ -1,12 +1,12 @@
 import "./ContactForm.scss";
 import SendIcon from "@mui/icons-material/Send";
-import RequestQuoteIcon from "@mui/icons-material/RequestQuote";
+import FactCheckIcon from "@mui/icons-material/FactCheck";
 
 const ContactForm = () => {
   return (
     <form className="form-container">
       <h2>
-        Request a Quote <RequestQuoteIcon fontSize="inherit" />
+        Request a Quote <FactCheckIcon fontSize="inherit" />
       </h2>
       <div className="form-row">
         <input

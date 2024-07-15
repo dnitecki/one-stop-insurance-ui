@@ -66,4 +66,8 @@
   align-items: center;
   text-align: center;
   background-color: var(--secondary-red);
+  border: 3px solid white;
+}
+.form-submit-btn:focus {
+  border: 3px solid var(--focus);
 }
