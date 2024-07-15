@@ -1,8 +1,13 @@
 import "./ContactForm.scss";
+import SendIcon from "@mui/icons-material/Send";
+import RequestQuoteIcon from "@mui/icons-material/RequestQuote";
 
 const ContactForm = () => {
   return (
     <form className="form-container">
+      <h2>
+        Request a Quote <RequestQuoteIcon fontSize="inherit" />
+      </h2>
       <div className="form-row">
         <input
           className="form-input"
@@ -65,7 +70,9 @@ const ContactForm = () => {
         placeholder="Additional Information"
       />
       <button className="form-submit-btn" type="submit" value="Submit">
-        Submit
+        <h2>
+          Submit <SendIcon fontSize="inherit" />
+        </h2>
       </button>
     </form>
   );
