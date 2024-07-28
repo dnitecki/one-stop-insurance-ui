@@ -6,6 +6,7 @@ import "./Overview.scss";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapper } from "../../content/contentMapper";
 import Banner from "../../components/banner/Banner";
+import SocialFeed from "../../components/socialFeed/SocialFeed";
 
 export const Overview = () => {
   const [searchParams] = useSearchParams();
@@ -24,6 +25,7 @@ export const Overview = () => {
             <section.Component />
           </section>
         ))}
+        <SocialFeed />
         <Footer />
       </div>
     </div>

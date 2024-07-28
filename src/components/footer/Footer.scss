@@ -17,6 +17,13 @@
   height: 100%;
   width: 100%;
   padding: 2rem;
+  a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .link-cluster {
   display: flex;
