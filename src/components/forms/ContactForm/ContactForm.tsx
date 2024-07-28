@@ -52,9 +52,7 @@ const ContactForm = () => {
           defaultValue="Policy Type"
           required
         >
-          <option hidden selected>
-            Policy Type
-          </option>
+          <option hidden>Policy Type</option>
           <option value="auto">Auto</option>
           <option value="home">Home</option>
           <option value="life">Life</option>

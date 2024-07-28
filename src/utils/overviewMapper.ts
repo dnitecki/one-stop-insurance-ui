@@ -1,6 +1,7 @@
 import Agency from "../components/agency/Agency";
 import Contact from "../components/contact/Contact";
 import Services from "../components/services/Services";
+import SocialFeed from "../components/socialFeed/SocialFeed";
 import { OverviewMapperType } from "../types/types";
 
 export const OverviewMapper: OverviewMapperType[] = [
@@ -18,5 +19,10 @@ export const OverviewMapper: OverviewMapperType[] = [
     id: "contact",
     header: "Contact Us",
     Component: Contact,
+  },
+  {
+    id: "feed",
+    header: "Give Us a Follow!",
+    Component: SocialFeed,
   },
 ];

@@ -6,7 +6,6 @@ import "./Overview.scss";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapper } from "../../content/contentMapper";
 import Banner from "../../components/banner/Banner";
-import SocialFeed from "../../components/socialFeed/SocialFeed";
 
 export const Overview = () => {
   const [searchParams] = useSearchParams();
@@ -20,12 +19,11 @@ export const Overview = () => {
         {OverviewMapper.map((section) => (
           <section id={section.id} key={section.id}>
             <div className="section-heading">
-              <h1>{ContentMapper.sections[section.id].header[language]}</h1>
+              <h1>{ContentMapper?.sections[section.id]?.header[language]}</h1>
             </div>
             <section.Component />
           </section>
         ))}
-        <SocialFeed />
         <Footer />
       </div>
     </div>
