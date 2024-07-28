@@ -8,8 +8,28 @@
 }
 .footer-content {
   display: flex;
+  gap: 1rem;
+  flex-direction: column;
   background-color: var(--primary-red);
-  min-height: 5rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
   height: 100%;
   width: 100%;
+  padding: 2rem;
+}
+.link-cluster {
+  display: flex;
+  font-size: 36px;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-text {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
 }
