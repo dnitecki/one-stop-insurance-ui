@@ -4,4 +4,12 @@
   height: 100%;
   flex-direction: column;
   gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  hr {
+    background-color: var(--white);
+    border: 0;
+    height: 2px;
+    width: 80%;
+  }
 }

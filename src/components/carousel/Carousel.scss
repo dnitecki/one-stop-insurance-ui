@@ -52,8 +52,11 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  color: var(--tertiary-gray);
   hr {
-    border-top: 1px solid var(--secondary-gray);
+    background-color: var(--secondary-gray);
+    border: 0;
+    height: 2px;
     width: 100%;
   }
 }

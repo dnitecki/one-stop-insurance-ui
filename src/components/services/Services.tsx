@@ -35,7 +35,7 @@ const Services = () => {
             ))}
           </div>
         </div>
-        <button className="service-toggle" {...getToggleProps()}>
+        <button className="service-toggle-btn" {...getToggleProps()}>
           <p>{isExpanded ? "Less" : "More"}</p>
           <div className={`more-chevron ${isExpanded ? "collapse" : "expand"}`}>
             <ExpandMoreIcon fontSize="inherit" />

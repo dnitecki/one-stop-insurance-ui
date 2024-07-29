@@ -4,6 +4,8 @@ import L from "leaflet";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
+import PlaceIcon from "@mui/icons-material/Place";
+import { INFO } from "../../constants/constants";
 
 const Map = () => {
   const latLong: L.LatLngExpression = {
@@ -31,6 +33,10 @@ const Map = () => {
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker position={latLong}></Marker>
       </MapContainer>
+      <div className="map-address">
+        <PlaceIcon fontSize="inherit" />
+        <p>{INFO.ADDRESS}</p>
+      </div>
     </div>
   );
 };

@@ -60,18 +60,21 @@ const ContactForm = () => {
           <option value="other">Other</option>
         </select>
       </div>
-      <textarea
-        className="form-additional-info"
-        id="additional-info"
-        rows={3}
-        wrap="on"
-        placeholder="Additional Information"
-      />
-      <button className="form-submit-btn" type="submit" value="Submit">
-        <h2>
-          Submit <SendIcon fontSize="inherit" />
-        </h2>
-      </button>
+      <div className="form-row">
+        <textarea
+          className="form-additional-info"
+          id="additional-info"
+          rows={3}
+          wrap="on"
+          placeholder="Additional Information"
+        />
+      </div>
+      <div className="form-row">
+        <button className="form-submit-btn" type="submit" value="Submit">
+          <p>Submit</p>
+          <SendIcon className="send-icon" fontSize="inherit" />
+        </button>
+      </div>
     </form>
   );
 };

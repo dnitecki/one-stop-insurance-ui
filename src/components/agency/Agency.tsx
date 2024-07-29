@@ -7,7 +7,7 @@ const Agency = () => {
   const language = searchParams.get(SeachParamEnum.LANG);
   return (
     <div className="card">
-      {ContentMapper.sections["agency"].body[language]}
+      <p>{ContentMapper.sections["agency"].body[language]}</p>
     </div>
   );
 };

@@ -35,8 +35,11 @@
 .footer-text {
   display: flex;
   align-items: center;
-  font-size: 14px;
+
   justify-content: center;
   text-align: center;
   height: 100%;
+  p {
+    font-size: 14px;
+  }
 }

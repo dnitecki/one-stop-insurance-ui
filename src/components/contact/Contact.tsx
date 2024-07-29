@@ -13,6 +13,7 @@ const Contact = () => {
     <div className="card">
       <div className="contact-container">
         <ContactForm />
+        <hr />
         <Map />
       </div>
     </div>
