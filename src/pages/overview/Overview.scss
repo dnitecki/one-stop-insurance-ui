@@ -16,17 +16,24 @@
     align-items: flex-start;
     display: flex;
     margin: 30px 0;
-    padding: 0 1rem;
     width: 75%;
     .section-heading {
       z-index: 1;
       flex: 0 0 33%;
       padding: 10px 15px;
+      backdrop-filter: blur(30px);
       position: sticky;
       position: -webkit-sticky;
       text-align: right;
       top: var(--header-height);
-      background-color: var(--white);
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+    .section-component {
+      padding: 0 1rem;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

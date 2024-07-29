@@ -21,7 +21,9 @@ export const Overview = () => {
             <div className="section-heading">
               <h1>{ContentMapper?.sections[section.id]?.header[language]}</h1>
             </div>
-            <section.Component />
+            <div className="section-component">
+              <section.Component />
+            </div>
           </section>
         ))}
         <Footer />
