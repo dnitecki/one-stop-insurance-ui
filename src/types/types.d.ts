@@ -20,6 +20,12 @@ export type ServiceMapperType = {
   image?: any;
 };
 
+export type ReviewMapperType = {
+  rating: number;
+  review: string;
+  name: string;
+};
+
 export type ContentMapperType = {
   sections: {
     [index: string]: {

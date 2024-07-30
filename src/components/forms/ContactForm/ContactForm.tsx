@@ -64,7 +64,7 @@ const ContactForm = () => {
         <textarea
           className="form-additional-info"
           id="additional-info"
-          rows={3}
+          rows={4}
           wrap="on"
           placeholder="Additional Information"
         />
