@@ -6,6 +6,7 @@ import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import PlaceIcon from "@mui/icons-material/Place";
 import { INFO } from "../../constants/constants";
+import { Phone } from "@mui/icons-material";
 
 const Map = () => {
   const latLong: L.LatLngExpression = {
@@ -33,9 +34,15 @@ const Map = () => {
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker position={latLong}></Marker>
       </MapContainer>
-      <div className="map-address">
-        <PlaceIcon fontSize="inherit" />
-        <p>{INFO.ADDRESS}</p>
+      <div className="map-info">
+        <div className="map-address">
+          <PlaceIcon fontSize="inherit" />
+          <p>{INFO.ADDRESS}</p>
+        </div>
+        <div>
+          <Phone fontSize="inherit" />
+          <p>{INFO.PHONE}</p>
+        </div>
       </div>
     </div>
   );
