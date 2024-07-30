@@ -21,7 +21,8 @@
       z-index: 1;
       flex: 0 0 33%;
       padding: 10px 15px;
-      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
       position: sticky;
       position: -webkit-sticky;
       text-align: right;
