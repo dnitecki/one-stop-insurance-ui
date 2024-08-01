@@ -17,9 +17,9 @@ export const ContentMapper: ContentMapperType = {
         ES: "Nuestra Agencia",
       },
       body: {
-        EN: `More than 40 years of combined insurance experience.`,
-        PL: "Agencja ubezpieczeniowa pełni rolę pośrednika między klientami a firmami ubezpieczeniowymi, oferując różne rodzaje ubezpieczeń, takie jak zdrowotne, na życie, komunikacyjne i majątkowe. Ich głównym zadaniem jest ocena ryzyka i potrzeb klientów, dostarczanie dostosowanych rekomendacji polis, które zapewniają odpowiednią ochronę.",
-        ES: "Una agencia de seguros actúa como intermediaria entre los clientes y las compañías de seguros, ofreciendo diversos tipos de cobertura como seguro de salud, vida, automóvil y propiedad. Su función principal es evaluar los riesgos y necesidades de los clientes, proporcionando recomendaciones de pólizas personalizadas que aseguren una protección adecuada.",
+        EN: "More than 40 years of combined insurance experience.",
+        PL: "Ponad 40 lat wspólnego doświadczenia ubezpieczeniowego.",
+        ES: "Más de 40 años de experiencia combinada en seguros.",
       },
     },
     services: {
