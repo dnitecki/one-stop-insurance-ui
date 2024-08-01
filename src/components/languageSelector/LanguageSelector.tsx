@@ -18,9 +18,9 @@ const LanguageSelector = () => {
   useEffect(() => {
     setInitLanguage();
   });
-
+  const languageParam = searchParams.get(SeachParamEnum.LANG);
   const setInitLanguage = () => {
-    if (!searchParams.get(SeachParamEnum.LANG)) {
+    if (!languageParam || !(languageParam in LanguageEnumShort)) {
       setSearchParams({ [SeachParamEnum.LANG]: LanguageEnumShort.EN });
     }
   };
