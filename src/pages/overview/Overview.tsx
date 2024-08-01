@@ -26,7 +26,6 @@ export const Overview = () => {
             </div>
           </section>
         ))}
-        <Footer />
       </div>
     </div>
   );

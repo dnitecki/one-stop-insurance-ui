@@ -6,10 +6,17 @@
   gap: 2rem;
   justify-content: center;
   align-items: center;
-  hr {
-    background-color: var(--white);
-    border: 0;
-    height: 2px;
-    width: 80%;
-  }
+}
+.map-card {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-red);
+  color: var(--white);
 }
