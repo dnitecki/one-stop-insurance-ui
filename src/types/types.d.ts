@@ -38,3 +38,7 @@ export type ContentMapperType = {
     };
   };
 };
+
+export type ObjectIndexType = {
+  [index: string]: JSX.Element;
+};
