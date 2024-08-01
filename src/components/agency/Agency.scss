@@ -8,7 +8,11 @@
   height: fit-content;
   padding: 1rem;
   border-radius: var(--border-radius);
-  background-color: var(--primary-red);
+  background: linear-gradient(
+    90deg,
+    rgba(204, 4, 4, 1) 0%,
+    rgba(161, 3, 3, 1) 70%
+  );
   color: var(--white);
   h2 {
     font-weight: 300;
@@ -32,6 +36,8 @@
   height: 30rem;
   position: absolute;
   top: -5rem;
+  filter: drop-shadow(var(--shadow));
+  -webkit-filter: drop-shadow(var(--shadow));
 }
 .agency-text {
   height: 100%;
