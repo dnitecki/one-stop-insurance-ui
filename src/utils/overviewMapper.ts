@@ -17,14 +17,14 @@ export const OverviewMapper: OverviewMapperType[] = [
     Component: Services,
   },
   {
-    id: "reviews",
-    header: "What our Clients Think",
-    Component: Reviews,
-  },
-  {
     id: "contact",
     header: "Contact Us",
     Component: Contact,
+  },
+  {
+    id: "reviews",
+    header: "What our Clients Think",
+    Component: Reviews,
   },
   {
     id: "feed",
