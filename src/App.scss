@@ -11,7 +11,9 @@
 }
 .card {
   display: flex;
+  position: relative;
   justify-content: center;
+  overflow: hidden;
   align-items: center;
   width: 50%;
   height: fit-content;

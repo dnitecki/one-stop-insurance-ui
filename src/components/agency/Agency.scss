@@ -1,0 +1,36 @@
+.agency-card {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 15rem;
+  max-height: 15rem;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-red);
+  color: var(--white);
+}
+.headshot-container {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.headshot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+  position: absolute;
+  top: -5rem;
+}
+.agency-text {
+  height: 100%;
+  display: flex;
+  float: left;
+  width: 50%;
+  z-index: 1;
+}

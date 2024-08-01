@@ -17,7 +17,7 @@ export const ContentMapper: ContentMapperType = {
         ES: "Nuestra Agencia",
       },
       body: {
-        EN: "An insurance agency serves as an intermediary between clients and insurance companies, offering various types of coverage such as health, life, auto, and property insurance. Their primary role is to assess the risk and needs of clients, providing tailored policy recommendations that ensure adequate protection.",
+        EN: `More than 40 years of combined insurance experience.`,
         PL: "Agencja ubezpieczeniowa pełni rolę pośrednika między klientami a firmami ubezpieczeniowymi, oferując różne rodzaje ubezpieczeń, takie jak zdrowotne, na życie, komunikacyjne i majątkowe. Ich głównym zadaniem jest ocena ryzyka i potrzeb klientów, dostarczanie dostosowanych rekomendacji polis, które zapewniają odpowiednią ochronę.",
         ES: "Una agencia de seguros actúa como intermediaria entre los clientes y las compañías de seguros, ofreciendo diversos tipos de cobertura como seguro de salud, vida, automóvil y propiedad. Su función principal es evaluar los riesgos y necesidades de los clientes, proporcionando recomendaciones de pólizas personalizadas que aseguren una protección adecuada.",
       },
