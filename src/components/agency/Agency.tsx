@@ -17,7 +17,7 @@ const Agency = () => {
     ),
     PL: (
       <>
-        Ma Ponad <strong>30 lat</strong> wspólnego doświadczenia z
+        Ma ponad <strong>30 lat</strong> wspólnego doświadczenia z
         ubezpieczeniem.
       </>
     ),
