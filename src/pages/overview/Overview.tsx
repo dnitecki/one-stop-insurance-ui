@@ -12,7 +12,7 @@ export const Overview = () => {
   const language = searchParams.get(SeachParamEnum.LANG);
 
   return (
-    <div className="overview-container">
+    <div className="overview-container" id="overview-container">
       <div className="overview-content">
         <Banner />
         <Carousel />

@@ -11,8 +11,20 @@ const LanguageSelector = () => {
   const [isExpanded, setExpanded] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded });
+
   const handleClick = () => {
     setExpanded(!isExpanded);
+    const overviewContainer = document.getElementById("overview-container");
+    overviewContainer.addEventListener(
+      "click",
+      () => {
+        setExpanded(false);
+        overviewContainer.removeEventListener("click", () => {
+          setExpanded(false);
+        });
+      },
+      true
+    );
   };
 
   useEffect(() => {
