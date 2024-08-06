@@ -1,5 +1,5 @@
 import "./Services.scss";
-import { ServicesMapper } from "../../utils/servicesMapper";
+import { ServicesMapper } from "../../mappers/servicesMapper";
 import { ServiceMapperType } from "../../types/types";
 
 const MainServices = ServicesMapper;

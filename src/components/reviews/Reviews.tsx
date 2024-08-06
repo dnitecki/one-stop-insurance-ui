@@ -1,5 +1,5 @@
 import { LINKS } from "../../constants/constants";
-import { ReviewMapper } from "../../utils/reviewMapper";
+import { ReviewMapper } from "../../mappers/reviewMapper";
 import "./Reviews.scss";
 import StarIcon from "@mui/icons-material/Star";
 
