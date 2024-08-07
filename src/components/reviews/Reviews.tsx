@@ -7,7 +7,7 @@ const Reviews = () => {
   return (
     <div className="reviews-container">
       {ReviewMapper.map((review) => (
-        <div className="review-card">
+        <div className="review-card" key={review.name}>
           <div className="review-rating">
             <StarIcon className="star-icon" fontSize="inherit" />
             <h3>{review.rating.toFixed(1)}</h3>
