@@ -3,8 +3,41 @@
   height: 100%;
   width: 100%;
   height: fit-content;
+  flex-direction: column;
   iframe {
     border: none;
     border-radius: var(--border-radius);
   }
+}
+.media-links {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-red);
+  color: var(--white);
+  padding: 0.3rem;
+  border-radius: var(--border-radius);
+  font-size: 40px;
+}
+.left-arrow {
+  display: flex;
+  height: 100%;
+  width: 6rem;
+}
+.right-arrow {
+  display: flex;
+  height: 100%;
+  width: 6rem;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
