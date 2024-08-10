@@ -22,7 +22,7 @@ const Reviews = () => {
       ))}
       <a href={LINKS.FB} target="_blank" rel="noreferrer">
         <button className="review-more-btn">
-          <p>View More</p>
+          <p>Leave a Review!</p>
         </button>
       </a>
     </div>
