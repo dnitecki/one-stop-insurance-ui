@@ -17,15 +17,18 @@
   flex-direction: column;
   gap: 0.5rem;
 
-  div {
+  a {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     gap: 0.5rem;
     font-size: 30px;
     align-items: center;
-    font-size: 24px;
+    background-color: var(--primary-gray);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    color: var(--tertiary-gray);
     p {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 }

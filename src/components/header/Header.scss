@@ -28,4 +28,9 @@
   align-items: center;
   color: var(--white);
   font-size: 30px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

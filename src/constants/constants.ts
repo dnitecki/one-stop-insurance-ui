@@ -7,6 +7,9 @@ export const LINKS = {
 };
 
 export const INFO = {
-  ADDRESS: "130 N Bloomingdale Rd, Bloomingdale, IL 60108",
+  ADDRESS: "130 N. Bloomingdale Rd, Bloomingdale, IL. 60108",
   PHONE: "(630) 400-8111",
+  EMAIL: "bnitecki@onestopinsurance.net",
+  PHONE_HREF: "tel:+16304008111",
+  EMAIL_HREF: "mailto:bnitecki@onestopinsurance.net",
 };

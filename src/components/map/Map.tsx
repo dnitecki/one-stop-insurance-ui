@@ -6,7 +6,6 @@ import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import PlaceIcon from "@mui/icons-material/Place";
 import { INFO } from "../../constants/constants";
-import { Phone } from "@mui/icons-material";
 
 const Map = () => {
   const latLong: L.LatLngExpression = {
@@ -35,14 +34,15 @@ const Map = () => {
         <Marker position={latLong}></Marker>
       </MapContainer>
       <div className="map-info">
-        <div className="map-address">
+        <a
+          className="map-address"
+          href={`https://maps.google.com/maps?q=${INFO.ADDRESS}`}
+          target="_blank"
+          rel="noreferrer"
+        >
           <PlaceIcon fontSize="inherit" />
           <p>{INFO.ADDRESS}</p>
-        </div>
-        <div>
-          <Phone fontSize="inherit" />
-          <p>{INFO.PHONE}</p>
-        </div>
+        </a>
       </div>
     </div>
   );

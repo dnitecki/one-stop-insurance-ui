@@ -26,7 +26,7 @@ export const ContentMapper: ContentMapperType = {
       header: {
         EN: "Our Services",
         PL: "Nasze Usługi",
-        ES: "Nuestros Servicios",
+        ES: "Servicios",
       },
       body: {
         EN: "An insurance agency serves as an intermediary between clients and insurance companies, offering various types of coverage such as health, life, auto, and property insurance. Their primary role is to assess the risk and needs of clients, providing tailored policy recommendations that ensure adequate protection.",
@@ -38,7 +38,7 @@ export const ContentMapper: ContentMapperType = {
       header: {
         EN: "Reviews",
         PL: "Nasze recenzje",
-        ES: "Nuestras Reseñas",
+        ES: "Reseñas",
       },
       body: {
         EN: "An insurance agency serves as an intermediary between clients and insurance companies, offering various types of coverage such as health, life, auto, and property insurance. Their primary role is to assess the risk and needs of clients, providing tailored policy recommendations that ensure adequate protection.",
@@ -62,7 +62,7 @@ export const ContentMapper: ContentMapperType = {
       header: {
         EN: "Give Us a Follow!",
         PL: "Obserwuj nasze media!",
-        ES: "¡Síguenos en nuestras redes sociales!",
+        ES: "Redes Sociales",
       },
       body: {
         EN: "An insurance agency serves as an intermediary between clients and insurance companies, offering various types of coverage such as health, life, auto, and property insurance. Their primary role is to assess the risk and needs of clients, providing tailored policy recommendations that ensure adequate protection.",
