@@ -1,5 +1,4 @@
 import "./ContactForm.scss";
-import SendIcon from "@mui/icons-material/Send";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
 
 const ContactForm = () => {
