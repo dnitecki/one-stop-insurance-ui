@@ -10,8 +10,8 @@ const Banner = () => {
         <h2>INSURANCE</h2>
       </div>
       <div className="banner-content">
-        <img className="group-photo" src={groupPhoto} />
-        <img className="logo" src={logo} />
+        <img className="group-photo" src={groupPhoto} alt="group photo" />
+        <img className="logo" src={logo} alt="one stop logo" />
       </div>
     </div>
   );

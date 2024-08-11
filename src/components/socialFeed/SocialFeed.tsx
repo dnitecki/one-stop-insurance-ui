@@ -9,7 +9,7 @@ const SocialFeed = () => {
   return (
     <div className="feed-container">
       <div className="media-links">
-        <img className="left-arrow" src={Arrow} />
+        <img className="left-arrow" src={Arrow} alt="arrow" />
         <a
           className="link-container"
           href={LINKS.FB}
@@ -34,7 +34,7 @@ const SocialFeed = () => {
         >
           <LinkedInIcon fontSize="inherit" />
         </a>
-        <img className="right-arrow" src={Arrow} />
+        <img className="right-arrow" src={Arrow} alt="arrow" />
       </div>
       <iframe
         width="100%"

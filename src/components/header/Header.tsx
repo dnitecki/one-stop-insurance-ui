@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className="header-container">
       <div className="header-logo">
-        <img src={logo} />
+        <img src={logo} alt="one stop logo" />
       </div>
       <div className="header-options">
         <a href={INFO.PHONE_HREF}>

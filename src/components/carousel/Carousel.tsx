@@ -22,11 +22,15 @@ const Carousel = () => {
       </div>
       <Marquee gradient={true} gradientWidth={50} speed={30}>
         <div className="scroller-partners">
-          <img src={progressiveLogo} className="progressive" />
-          <img src={erieLogo} className="erie" />
-          <img src={travelersLogo} className="travelers" />
-          <img src={foremostLogo} className="foremost" />
-          <img src={openlyLogo} className="openly" />
+          <img
+            src={progressiveLogo}
+            className="progressive"
+            alt="progressive"
+          />
+          <img src={erieLogo} className="erie" alt="erie" />
+          <img src={travelersLogo} className="travelers" alt="travelers" />
+          <img src={foremostLogo} className="foremost" alt="foremost" />
+          <img src={openlyLogo} className="openly" alt="openly" />
         </div>
       </Marquee>
     </div>

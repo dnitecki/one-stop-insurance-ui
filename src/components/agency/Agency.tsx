@@ -34,7 +34,7 @@ const Agency = () => {
         <h2>{content[language]}</h2>
       </div>
       <div className="headshot-container">
-        <img className="headshot" src={BeataHeadshot} />
+        <img className="headshot" src={BeataHeadshot} alt="Beata Headshot" />
       </div>
     </div>
   );
