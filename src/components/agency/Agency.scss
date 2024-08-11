@@ -33,6 +33,7 @@
 .headshot {
   display: flex;
   justify-content: center;
+  object-fit: contain;
   align-items: center;
   height: 30rem;
   position: absolute;

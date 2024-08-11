@@ -4,7 +4,7 @@ export const ReviewMapper: ReviewMapperType[] = [
   {
     rating: 5.0,
     review:
-      "I have finally found an intelligent, smooth, well trained ladies who switched my insurance to a better one ! With their advise and knowledge I was able get this process quick and convenient. They have the best insurance companies around to choose from! Highly recommended 👌 👍 👏 Thank you Beata and Ania for your help!",
+      "I have finally found an intelligent, smooth, well trained ladies who switched my insurance to a better one!",
     name: "Gabriela",
   },
   {
