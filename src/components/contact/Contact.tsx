@@ -6,10 +6,14 @@ import Map from "../map/Map";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { INFO } from "../../constants/constants";
+import { ContentMapper } from "../../content/contentMapper";
+import { ContactContentType } from "../../types/types";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
+  const content: ContactContentType =
+    ContentMapper.sections.contact.body[language];
 
   return (
     <>
@@ -22,9 +26,9 @@ const Contact = () => {
           <EmailIcon fontSize="inherit" />
           <h2>Email</h2>
         </a>
-        <h3>or</h3>
+        <h3>{content.or}</h3>
         <div className="contact-container">
-          <ContactForm />
+          <ContactForm {...content} />
         </div>
       </div>
       <div className="map-card">

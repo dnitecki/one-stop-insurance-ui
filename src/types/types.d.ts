@@ -33,12 +33,23 @@ export type ContentMapperType = {
         [index: string]: string;
       };
       body?: {
-        [index: string]: string;
+        [index: string]: string | any;
       };
     };
   };
 };
 
 export type ObjectIndexType = {
-  [index: string]: JSX.Element;
+  [index: string]: JSX.Element | string;
+};
+
+export type ContactContentType = {
+  formTitle: string;
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
+  policyType: string;
+  addtlInfo: string;
+  submit: string;
+  or: string;
 };

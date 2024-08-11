@@ -1,11 +1,12 @@
+import { ContactContentType } from "../../../types/types";
 import "./ContactForm.scss";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
 
-const ContactForm = () => {
+const ContactForm = (content: ContactContentType) => {
   return (
     <form className="form-container">
       <h2>
-        <FactCheckIcon fontSize="inherit" /> Request a Quote
+        <FactCheckIcon fontSize="inherit" /> {content.formTitle}
       </h2>
       <div className="form-row">
         <input
@@ -13,7 +14,7 @@ const ContactForm = () => {
           type="text"
           id="fname"
           name="firstname"
-          placeholder="First Name"
+          placeholder={content.firstName}
           required
         />
         <input
@@ -21,7 +22,7 @@ const ContactForm = () => {
           type="text"
           id="lname"
           name="lastname"
-          placeholder="Last Name"
+          placeholder={content.lastName}
           required
         />
       </div>
@@ -41,7 +42,7 @@ const ContactForm = () => {
           type="tel"
           id="phone"
           name="phone"
-          placeholder="Phone Number"
+          placeholder={content.phoneNumber}
           required
         />
 
@@ -51,7 +52,7 @@ const ContactForm = () => {
           defaultValue="Policy Type"
           required
         >
-          <option hidden>Policy Type</option>
+          <option hidden>{content.policyType}</option>
           <option value="auto">Auto</option>
           <option value="home">Home</option>
           <option value="life">Life</option>
@@ -65,12 +66,12 @@ const ContactForm = () => {
           id="additional-info"
           rows={4}
           wrap="on"
-          placeholder="Additional Information"
+          placeholder={content.addtlInfo}
         />
       </div>
       <div className="form-row">
         <button className="form-submit-btn" type="submit" value="Submit">
-          <p>Submit</p>
+          <p>{content.submit}</p>
         </button>
       </div>
     </form>
