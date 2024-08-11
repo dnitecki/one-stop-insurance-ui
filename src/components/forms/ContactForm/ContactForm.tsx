@@ -6,7 +6,7 @@ const ContactForm = () => {
   return (
     <form className="form-container">
       <h2>
-        Request a Quote <FactCheckIcon fontSize="inherit" />
+        <FactCheckIcon fontSize="inherit" /> Request a Quote
       </h2>
       <div className="form-row">
         <input
@@ -72,7 +72,6 @@ const ContactForm = () => {
       <div className="form-row">
         <button className="form-submit-btn" type="submit" value="Submit">
           <p>Submit</p>
-          <SendIcon className="send-icon" fontSize="inherit" />
         </button>
       </div>
     </form>

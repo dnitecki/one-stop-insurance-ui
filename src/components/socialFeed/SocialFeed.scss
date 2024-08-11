@@ -16,6 +16,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 .link-container {
@@ -31,12 +32,14 @@
 .left-arrow {
   display: flex;
   height: 100%;
-  width: 6rem;
+  min-width: 4rem;
+  max-width: 7rem;
 }
 .right-arrow {
   display: flex;
   height: 100%;
-  width: 6rem;
+  min-width: 4rem;
+  max-width: 7rem;
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
