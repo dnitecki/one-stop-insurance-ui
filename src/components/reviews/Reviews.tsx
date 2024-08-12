@@ -1,9 +1,15 @@
+import { useSearchParams } from "react-router-dom";
 import { LINKS } from "../../constants/constants";
 import { ReviewMapper } from "../../mappers/reviewMapper";
 import "./Reviews.scss";
 import StarIcon from "@mui/icons-material/Star";
+import { SeachParamEnum } from "../../enums/languageEnums";
+import { ContentMapper } from "../../content/contentMapper";
 
 const Reviews = () => {
+  const [searchParams] = useSearchParams();
+  const language = searchParams.get(SeachParamEnum.LANG);
+  const content = ContentMapper?.sections?.reviews?.body[language];
   return (
     <div className="reviews-container">
       {ReviewMapper.map((review) => (
@@ -22,7 +28,7 @@ const Reviews = () => {
       ))}
       <a href={LINKS.FB} target="_blank" rel="noreferrer">
         <button className="review-more-btn">
-          <p>Leave a Review!</p>
+          <p>{content}</p>
         </button>
       </a>
     </div>
