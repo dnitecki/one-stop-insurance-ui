@@ -8,6 +8,8 @@
   height: fit-content;
   padding: 1rem;
   border-radius: var(--border-radius);
+  -webkit-mask-image: radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
   background: linear-gradient(
     90deg,
     rgba(204, 4, 4, 1) 0%,
@@ -26,14 +28,14 @@
   display: flex;
   width: 50%;
   height: 100%;
-  position: relative;
+  position: static;
   justify-content: center;
+  overflow: hidden;
   align-items: center;
 }
 .headshot {
   display: flex;
   justify-content: center;
-  object-fit: contain;
   align-items: center;
   height: 30rem;
   position: absolute;
