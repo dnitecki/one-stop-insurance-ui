@@ -26,7 +26,7 @@ const Contact = () => {
           <EmailIcon fontSize="inherit" />
           <h2>Email</h2>
         </a>
-        <h3>{content.or}</h3>
+        <h3>{content?.or}</h3>
         <div className="contact-container">
           <ContactForm {...content} />
         </div>
