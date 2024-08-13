@@ -11,14 +11,15 @@ const Services = () => {
         <div className="services-content">
           {MainServices.map((service: ServiceMapperType) => (
             <div className="service-chip" key={service.id} id={service.id}>
-              <div className="service-icon">
-                <div className="circle" />
-                <div className="icon">
-                  <service.icon fontSize="inherit" />
+              <div className="content-container">
+                <div className="service-icon">
+                  <div className="icon">
+                    <service.icon fontSize="inherit" />
+                  </div>
                 </div>
-              </div>
-              <div className="service-name">
-                <p>{service.text}</p>
+                <div className="service-name">
+                  <p>{service.text}</p>
+                </div>
               </div>
             </div>
           ))}

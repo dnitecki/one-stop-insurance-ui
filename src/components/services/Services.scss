@@ -33,54 +33,46 @@
 }
 .service-chip {
   display: flex;
+  flex-direction: column;
   position: relative;
-  height: 6rem;
+  height: 8rem;
   width: 100%;
-  justify-content: flex-end;
   overflow: hidden;
   text-align: center;
   align-items: center;
+  justify-content: center;
   border-radius: var(--border-radius);
   background-color: var(--primary-gray);
-  .service-name {
+  .content-container {
     display: flex;
-    width: 60%;
-    justify-content: flex-start;
-    align-items: center;
-    word-break: break-all;
-    font-size: 20px;
-    font-weight: 400;
-  }
-  .service-icon {
-    display: flex;
-    position: relative;
+    height: 100%;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    width: 40%;
-    height: 100%;
-    .circle {
+    flex-direction: column;
+    .service-name {
       display: flex;
-      position: absolute;
-      justify-content: flex-end;
-      padding-right: 20%;
-      align-items: center;
-      left: -30px;
-      height: 150%;
-      width: 120%;
-      font-size: 36px;
-      border-radius: 50%;
-      color: var(--white);
-      background-color: var(--primary-red);
-    }
-    .icon {
-      display: flex;
-      z-index: 1;
-      justify-content: flex-start;
       width: 100%;
-      padding-left: 20%;
+      justify-content: center;
       align-items: center;
-      font-size: 30px;
-      color: var(--white);
+      word-break: break-all;
+      p {
+        font-size: 22px;
+        font-weight: 400;
+      }
+    }
+    .service-icon {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .icon {
+        display: flex;
+        z-index: 1;
+        font-size: 52px;
+        color: var(--primary-red);
+      }
     }
   }
 }
