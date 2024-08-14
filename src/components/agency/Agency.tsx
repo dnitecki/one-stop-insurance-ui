@@ -29,14 +29,17 @@ const Agency = () => {
     ),
   };
   return (
-    <div className="agency-card">
-      <div className="agency-text">
-        <h2>{content[language]}</h2>
+    <>
+      <div className="agency-card">
+        <div className="agency-text">
+          <h2>{content[language]}</h2>
+        </div>
+        <div className="headshot-container">
+          <img className="headshot" src={BeataHeadshot} alt="Beata Headshot" />
+        </div>
       </div>
-      <div className="headshot-container">
-        <img className="headshot" src={BeataHeadshot} alt="Beata Headshot" />
-      </div>
-    </div>
+      <div className="agency-card"></div>
+    </>
   );
 };
 
