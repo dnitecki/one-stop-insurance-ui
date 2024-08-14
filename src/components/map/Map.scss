@@ -28,8 +28,18 @@
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
     color: var(--white);
-    p {
-      font-size: 14px;
-    }
   }
+}
+.info-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  p {
+    font-size: 14px;
+  }
+}
+.info-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

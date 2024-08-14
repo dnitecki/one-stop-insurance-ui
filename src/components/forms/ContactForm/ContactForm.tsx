@@ -71,7 +71,7 @@ const ContactForm = (content: ContactContentType) => {
       </div>
       <div className="form-row">
         <button className="form-submit-btn" type="submit" value="Submit">
-          <p>{content.submit}</p>
+          <h3>{content.submit}</h3>
         </button>
       </div>
     </form>

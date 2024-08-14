@@ -4,7 +4,7 @@ import L from "leaflet";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
-import PlaceIcon from "@mui/icons-material/Place";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { INFO } from "../../constants/constants";
 
 const Map = () => {
@@ -40,8 +40,13 @@ const Map = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <PlaceIcon fontSize="inherit" />
-          <p>{INFO.ADDRESS}</p>
+          <div className="info-container">
+            <p>{INFO.ADDRESS}</p>
+            <p>{INFO.HOURS}</p>
+          </div>
+          <div className="info-icon">
+            <KeyboardArrowRightIcon fontSize="inherit" />
+          </div>
         </a>
       </div>
     </div>
