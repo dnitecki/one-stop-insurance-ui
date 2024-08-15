@@ -1,11 +1,10 @@
-.agency-card {
+.experience-card {
   display: flex;
   position: relative;
   overflow: hidden;
   width: 100%;
   min-height: 15rem;
-  max-height: 15rem;
-  height: fit-content;
+  max-height: 20rem;
   padding: 1rem;
   border-radius: var(--border-radius);
   -webkit-mask-image: radial-gradient(white, black);
@@ -23,30 +22,68 @@
     font-weight: 700;
     font-size: 30px;
   }
+  .experience-text {
+    height: 100%;
+    display: flex;
+    float: left;
+    width: 50%;
+    z-index: 1;
+  }
+  .headshot-container {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    position: static;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    .headshot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30rem;
+      position: absolute;
+      top: -5rem;
+      filter: drop-shadow(var(--shadow));
+      -webkit-filter: drop-shadow(var(--shadow));
+    }
+  }
 }
-.headshot-container {
+.agency-card {
   display: flex;
-  width: 50%;
-  height: 100%;
-  position: static;
-  justify-content: center;
+  position: relative;
+  align-items: center;
   overflow: hidden;
-  align-items: center;
-}
-.headshot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30rem;
-  position: absolute;
-  top: -5rem;
-  filter: drop-shadow(var(--shadow));
-  -webkit-filter: drop-shadow(var(--shadow));
-}
-.agency-text {
-  height: 100%;
-  display: flex;
-  float: left;
-  width: 50%;
-  z-index: 1;
+  width: 100%;
+  min-height: 15rem;
+  max-height: 20rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background: linear-gradient(
+    90deg,
+    rgb(136, 136, 136) 0%,
+    rgb(226, 225, 225) 70%
+  );
+  .agency-text {
+    height: 100%;
+    display: flex;
+    float: right;
+    width: 50%;
+    z-index: 1;
+    text-align: right;
+    color: var(--black);
+  }
+  .icon-container {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    .broker-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+    }
+  }
 }
