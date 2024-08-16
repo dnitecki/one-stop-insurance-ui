@@ -1,5 +1,5 @@
 import "./Header.scss";
-import logo from "../../assets/OneStopIconWhite.png";
+import logo from "../../assets/one-stop-icon-white.png";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LanguageSelector from "../languageSelector/LanguageSelector";

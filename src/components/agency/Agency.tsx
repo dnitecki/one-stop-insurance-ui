@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
-import BeataHeadshot from "../../assets/BeataHeadshot.png";
-import BrokerIcon from "../../assets/BrokerIcon.png";
+import BeataHeadshot from "../../assets/beata-headshot.png";
+import BrokerIcon from "../../assets/broker-icon.png";
 import "./Agency.scss";
 import { ObjectIndexType } from "../../types/types";
 
@@ -60,7 +60,7 @@ const Agency = () => {
       </div>
       <div className="agency-card">
         <div className="icon-container">
-          <img className="broker-icon" src={BrokerIcon} alt="Beata Headshot" />
+          <img className="broker-icon" src={BrokerIcon} alt="Broker Icon" />
         </div>
         <div className="agency-text">
           <h2>{agencyContent[language]}</h2>
