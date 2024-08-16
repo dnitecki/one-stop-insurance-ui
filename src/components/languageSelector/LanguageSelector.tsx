@@ -45,7 +45,7 @@ const LanguageSelector = () => {
   return (
     <div className="selector-container">
       <button
-        className={`selector-button ${isExpanded ? "clicked" : ""}`}
+        className={`selector-button ${isExpanded && "clicked"}`}
         {...getToggleProps({
           onClick: () => handleClick(),
         })}

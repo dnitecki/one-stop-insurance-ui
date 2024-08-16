@@ -37,7 +37,7 @@ export const ContentMapper: ContentMapperType = {
     reviews: {
       header: {
         EN: "Reviews",
-        PL: "Nasze Recenzje",
+        PL: "Recenzje",
         ES: "Reseñas",
       },
       body: {

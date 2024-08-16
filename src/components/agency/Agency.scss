@@ -15,19 +15,21 @@
     rgba(161, 3, 3, 1) 70%
   );
   color: var(--white);
-  h2 {
-    font-weight: 300;
-  }
-  strong {
-    font-weight: 700;
-    font-size: 30px;
-  }
   .experience-text {
     height: 100%;
     display: flex;
     float: left;
     width: 50%;
     z-index: 1;
+
+    h2 {
+      font-weight: 300;
+    }
+    strong {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 0;
+    }
   }
   .headshot-container {
     display: flex;
@@ -61,8 +63,8 @@
   border-radius: var(--border-radius);
   background: linear-gradient(
     90deg,
-    rgb(136, 136, 136) 0%,
-    rgb(226, 225, 225) 70%
+    rgb(214, 214, 214) 0%,
+    var(--primary-gray) 70%
   );
   .agency-text {
     height: 100%;
@@ -72,6 +74,14 @@
     z-index: 1;
     text-align: right;
     color: var(--black);
+    h2 {
+      font-weight: 300;
+    }
+    strong {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 0;
+    }
   }
   .icon-container {
     display: flex;

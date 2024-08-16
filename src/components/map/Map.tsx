@@ -2,8 +2,7 @@ import "./Map.scss";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import icon from "leaflet/dist/images/marker-icon.png";
-import iconShadow from "leaflet/dist/images/marker-shadow.png";
+import icon from "../../assets/favicon.png";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { INFO } from "../../constants/constants";
 
@@ -15,8 +14,7 @@ const Map = () => {
 
   const defaultIcon = L.icon({
     iconUrl: icon,
-    shadowUrl: iconShadow,
-    iconAnchor: [15, 18],
+    iconSize: [35, 35],
   });
 
   L.Marker.prototype.options.icon = defaultIcon;
