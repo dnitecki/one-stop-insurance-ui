@@ -15,6 +15,7 @@ const Map = () => {
   const defaultIcon = L.icon({
     iconUrl: icon,
     iconSize: [35, 35],
+    className: "map-marker",
   });
 
   L.Marker.prototype.options.icon = defaultIcon;
@@ -22,7 +23,7 @@ const Map = () => {
     <div className="map-container">
       <MapContainer
         center={latLong}
-        zoom={14}
+        zoom={15}
         attributionControl={false}
         zoomControl={true}
         scrollWheelZoom={false}
