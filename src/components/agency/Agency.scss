@@ -1,7 +1,9 @@
 .experience-card {
   display: flex;
   position: relative;
+  align-items: center;
   overflow: hidden;
+  height: 100%;
   width: 100%;
   min-height: 15rem;
   max-height: 20rem;
@@ -54,6 +56,7 @@
 .agency-card {
   display: flex;
   position: relative;
+  height: 100%;
   align-items: center;
   overflow: hidden;
   width: 100%;
@@ -70,7 +73,7 @@
     height: 100%;
     display: flex;
     float: right;
-    width: 60%;
+    width: 50%;
     z-index: 1;
     text-align: right;
     color: var(--black);
@@ -86,14 +89,14 @@
   .icon-container {
     display: flex;
     height: 100%;
-    width: 40%;
+    width: 50%;
     justify-content: center;
     align-items: center;
     .broker-icon {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 90%;
+      width: 80%;
     }
   }
 }

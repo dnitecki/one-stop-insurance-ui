@@ -1,6 +1,5 @@
 import { useSearchParams } from "react-router-dom";
 import Carousel from "../../components/carousel/Carousel";
-import Footer from "../../components/footer/Footer";
 import { OverviewMapper } from "../../mappers/overviewMapper";
 import "./Overview.scss";
 import { SeachParamEnum } from "../../enums/languageEnums";
