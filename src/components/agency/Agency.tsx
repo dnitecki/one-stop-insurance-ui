@@ -1,9 +1,10 @@
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import BeataHeadshot from "../../assets/beata-headshot.png";
-import BrokerIcon from "../../assets/broker-icon.png";
+import BrokerAnimation from "../../assets/BrokerAnimation.json";
 import "./Agency.scss";
 import { ObjectIndexType } from "../../types/types";
+import Lottie from "react-lottie-player";
 
 const Agency = () => {
   const [searchParams] = useSearchParams();
@@ -60,7 +61,12 @@ const Agency = () => {
       </div>
       <div className="agency-card">
         <div className="icon-container">
-          <img className="broker-icon" src={BrokerIcon} alt="Broker Icon" />
+          <Lottie
+            animationData={BrokerAnimation}
+            className="player"
+            play
+            loop
+          />
         </div>
         <div className="agency-text">
           <h2>{agencyContent[language]}</h2>

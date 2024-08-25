@@ -73,7 +73,7 @@
     height: 100%;
     display: flex;
     float: right;
-    width: 50%;
+    width: 55%;
     z-index: 1;
     text-align: right;
     color: var(--black);
@@ -84,12 +84,13 @@
       font-weight: 700;
       font-size: 30px;
       line-height: 0;
+      color: var(--primary-red);
     }
   }
   .icon-container {
     display: flex;
     height: 100%;
-    width: 50%;
+    width: 45%;
     justify-content: center;
     align-items: center;
     .broker-icon {

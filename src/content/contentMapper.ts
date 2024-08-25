@@ -1,15 +1,7 @@
-import { LanguageEnumShort } from "../enums/languageEnums";
 import { ContentMapperType } from "../types/types";
 
 export const ContentMapper: ContentMapperType = {
   sections: {
-    partners: {
-      header: {
-        [LanguageEnumShort.EN]: "Partners",
-        [LanguageEnumShort.PL]: "Partnerzy",
-        [LanguageEnumShort.ES]: "Compañeros",
-      },
-    },
     agency: {
       header: {
         EN: "Our Agency",

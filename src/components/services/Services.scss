@@ -42,7 +42,11 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--border-radius);
-  background-color: var(--primary-gray);
+  background: linear-gradient(
+    90deg,
+    rgb(233, 233, 233) 0%,
+    var(--primary-gray) 70%
+  );
   .content-container {
     display: flex;
     height: 100%;
