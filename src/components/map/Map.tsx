@@ -1,10 +1,12 @@
 import "./Map.scss";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import icon from "../../assets/favicon.png";
+import Icon from "../../assets/favicon.png";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { INFO } from "../../constants/constants";
+import { MapContainer } from "react-leaflet/MapContainer";
+import { TileLayer } from "react-leaflet/TileLayer";
+import { Marker } from "react-leaflet/Marker";
 
 const Map = () => {
   const latLong: L.LatLngExpression = {
@@ -13,7 +15,7 @@ const Map = () => {
   };
 
   const defaultIcon = L.icon({
-    iconUrl: icon,
+    iconUrl: Icon,
     iconSize: [35, 35],
     className: "map-marker",
   });

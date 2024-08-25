@@ -1,11 +1,11 @@
 import "./Carousel.scss";
 import { useSearchParams } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import erieLogo from "../../assets/erie-ins.png";
-import progressiveLogo from "../../assets/prog-ins.png";
-import travelersLogo from "../../assets/travelers-ins.png";
-import foremostLogo from "../../assets/foremost-ins.png";
-import openlyLogo from "../../assets/openly-ins.png";
+import ErieLogo from "../../assets/erie-ins.png";
+import ProgressiveLogo from "../../assets/prog-ins.png";
+import TravelersLogo from "../../assets/travelers-ins.png";
+import ForemostLogo from "../../assets/foremost-ins.png";
+import OpenlyLogo from "../../assets/openly-ins.png";
 import { ContentMapper } from "../../content/contentMapper";
 import { SeachParamEnum } from "../../enums/languageEnums";
 
@@ -23,14 +23,14 @@ const Carousel = () => {
       <Marquee gradient={true} gradientWidth={50} speed={30}>
         <div className="scroller-partners">
           <img
-            src={progressiveLogo}
+            src={ProgressiveLogo}
             className="progressive"
             alt="progressive"
           />
-          <img src={erieLogo} className="erie" alt="erie" />
-          <img src={travelersLogo} className="travelers" alt="travelers" />
-          <img src={foremostLogo} className="foremost" alt="foremost" />
-          <img src={openlyLogo} className="openly" alt="openly" />
+          <img src={ErieLogo} className="erie" alt="erie" />
+          <img src={TravelersLogo} className="travelers" alt="travelers" />
+          <img src={ForemostLogo} className="foremost" alt="foremost" />
+          <img src={OpenlyLogo} className="openly" alt="openly" />
         </div>
       </Marquee>
     </div>
