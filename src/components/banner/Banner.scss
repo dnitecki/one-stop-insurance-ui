@@ -2,7 +2,7 @@
   display: flex;
   height: fit-content;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 2rem;
   gap: 3rem;
   width: 100%;
 }
@@ -10,9 +10,15 @@
   display: flex;
   height: 100%;
   width: 100%;
+  gap: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .company-logo {
+    display: flex;
+    width: 80%;
+    max-width: 40rem;
+  }
   .group-photo {
     display: flex;
     height: 100%;

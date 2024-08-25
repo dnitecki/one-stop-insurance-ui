@@ -7,14 +7,14 @@ const Banner = () => {
     <div className="banner-container">
       <div className="banner-content">
         <img
-          className="company-name"
+          className="company-logo"
           src={OneStopLogo}
           alt="One Stop Insurance Agency"
         />
         <img
           className="group-photo"
           src={GroupPhoto}
-          alt="One Stop Insurance Agency"
+          alt="One Stop Insurance Agency Group Photo"
         />
       </div>
     </div>
