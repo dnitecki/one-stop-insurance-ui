@@ -1,7 +1,7 @@
 import "./Map.scss";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import Icon from "../../assets/favicon.png";
+import Icon from "../../assets/png/favicon.png";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { INFO } from "../../constants/constants";
 import { MapContainer } from "react-leaflet/MapContainer";

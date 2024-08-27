@@ -1,10 +1,10 @@
 import "./Carousel.scss";
 import Marquee from "react-fast-marquee";
-import ErieLogo from "../../assets/erie-ins.png";
-import ProgressiveLogo from "../../assets/prog-ins.png";
-import TravelersLogo from "../../assets/travelers-ins.png";
-import ForemostLogo from "../../assets/foremost-ins.png";
-import OpenlyLogo from "../../assets/openly-ins.png";
+import ErieLogo from "../../assets/webp/erie-ins.webp";
+import ProgressiveLogo from "../../assets/webp/prog-ins.webp";
+import TravelersLogo from "../../assets/webp/travelers-ins.webp";
+import ForemostLogo from "../../assets/webp/foremost-ins.webp";
+import OpenlyLogo from "../../assets/webp/openly-ins.webp";
 
 const Carousel = () => {
   return (

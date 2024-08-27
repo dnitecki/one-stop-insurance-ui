@@ -2,7 +2,7 @@ import { LINKS } from "../../constants/constants";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Arrow from "../../assets/arrow.png";
+import Arrow from "../../assets/png/arrow.png";
 import "./SocialFeed.scss";
 
 const SocialFeed = () => {

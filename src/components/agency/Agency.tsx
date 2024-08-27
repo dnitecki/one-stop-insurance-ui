@@ -1,8 +1,8 @@
+import "./Agency.scss";
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
-import BeataHeadshot from "../../assets/beata-headshot.png";
-import BrokerAnimation from "../../assets/BrokerAnimation.json";
-import "./Agency.scss";
+import BeataHeadshot from "../../assets/webp/beata-headshot.webp";
+import BrokerAnimation from "../../assets/json/BrokerAnimation.json";
 import { ObjectIndexType } from "../../types/types";
 import Lottie from "react-lottie-player";
 

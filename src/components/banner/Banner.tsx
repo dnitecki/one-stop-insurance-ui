@@ -1,6 +1,6 @@
 import "./Banner.scss";
-import GroupPhoto from "../../assets/group-photo.png";
-import OneStopLogo from "../../assets/one-stop-logo.png";
+import GroupPhoto from "../../assets/webp/group-photo.webp";
+import OneStopLogo from "../../assets/png/one-stop-logo.png";
 
 const Banner = () => {
   return (
