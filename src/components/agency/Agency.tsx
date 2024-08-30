@@ -13,13 +13,13 @@ const Agency = () => {
   const experienceContent: ObjectIndexType = {
     EN: (
       <>
-        has more than <strong>30 years</strong> of combined insurance
+        We have more than <strong>30 years</strong> of combined insurance
         experience.
       </>
     ),
     PL: (
       <>
-        ma ponad <strong>30 lat</strong> wspólnego doświadczenia z
+        My mamy ponad <strong>30 lat</strong> wspólnego doświadczenia z
         ubezpieczeniem.
       </>
     ),
