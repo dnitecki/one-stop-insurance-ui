@@ -5,7 +5,7 @@ import "./Reviews.scss";
 import StarIcon from "@mui/icons-material/Star";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapper } from "../../content/contentMapper";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Reviews = () => {
   const [searchParams] = useSearchParams();
@@ -13,7 +13,6 @@ const Reviews = () => {
   const content = ContentMapper?.sections?.reviews?.body[language];
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [isFading, setIsFading] = useState<boolean>(true);
-  const ReviewCard = useRef(null);
 
   useEffect(() => {
     const fadeInDuration = 500;
