@@ -15,16 +15,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  section {
-    align-items: flex-start;
+  .overview-section {
     display: flex;
     flex-direction: column;
     width: 60%;
     padding-bottom: 3rem;
     .section-heading {
       z-index: 2;
-      padding: 10px 15px;
-      text-align: right;
+      justify-content: center;
+      padding: 1rem;
+      align-items: center;
+      text-align: center;
       top: var(--header-height);
       background-color: rgba(255, 255, 255, 0.7);
     }
@@ -42,19 +43,9 @@
 @media (max-width: 700px) {
   .overview-content {
     width: 100%;
-    section {
+    .overview-section {
       flex-direction: column;
       width: 100%;
-      .section-heading {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        padding: 5px 0px 5px 1rem;
-        text-align: left;
-        width: 100%;
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px);
-      }
     }
   }
 }

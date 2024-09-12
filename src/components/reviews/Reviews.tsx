@@ -18,7 +18,7 @@ const Reviews = () => {
 
   useEffect(() => {
     const fadeInDuration = 400;
-    const fadeOutDuration = 400;
+    const fadeOutDuration = 300;
     const displayDuration = 4000;
 
     const timer = setTimeout(() => {
@@ -39,10 +39,6 @@ const Reviews = () => {
   return (
     <div className="reviews-container">
       <div className="google-container">
-        <div className="google-text">
-          <h2>4.8 Stars on</h2>
-        </div>
-        <img className="google-icon" src={GoogleIcon} alt="google icon" />
         <div className="stars">
           <StarIcon fontSize="inherit" />
           <StarIcon fontSize="inherit" />
@@ -50,6 +46,10 @@ const Reviews = () => {
           <StarIcon fontSize="inherit" />
           <StarIcon fontSize="inherit" />
         </div>
+        <div className="google-text">
+          <h2>4.8 Stars on</h2>
+        </div>
+        <img className="google-icon" src={GoogleIcon} alt="google icon" />
       </div>
       <div className="review-container">
         <div
@@ -68,12 +68,6 @@ const Reviews = () => {
           </div>
         </div>
       </div>
-      <a href={LINKS.FB} target="_blank" rel="noreferrer">
-        <button className="review-more-btn">
-          <p>{content}</p>
-          <CreateIcon fontSize="medium" />
-        </button>
-      </a>
     </div>
   );
 };

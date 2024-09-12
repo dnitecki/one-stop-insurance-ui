@@ -16,7 +16,11 @@ export const Overview = () => {
         <Banner />
         <Carousel />
         {OverviewMapper.map((section) => (
-          <section id={section.id} key={section.id}>
+          <section
+            id={section.id}
+            key={section.id}
+            className="overview-section"
+          >
             <div className="section-heading">
               <h1>{ContentMapper?.sections[section.id]?.header[language]}</h1>
             </div>

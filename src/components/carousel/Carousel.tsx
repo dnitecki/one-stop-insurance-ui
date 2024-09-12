@@ -8,7 +8,7 @@ import OpenlyLogo from "../../assets/webp/openly-ins.webp";
 
 const Carousel = () => {
   return (
-    <div className="scroller-container">
+    <section className="scroller-container">
       <Marquee gradient={true} gradientWidth={50} speed={30}>
         <div className="scroller-partners">
           <img
@@ -22,7 +22,7 @@ const Carousel = () => {
           <img src={OpenlyLogo} className="openly" alt="openly" />
         </div>
       </Marquee>
-    </div>
+    </section>
   );
 };
 

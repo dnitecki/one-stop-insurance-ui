@@ -18,16 +18,17 @@
     align-items: center;
     padding-bottom: 0.5rem;
     h2 {
-      font-weight: 400;
+      font-weight: 300;
+      font-size: 22px;
     }
   }
   .google-icon {
-    height: 4.5rem;
+    height: 4rem;
     width: auto;
   }
   .stars {
-    color: rgb(253, 207, 4);
-    font-size: 60px;
+    color: var(--star-yellow);
+    font-size: 40px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -37,7 +38,7 @@
 .review-container {
   display: flex;
   width: 100%;
-  height: 10rem;
+  min-height: 12rem;
 }
 .review-card {
   display: flex;
@@ -56,13 +57,6 @@
   border-radius: var(--border-radius);
   opacity: 0;
   transition: opacity 0.5s ease-in-out; /* Smooth fade-in and fade-out */
-  a {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
 }
 .review-card.fade-in {
   opacity: 1;
@@ -75,7 +69,7 @@
   align-items: center;
 }
 .star-icon {
-  color: rgb(253, 207, 4);
+  color: var(--star-yellow);
 }
 .review-content {
   display: flex;
@@ -92,22 +86,5 @@
   justify-content: end;
   h3 {
     font-weight: 400;
-  }
-}
-.review-more-btn {
-  display: flex;
-  height: fit-content;
-  width: fit-content;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: var(--primary-red);
-  padding: 0.5rem 1rem;
-  margin-top: 2rem;
-  border-radius: var(--border-radius);
-  color: var(--white);
-  p {
-    display: flex;
-    font-size: 18px;
   }
 }

@@ -4,7 +4,7 @@ import OneStopLogo from "../../assets/png/one-stop-logo.png";
 
 const Banner = () => {
   return (
-    <div className="banner-container">
+    <section className="banner-container">
       <div className="banner-content">
         <img
           className="company-logo"
@@ -17,7 +17,7 @@ const Banner = () => {
           alt="One Stop Insurance Agency Group Photo"
         />
       </div>
-    </div>
+    </section>
   );
 };
 
