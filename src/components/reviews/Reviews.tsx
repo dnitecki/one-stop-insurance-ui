@@ -6,6 +6,7 @@ import StarIcon from "@mui/icons-material/Star";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapper } from "../../content/contentMapper";
 import { useEffect, useState } from "react";
+import GoogleIcon from "../../assets/webp/google-icon.webp";
 
 const Reviews = () => {
   const [searchParams] = useSearchParams();
@@ -15,8 +16,8 @@ const Reviews = () => {
   const [isFading, setIsFading] = useState<boolean>(true);
 
   useEffect(() => {
-    const fadeInDuration = 500;
-    const fadeOutDuration = 500;
+    const fadeInDuration = 400;
+    const fadeOutDuration = 400;
     const displayDuration = 4000;
 
     const timer = setTimeout(() => {
@@ -36,6 +37,19 @@ const Reviews = () => {
 
   return (
     <div className="reviews-container">
+      <div className="google-container">
+        <div className="google-text">
+          <h2>4.8 Stars on</h2>
+        </div>
+        <img className="google-icon" src={GoogleIcon} alt="google icon" />
+        <div className="stars">
+          <StarIcon fontSize="inherit" />
+          <StarIcon fontSize="inherit" />
+          <StarIcon fontSize="inherit" />
+          <StarIcon fontSize="inherit" />
+          <StarIcon fontSize="inherit" />
+        </div>
+      </div>
       <div className="review-container">
         <div
           className={`review-card ${isFading && "fade-in"}`}

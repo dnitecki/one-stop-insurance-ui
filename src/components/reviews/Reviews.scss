@@ -5,6 +5,35 @@
   gap: 1rem;
   align-items: center;
 }
+.google-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  .google-text {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    h2 {
+      font-weight: 400;
+    }
+  }
+  .google-icon {
+    height: 4.5rem;
+    width: auto;
+  }
+  .stars {
+    color: rgb(253, 207, 4);
+    font-size: 60px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
 .review-container {
   display: flex;
   width: 100%;
