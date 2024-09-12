@@ -100,8 +100,10 @@
   width: fit-content;
   justify-content: flex-end;
   align-items: center;
+  gap: 0.5rem;
   background-color: var(--primary-red);
   padding: 0.5rem 1rem;
+  margin-top: 2rem;
   border-radius: var(--border-radius);
   color: var(--white);
   p {

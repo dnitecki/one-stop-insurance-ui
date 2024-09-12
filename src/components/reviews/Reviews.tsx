@@ -3,6 +3,7 @@ import { LINKS } from "../../constants/constants";
 import { ReviewMapper } from "../../mappers/reviewMapper";
 import "./Reviews.scss";
 import StarIcon from "@mui/icons-material/Star";
+import CreateIcon from "@mui/icons-material/Create";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapper } from "../../content/contentMapper";
 import { useEffect, useState } from "react";
@@ -70,6 +71,7 @@ const Reviews = () => {
       <a href={LINKS.FB} target="_blank" rel="noreferrer">
         <button className="review-more-btn">
           <p>{content}</p>
+          <CreateIcon fontSize="medium" />
         </button>
       </a>
     </div>
