@@ -1,9 +1,7 @@
 import { useSearchParams } from "react-router-dom";
-import { LINKS } from "../../constants/constants";
 import { ReviewMapper } from "../../mappers/reviewMapper";
 import "./Reviews.scss";
 import StarIcon from "@mui/icons-material/Star";
-import CreateIcon from "@mui/icons-material/Create";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapper } from "../../content/contentMapper";
 import { useEffect, useState } from "react";
@@ -18,7 +16,7 @@ const Reviews = () => {
 
   useEffect(() => {
     const fadeInDuration = 400;
-    const fadeOutDuration = 300;
+    const fadeOutDuration = 400;
     const displayDuration = 4000;
 
     const timer = setTimeout(() => {
@@ -52,16 +50,42 @@ const Reviews = () => {
         <img className="google-icon" src={GoogleIcon} alt="google icon" />
       </div>
       <div className="review-container">
-        <div
-          className={`review-card ${isFading && "fade-in"}`}
-          key={activeReview?.name}
-        >
-          <div className="review-rating">
-            <StarIcon className="star-icon" fontSize="inherit" />
-            <h3>{activeReview?.rating.toFixed(1)}</h3>
-          </div>
-          <div className="review-content">
-            <p>{activeReview?.review}</p>
+        <div className="review-card">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 60 60"
+            xmlns="http://www.w3.org/2000/svg"
+            className="octagon-svg"
+          >
+            <path
+              className="one-stop-loader"
+              d="M10,2.5 L20,2.5 L27.5,10 L27.5,20 L20,27.5 L10,27.5 L2.5,20 L2.5,10 Z"
+              stroke-width="4"
+              fill="transparent"
+              stroke-dasharray="85"
+              stroke-dashoffset="85"
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                from="85"
+                to="0"
+                dur="4.4s"
+                repeatCount="indefinite"
+              />
+            </path>
+          </svg>
+          <div
+            className={`review-card-content ${isFading && "fade-in"}`}
+            key={activeReview?.name}
+          >
+            <div className="review-rating">
+              <StarIcon className="star-icon" fontSize="inherit" />
+              <h3>{activeReview?.rating.toFixed(1)}</h3>
+            </div>
+            <div className="review-content">
+              <p>{activeReview?.review}</p>
+            </div>
             <div className="review-name">
               <h3>-{activeReview?.name}</h3>
             </div>
