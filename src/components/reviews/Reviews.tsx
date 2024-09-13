@@ -37,6 +37,10 @@ const Reviews = () => {
   return (
     <div className="reviews-container">
       <div className="google-container">
+        <div className="google-text">
+          <h2>4.8 Stars on</h2>
+        </div>
+        <img className="google-icon" src={GoogleIcon} alt="google icon" />
         <div className="stars">
           <StarIcon fontSize="inherit" />
           <StarIcon fontSize="inherit" />
@@ -44,11 +48,8 @@ const Reviews = () => {
           <StarIcon fontSize="inherit" />
           <StarIcon fontSize="inherit" />
         </div>
-        <div className="google-text">
-          <h2>4.8 Stars on</h2>
-        </div>
-        <img className="google-icon" src={GoogleIcon} alt="google icon" />
       </div>
+
       <div className="review-container">
         <div className="review-card">
           <svg
@@ -63,12 +64,13 @@ const Reviews = () => {
               d="M10,2.5 L20,2.5 L27.5,10 L27.5,20 L20,27.5 L10,27.5 L2.5,20 L2.5,10 Z"
               stroke-width="4"
               fill="transparent"
-              stroke-dasharray="85"
-              stroke-dashoffset="85"
+              stroke-dasharray="82"
+              stroke-dashoffset="82"
+              strokeLinecap="round"
             >
               <animate
                 attributeName="stroke-dashoffset"
-                from="85"
+                from="82"
                 to="0"
                 dur="4.4s"
                 repeatCount="indefinite"
