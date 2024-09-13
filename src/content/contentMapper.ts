@@ -33,9 +33,9 @@ export const ContentMapper: ContentMapperType = {
         ES: "Reseñas",
       },
       body: {
-        EN: "Leave a Review!",
-        PL: "Zostaw Recenzję!",
-        ES: "!Deja una reseña!",
+        EN: "4.8 Stars on",
+        PL: "4,8 gwiazdki na",
+        ES: "4,8 estrellas en",
       },
     },
     contact: {
