@@ -5,7 +5,6 @@
   gap: 1rem;
   align-items: center;
 }
-
 .google-container {
   display: flex;
   flex-direction: column;
@@ -26,14 +25,6 @@
   .google-icon {
     height: 4rem;
     width: auto;
-  }
-  .stars {
-    color: var(--star-yellow);
-    font-size: 40px;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: flex-start;
   }
 }
 .review-container {
@@ -57,20 +48,6 @@
   );
   border-radius: var(--border-radius);
   transition: opacity 0.5s ease-in-out;
-
-  .octagon-svg {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 1rem;
-    right: 0;
-    z-index: 2;
-  }
-  .one-stop-loader {
-    stroke: var(--primary-red);
-    display: flex;
-  }
 }
 .review-card.fade-in {
   opacity: 1;

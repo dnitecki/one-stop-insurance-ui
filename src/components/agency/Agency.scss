@@ -2,15 +2,12 @@
   display: flex;
   position: relative;
   align-items: center;
-  overflow: hidden;
   height: 100%;
   width: 100%;
-  min-height: 15rem;
+  min-height: 12rem;
   max-height: 20rem;
   padding: 1rem;
   border-radius: var(--border-radius);
-  -webkit-mask-image: radial-gradient(white, black);
-  mask-image: radial-gradient(white, black);
   background: linear-gradient(
     90deg,
     rgba(204, 4, 4, 1) 0%,
@@ -21,10 +18,10 @@
     height: 100%;
     display: flex;
     float: left;
-    width: 50%;
+    width: 70%;
     z-index: 1;
-
     h2 {
+      display: inline;
       font-weight: 300;
     }
     strong {
@@ -35,19 +32,17 @@
   }
   .headshot-container {
     display: flex;
-    width: 50%;
-    height: 100%;
-    position: static;
+    height: fit-content;
+    position: absolute;
     justify-content: center;
-    overflow: hidden;
     align-items: center;
+    bottom: 0;
+    right: 0rem;
     .headshot {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 20rem;
-      position: absolute;
-      top: -1rem;
+      height: 14rem;
       filter: drop-shadow(var(--shadow));
       -webkit-filter: drop-shadow(var(--shadow));
     }
