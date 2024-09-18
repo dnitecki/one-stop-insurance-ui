@@ -12,21 +12,21 @@ const Agency = () => {
 
   const experienceContent: ObjectIndexType = {
     EN: (
-      <>
+      <span>
         We have more than <strong>30 years</strong> of combined insurance
         experience.
-      </>
+      </span>
     ),
     PL: (
-      <>
+      <span>
         My mamy ponad <strong>30 lat</strong> wspólnego doświadczenia z
         ubezpieczeniem.
-      </>
+      </span>
     ),
     ES: (
-      <>
+      <span>
         más de <strong>30 años</strong> de experiencia combinada en seguros.
-      </>
+      </span>
     ),
   };
   const agencyContent: ObjectIndexType = {
@@ -51,11 +51,17 @@ const Agency = () => {
   return (
     <>
       <div className="experience-card">
-        <div className="experience-text">
-          <h2>{experienceContent[language]}</h2>
-        </div>
-        <div className="headshot-container">
-          <img className="headshot" src={BeataHeadshot} alt="Beata Headshot" />
+        <div className="experience-container">
+          <div className="experience-text">
+            <h2>{experienceContent[language]}</h2>
+          </div>
+          <div className="headshot-container">
+            <img
+              className="headshot"
+              src={BeataHeadshot}
+              alt="Beata Headshot"
+            />
+          </div>
         </div>
       </div>
       <div className="agency-card">

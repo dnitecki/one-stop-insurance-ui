@@ -7,23 +7,23 @@
 }
 .google-container {
   display: flex;
-  flex-direction: column;
   width: 100%;
   justify-content: center;
+  gap: 0.5rem;
   align-items: center;
   .google-text {
     display: flex;
-    width: 100%;
+    width: fit-content;
     justify-content: center;
     align-items: center;
     padding-bottom: 0.5rem;
     h2 {
-      font-weight: 300;
+      font-weight: 400;
       font-size: 24px;
     }
   }
   .google-icon {
-    height: 4rem;
+    height: 3rem;
     width: auto;
   }
 }
@@ -99,5 +99,13 @@
   align-items: flex-end;
   h3 {
     font-weight: 400;
+  }
+}
+@media (max-width: 700px) {
+  .google-container {
+    .google-icon {
+      height: 2rem;
+      width: auto;
+    }
   }
 }
