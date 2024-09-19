@@ -16,21 +16,34 @@
   width: 100%;
   height: fit-content;
 }
-.contact-option {
+.contact-option-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: var(--secondary-red);
-  border-radius: var(--border-radius);
-  padding: 1rem 0rem;
-  font-size: 24px;
   gap: 0.5rem;
-  h2 {
+  .contact-option {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--secondary-red);
+    border-radius: var(--border-radius);
+    padding: 1rem 0rem;
+    font-size: 24px;
     gap: 0.5rem;
-    font-size: 22px;
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 22px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .contact-option-container {
+    flex-direction: column;
   }
 }
