@@ -17,7 +17,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="card">
+      <div className="contact-card">
         <div className="contact-option-container">
           <a className="contact-option" href={INFO.PHONE_HREF}>
             <PhoneIcon fontSize="inherit" />
@@ -28,7 +28,7 @@ const Contact = () => {
             <h2>Email</h2>
           </a>
         </div>
-        <h3>{content?.or}</h3>
+        <hr></hr>
         <div className="contact-container">
           <ContactForm {...content} />
         </div>

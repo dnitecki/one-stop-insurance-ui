@@ -9,24 +9,3 @@
   height: 100%;
   width: 100%;
 }
-.card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-content: center;
-  gap: 0.5rem;
-  overflow: hidden;
-  align-items: center;
-  width: 100%;
-  height: fit-content;
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  background-color: var(--primary-red);
-  color: var(--white);
-}
-
-@media (max-width: 700px) {
-  .card {
-    width: 100%;
-  }
-}

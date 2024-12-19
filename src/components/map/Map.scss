@@ -16,7 +16,6 @@
   width: 100%;
   flex-direction: column;
   gap: 0.5rem;
-
   a {
     display: flex;
     max-width: 100%;
@@ -24,10 +23,16 @@
     font-size: 28px;
     align-items: center;
     background-color: var(--primary-red);
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
     color: var(--white);
+    transition: background-color 200ms ease;
+  }
+  a:hover {
+    background-color: var(--secondary-red);
   }
 }
 .info-container {

@@ -8,7 +8,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
   z-index: 0;
 }
 .scroller-partners {
@@ -17,8 +16,8 @@
   height: 100%;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  padding-right: 1.5rem;
+  gap: 2rem;
+  padding-right: 2rem;
   .travelers {
     display: flex;
     height: 100%;
@@ -58,5 +57,11 @@
     border: 0;
     height: 2px;
     width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .scroller-partners {
+    gap: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
