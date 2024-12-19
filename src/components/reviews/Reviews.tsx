@@ -15,7 +15,7 @@ const Reviews = () => {
   const [isFading, setIsFading] = useState<boolean>(true);
 
   useEffect(() => {
-    const fadeInDuration = 400;
+    const fadeInDuration = 300;
     const fadeOutDuration = 400;
     const displayDuration = 5000;
 

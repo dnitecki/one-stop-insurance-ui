@@ -76,15 +76,21 @@
   align-items: center;
   text-align: center;
   padding: 1rem 1rem;
-  margin: 1rem 0;
+  margin: 1rem 0 0 0;
   background-color: var(--secondary-red);
   border-radius: var(--border-radius);
   color: var(--white);
   column-gap: 0.5rem;
+  outline: 2px solid transparent;
+  transition: outline 200ms ease;
   p {
     display: flex;
     font-size: 18px;
   }
+}
+.form-submit-btn:hover,
+.form-submit-btn:focus {
+  outline: 2px solid var(--white);
 }
 @media (max-width: 700px) {
   .form-submit-btn {

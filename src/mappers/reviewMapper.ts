@@ -10,7 +10,7 @@ export const ReviewMapper: ReviewMapperType[] = [
   {
     rating: 5.0,
     review:
-      "Highly recommended insurance agency. Everyone here is very helpful and friendly. I relocated and they have been amazing with helping me get all my insurance needs straight.",
+      "Highly recommended insurance agency. I relocated and they have been amazing with helping me get all my insurance needs straight.",
     name: "Jes S.",
   },
   {

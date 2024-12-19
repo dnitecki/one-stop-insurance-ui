@@ -19,11 +19,11 @@ const Contact = () => {
     <>
       <div className="contact-card">
         <div className="contact-option-container">
-          <a className="contact-option" href={INFO.PHONE_HREF}>
+          <a className="contact-option-btn" href={INFO.PHONE_HREF}>
             <PhoneIcon fontSize="inherit" />
             <h2>{INFO.PHONE}</h2>
           </a>
-          <a className="contact-option" href={INFO.EMAIL_HREF}>
+          <a className="contact-option-btn" href={INFO.EMAIL_HREF}>
             <EmailIcon fontSize="inherit" />
             <h2>Email</h2>
           </a>

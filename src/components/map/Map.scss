@@ -40,7 +40,7 @@
   width: 100%;
   flex-direction: column;
   p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .info-icon {
@@ -51,4 +51,11 @@
 .map-marker {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   border-radius: var(--border-radius);
+}
+@media (max-width: 700px) {
+  .info-container {
+    p {
+      font-size: 16px;
+    }
+  }
 }

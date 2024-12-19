@@ -21,10 +21,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
   width: 100%;
   gap: 1rem;
-  .contact-option {
+  .contact-option-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +34,8 @@
     padding: 1rem 0rem;
     font-size: 24px;
     gap: 0.5rem;
+    outline: 2px solid transparent;
+    transition: outline 200ms ease;
     h2 {
       display: flex;
       align-items: center;
@@ -42,6 +43,10 @@
       gap: 0.5rem;
       font-size: 22px;
     }
+  }
+  .contact-option-btn:hover,
+  .contact-option-btn:focus {
+    outline: 2px solid var(--white);
   }
 }
 .contact-card {
@@ -54,7 +59,7 @@
   align-items: center;
   width: 100%;
   height: fit-content;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: var(--border-radius);
   background-color: var(--primary-red);
   color: var(--white);
@@ -68,5 +73,6 @@
 @media (max-width: 700px) {
   .contact-card {
     width: 100%;
+    padding: 1rem;
   }
 }
