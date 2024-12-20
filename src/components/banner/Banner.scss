@@ -39,17 +39,17 @@
       object-position: center;
       opacity: 0.3;
     }
-  }
-  .group-photo {
-    display: flex;
-    position: absolute;
-    height: 100%;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+    .group-photo {
+      display: flex;
+      position: absolute;
+      height: 100%;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
   }
 }
