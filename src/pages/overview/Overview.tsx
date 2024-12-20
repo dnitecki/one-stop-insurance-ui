@@ -12,8 +12,8 @@ export const Overview = () => {
 
   return (
     <div className="overview-container" id="overview-container">
+      <Banner />
       <div className="overview-content">
-        <Banner />
         <Carousel />
         {OverviewMapper.map((section) => (
           <section
