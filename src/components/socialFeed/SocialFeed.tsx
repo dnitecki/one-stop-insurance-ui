@@ -40,7 +40,8 @@ const SocialFeed = () => {
         width="100%"
         height="500"
         src="https://www.instagram.com/onestopinsuranceagency/embed/"
-      ></iframe>
+        title="instagram-feed"
+      />
     </div>
   );
 };
