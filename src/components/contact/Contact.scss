@@ -23,19 +23,20 @@
   align-items: center;
   width: 100%;
   gap: 1rem;
+  color: var(--white);
   .contact-option-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: fit-content;
-    background-color: var(--secondary-red);
+    background-color: var(--primary-red);
     border-radius: var(--border-radius);
     padding: 1rem 0rem;
     font-size: 24px;
     gap: 0.5rem;
     outline: 2px solid transparent;
-    transition: outline 200ms ease;
+    transition: all 200ms ease;
     h2 {
       display: flex;
       align-items: center;
@@ -47,6 +48,7 @@
   .contact-option-btn:hover,
   .contact-option-btn:focus {
     outline: 2px solid var(--white);
+    background-color: var(--secondary-red);
   }
 }
 .contact-card {
