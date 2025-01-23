@@ -1,4 +1,4 @@
-import { ContentMapperType } from "../types/types";
+import { ContentMapperType, ObjectIndexType } from "../types/types";
 
 export const ContentMapper: ContentMapperType = {
   sections: {
@@ -41,7 +41,7 @@ export const ContentMapper: ContentMapperType = {
     contact: {
       header: {
         EN: "Contact Us",
-        PL: "Skontaktuj",
+        PL: "Kontakt",
         ES: "Contáctenos",
       },
       body: {
@@ -90,4 +90,41 @@ export const ContentMapper: ContentMapperType = {
       },
     },
   },
+};
+export const experienceContent: ObjectIndexType = {
+  EN: (
+    <span>
+      We have more than <strong>30 years</strong> of combined insurance
+      experience.
+    </span>
+  ),
+  PL: (
+    <span>
+      Mamy ponad <strong>30 lat</strong> wspólnego doświadczenia z
+      ubezpieczeniem.
+    </span>
+  ),
+  ES: (
+    <span>
+      más de <strong>30 años</strong> de experiencia combinada en seguros.
+    </span>
+  ),
+};
+export const agencyContent: ObjectIndexType = {
+  EN: (
+    <>
+      Your <strong>One Stop</strong> Shop for smart savings and smarter
+      coverage.
+    </>
+  ),
+  PL: (
+    <>
+      Lepsze ubezpieczenie w niższej cenie w <strong>Jednym</strong> miejscu
+    </>
+  ),
+  ES: (
+    <>
+      Lugar <strong>único</strong> para ahorros inteligentes y mejor protección.
+    </>
+  ),
 };

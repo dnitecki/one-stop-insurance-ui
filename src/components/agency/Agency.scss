@@ -19,36 +19,38 @@
     max-height: 20rem;
     align-items: center;
     width: 100%;
+    overflow-y: visible;
     .experience-text {
       height: 100%;
       padding: 1rem;
       display: flex;
-
       float: left;
       width: 65%;
       z-index: 1;
       h2 {
-        display: inline-block;
-        font-weight: 300;
+        font-weight: 400;
+        font-size: 34px;
       }
       strong {
         font-weight: 700;
-        font-size: 30px;
+        font-size: 40px;
         line-height: 0;
       }
     }
     .headshot-container {
       display: flex;
-      height: auto;
-      width: auto;
+      height: 18rem;
+      width: 13rem;
+      overflow: hidden;
       position: absolute;
       bottom: 0;
       right: -1rem;
       .headshot {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 20rem;
+        object-fit: cover;
+        clip-path: inset(0 1px 0 0);
+        height: 100%;
+        width: 100%;
         filter: drop-shadow(var(--shadow));
         -webkit-filter: drop-shadow(var(--shadow));
       }
@@ -80,11 +82,12 @@
     text-align: right;
     color: var(--black);
     h2 {
-      font-weight: 300;
+      font-weight: 400;
+      font-size: 34px;
     }
     strong {
       font-weight: 700;
-      font-size: 30px;
+      font-size: 40px;
       line-height: 0;
       color: var(--primary-red);
     }
@@ -100,6 +103,30 @@
       justify-content: center;
       align-items: center;
       width: 80%;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .agency-card {
+    .agency-text {
+      h2 {
+        font-size: 26px;
+      }
+      strong {
+        font-size: 30px;
+      }
+    }
+  }
+  .experience-card {
+    .experience-container {
+      .experience-text {
+        h2 {
+          font-size: 26px;
+        }
+        strong {
+          font-size: 30px;
+        }
+      }
     }
   }
 }

@@ -3,51 +3,13 @@ import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import BeataHeadshot from "../../assets/webp/beata-headshot.webp";
 import BrokerAnimation from "../../assets/json/BrokerAnimation.json";
-import { ObjectIndexType } from "../../types/types";
 import Lottie from "react-lottie-player";
+import { agencyContent, experienceContent } from "../../content/contentMapper";
 
 const Agency = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
 
-  const experienceContent: ObjectIndexType = {
-    EN: (
-      <span>
-        We have more than <strong>30 years</strong> of combined insurance
-        experience.
-      </span>
-    ),
-    PL: (
-      <span>
-        My mamy ponad <strong>30 lat</strong> wspólnego doświadczenia z
-        ubezpieczeniem.
-      </span>
-    ),
-    ES: (
-      <span>
-        más de <strong>30 años</strong> de experiencia combinada en seguros.
-      </span>
-    ),
-  };
-  const agencyContent: ObjectIndexType = {
-    EN: (
-      <>
-        Your <strong>One Stop</strong> Shop for smart savings and smarter
-        coverage.
-      </>
-    ),
-    PL: (
-      <>
-        <strong>Jedno</strong> miejsce na sprytne oszczędności i lepszą ochronę.
-      </>
-    ),
-    ES: (
-      <>
-        Lugar <strong>único</strong> para ahorros inteligentes y mejor
-        protección.
-      </>
-    ),
-  };
   return (
     <>
       <div className="experience-card">
