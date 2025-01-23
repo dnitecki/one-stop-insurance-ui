@@ -29,12 +29,13 @@
       z-index: 1;
       h2 {
         font-weight: 400;
-        font-size: 34px;
+        font-size: 32px;
       }
       strong {
         font-weight: 700;
-        font-size: 40px;
+        font-size: 38px;
         line-height: 0;
+        color: var(--white);
       }
     }
     .headshot-container {
@@ -83,11 +84,11 @@
     color: var(--black);
     h2 {
       font-weight: 400;
-      font-size: 34px;
+      font-size: 32px;
     }
     strong {
       font-weight: 700;
-      font-size: 40px;
+      font-size: 38px;
       line-height: 0;
       color: var(--primary-red);
     }

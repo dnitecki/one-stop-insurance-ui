@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 20rem;
+  height: 30rem;
   margin-top: 3rem;
   z-index: 0;
 }
@@ -54,6 +54,9 @@
   border-radius: var(--border-radius);
 }
 @media (max-width: 700px) {
+  .map-container {
+    height: 20rem;
+  }
   .info-container {
     p {
       font-size: 16px;

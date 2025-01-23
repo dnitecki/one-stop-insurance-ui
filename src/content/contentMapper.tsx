@@ -5,7 +5,7 @@ export const ContentMapper: ContentMapperType = {
     agency: {
       header: {
         EN: "Our Agency",
-        PL: "Nasza Agencia",
+        PL: "Nasza Agencja",
         ES: "Nuestra Agencia",
       },
       body: {
