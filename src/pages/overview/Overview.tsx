@@ -1,12 +1,12 @@
-import { useSearchParams } from "react-router-dom";
-import Carousel from "../../components/carousel/Carousel";
-import { OverviewMapper } from "../../mappers/overviewMapper";
 import "./Overview.scss";
+import Carousel from "../../components/carousel/Carousel";
+import Banner from "../../components/banner/Banner";
+import { useSearchParams } from "react-router-dom";
+import { OverviewMapper } from "../../mappers/overviewMapper";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapper } from "../../content/contentMapper";
-import Banner from "../../components/banner/Banner";
 
-export const Overview = () => {
+const Overview = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
 
@@ -33,3 +33,4 @@ export const Overview = () => {
     </div>
   );
 };
+export default Overview;

@@ -1,7 +1,7 @@
-import { Overview } from "./pages/overview/Overview";
 import "./App.scss";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import Overview from "./pages/overview/Overview";
 
 export default function App() {
   return (
