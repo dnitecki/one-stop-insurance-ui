@@ -8,27 +8,22 @@ import { OverviewMapperType } from "../types/types";
 export const OverviewMapper: OverviewMapperType[] = [
   {
     id: "agency",
-    header: "Our Agency",
     Component: Agency,
   },
   {
     id: "services",
-    header: "Our Services",
     Component: Services,
   },
   {
     id: "contact",
-    header: "Contact Us",
     Component: Contact,
   },
   {
     id: "reviews",
-    header: "What our Clients Think",
     Component: Reviews,
   },
   {
     id: "feed",
-    header: "Give Us a Follow!",
     Component: SocialFeed,
   },
 ];
