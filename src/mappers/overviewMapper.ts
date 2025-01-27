@@ -23,7 +23,7 @@ export const OverviewMapper: OverviewMapperType[] = [
     Component: Reviews,
   },
   {
-    id: "feed",
+    id: "social-feed",
     Component: SocialFeed,
   },
 ];

@@ -14,7 +14,7 @@ const LanguageSelector = () => {
 
   const handleClick = () => {
     setExpanded(!isExpanded);
-    const overviewContainer = document.getElementById("overview-container");
+    const overviewContainer = document.getElementById("page-container");
     overviewContainer.addEventListener(
       "click",
       () => {
@@ -26,10 +26,6 @@ const LanguageSelector = () => {
       true
     );
   };
-
-  useEffect(() => {
-    setInitLanguage();
-  });
   const languageParam = searchParams.get(SeachParamEnum.LANG);
   const setInitLanguage = () => {
     if (!languageParam || !(languageParam in LanguageEnumShort)) {
@@ -41,7 +37,9 @@ const LanguageSelector = () => {
     setExpanded(!isExpanded);
     setSearchParams({ [SeachParamEnum.LANG]: language });
   };
-
+  useEffect(() => {
+    setInitLanguage();
+  });
   return (
     <div className="selector-container">
       <button
