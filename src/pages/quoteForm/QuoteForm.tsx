@@ -1,7 +1,7 @@
 import "./QuoteForm.scss";
 
 const QuoteForm = () => {
-  return <div>QuoteForm</div>;
+  return <div className="quote-container">QuoteForm</div>;
 };
 
 export default QuoteForm;

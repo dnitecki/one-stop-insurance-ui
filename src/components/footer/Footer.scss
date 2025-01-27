@@ -1,7 +1,7 @@
 .footer-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: var(--footer-height);
   width: 100%;
   justify-content: flex-end;
 }

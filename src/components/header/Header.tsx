@@ -11,17 +11,19 @@ const Header = () => {
   return (
     <nav className="header-container">
       <div className="header-logo">
-        <img src={logo} alt="one stop logo" />
+        <Link to="/" title="Home">
+          <img src={logo} alt="one stop logo" />
+        </Link>
       </div>
       <div className="header-options">
-        <Link to="quote">
+        <Link to="quote" title="Get A Quote">
           <FactCheckIcon fontSize="inherit" />
-          <p>Quote Form</p>
+          <p>Get A Quote</p>
         </Link>
-        <a href={INFO.PHONE_HREF}>
+        <a href={INFO.PHONE_HREF} title="Call">
           <PhoneIcon fontSize="inherit" />
         </a>
-        <a href={INFO.EMAIL_HREF}>
+        <a href={INFO.EMAIL_HREF} title="Email">
           <EmailIcon fontSize="inherit" />
         </a>
         <LanguageSelector />
