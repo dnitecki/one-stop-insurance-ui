@@ -33,7 +33,7 @@ export const ContentMapper: ContentMapperType = {
         ES: "Reseñas",
       },
       body: {
-        EN: "4.8 Stars on",
+        EN: "4.8 stars on",
         PL: "4,8 gwiazdki na",
         ES: "4,8 estrellas en",
       },
@@ -77,7 +77,7 @@ export const ContentMapper: ContentMapperType = {
         },
       },
     },
-    feed: {
+    socialFeed: {
       header: {
         EN: "Give Us a Follow!",
         PL: "Obserwuj nasze media!",

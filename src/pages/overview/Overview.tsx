@@ -13,8 +13,8 @@ const Overview = () => {
   return (
     <div className="overview-container" id="overview-container">
       <Banner />
+      <Carousel />
       <div className="overview-content">
-        <Carousel />
         {OverviewMapper.map((section) => (
           <section
             id={section.id}
