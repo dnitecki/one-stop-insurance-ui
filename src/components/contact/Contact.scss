@@ -1,9 +1,14 @@
 .contact-container {
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+}
+.contact-form-container {
+  display: flex;
   width: 100%;
   height: 100%;
   flex-direction: column;
-  gap: 2rem;
   justify-content: center;
   align-items: center;
 }
@@ -18,7 +23,6 @@
 }
 .contact-option-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -76,5 +80,8 @@
   .contact-card {
     width: 100%;
     padding: 1rem;
+  }
+  .contact-option-container {
+    flex-direction: column;
   }
 }

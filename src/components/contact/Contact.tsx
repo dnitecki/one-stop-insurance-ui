@@ -17,23 +17,25 @@ const Contact = () => {
 
   return (
     <>
-      <div className="contact-option-container">
-        <a className="contact-option-btn" href={INFO.PHONE_HREF}>
-          <PhoneIcon fontSize="inherit" />
-          <h2>{INFO.PHONE}</h2>
-        </a>
-        <a className="contact-option-btn" href={INFO.EMAIL_HREF}>
-          <EmailIcon fontSize="inherit" />
-          <h2>Email</h2>
-        </a>
-      </div>
-      <div className="contact-card">
-        <div className="contact-container">
-          <ContactForm {...content} />
+      <div className="contact-container">
+        <div className="contact-option-container">
+          <a className="contact-option-btn" href={INFO.PHONE_HREF}>
+            <PhoneIcon fontSize="inherit" />
+            <h2>{INFO.PHONE}</h2>
+          </a>
+          <a className="contact-option-btn" href={INFO.EMAIL_HREF}>
+            <EmailIcon fontSize="inherit" />
+            <h2>Email</h2>
+          </a>
         </div>
-      </div>
-      <div className="map-card">
-        <Map />
+        <div className="map-card">
+          <Map />
+        </div>
+        <div className="contact-card">
+          <div className="contact-form-container">
+            <ContactForm {...content} />
+          </div>
+        </div>
       </div>
     </>
   );
