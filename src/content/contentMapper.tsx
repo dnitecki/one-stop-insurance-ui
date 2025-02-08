@@ -79,11 +79,6 @@ export const experienceContent: ObjectIndexType = {
       ubezpieczeniem.
     </span>
   ),
-  ES: (
-    <span>
-      más de <strong>30 años</strong> de experiencia combinada en seguros.
-    </span>
-  ),
 };
 export const agencyContent: ObjectIndexType = {
   EN: (
@@ -95,11 +90,6 @@ export const agencyContent: ObjectIndexType = {
   PL: (
     <>
       Lepsze ubezpieczenie w niższej cenie w <strong>Jednym</strong> miejscu
-    </>
-  ),
-  ES: (
-    <>
-      Lugar <strong>único</strong> para ahorros inteligentes y mejor protección.
     </>
   ),
 };
