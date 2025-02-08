@@ -16,7 +16,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="header-options">
-        <Link to="quote" title="Get A Quote">
+        <Link to="/requestquote" title="Get A Quote">
           <FactCheckIcon fontSize="inherit" />
           <p>Get A Quote</p>
         </Link>

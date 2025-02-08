@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import "./LanguageSelector.scss";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -26,20 +26,12 @@ const LanguageSelector = () => {
       true
     );
   };
-  const languageParam = searchParams.get(SeachParamEnum.LANG);
-  const setInitLanguage = () => {
-    if (!languageParam || !(languageParam in LanguageEnumShort)) {
-      setSearchParams({ [SeachParamEnum.LANG]: LanguageEnumShort.EN });
-    }
-  };
 
   const handleLanguageSelect = (language: LanguageEnumShort) => {
     setExpanded(!isExpanded);
     setSearchParams({ [SeachParamEnum.LANG]: language });
   };
-  useEffect(() => {
-    setInitLanguage();
-  });
+
   return (
     <div className="selector-container">
       <button
