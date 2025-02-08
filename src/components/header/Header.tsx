@@ -5,18 +5,21 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
 import LanguageSelector from "../languageSelector/LanguageSelector";
 import { INFO } from "../../constants/constants";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import { SeachParamEnum } from "../../enums/languageEnums";
 
 const Header = () => {
+  const [searchParams] = useSearchParams();
+  const languageParam = searchParams.get(SeachParamEnum.LANG);
   return (
     <nav className="header-container">
       <div className="header-logo">
-        <Link to="/" title="Home">
+        <Link to={`/?lang=${languageParam}`} title="Home">
           <img src={logo} alt="one stop logo" />
         </Link>
       </div>
       <div className="header-options">
-        <Link to="/requestquote" title="Get A Quote">
+        <Link to={`/requestquote?lang=${languageParam}`} title="Get A Quote">
           <FactCheckIcon fontSize="inherit" />
           <p>Get A Quote</p>
         </Link>

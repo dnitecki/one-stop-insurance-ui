@@ -19,6 +19,7 @@ export default function App() {
   useEffect(() => {
     setInitLanguage();
   });
+
   return (
     <div className="app">
       <div className="app-container" id="app-container">
