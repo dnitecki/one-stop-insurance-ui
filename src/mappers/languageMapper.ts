@@ -12,9 +12,4 @@ export const LanguageMapper: LanguageMapperType[] = [
     language: LanguageEnumLong.POLISH,
     code: LanguageEnumShort.PL,
   },
-  {
-    id: "spanish",
-    language: LanguageEnumLong.SPANISH,
-    code: LanguageEnumShort.ES,
-  },
 ];

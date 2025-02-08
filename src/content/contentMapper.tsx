@@ -6,43 +6,28 @@ export const ContentMapper: ContentMapperType = {
       header: {
         EN: "Our Agency",
         PL: "Nasza Agencja",
-        ES: "Nuestra Agencia",
-      },
-      body: {
-        EN: "",
-        PL: "",
-        ES: "",
       },
     },
     services: {
       header: {
         EN: "Our Services",
         PL: "Nasze Usługi",
-        ES: "Servicios",
-      },
-      body: {
-        EN: "",
-        PL: "",
-        ES: "",
       },
     },
     reviews: {
       header: {
         EN: "Reviews",
         PL: "Recenzje",
-        ES: "Reseñas",
       },
       body: {
         EN: "4.8 stars on",
         PL: "4,8 gwiazdki na",
-        ES: "4,8 estrellas en",
       },
     },
     contact: {
       header: {
         EN: "Contact Us",
         PL: "Kontakt",
-        ES: "Contáctenos",
       },
       body: {
         EN: {
@@ -65,28 +50,18 @@ export const ContentMapper: ContentMapperType = {
           submit: "Wyślij",
           or: "lub",
         },
-        ES: {
-          formTitle: "Solicitar Cotización",
-          firstName: "Nombre",
-          lastName: "Apellido",
-          phoneNumber: "Número telefónico",
-          policyType: "Tipo de póliza",
-          addtlInfo: "Más información",
-          submit: "Entregar",
-          or: "o",
-        },
       },
     },
     socialFeed: {
       header: {
         EN: "Give Us a Follow!",
         PL: "Obserwuj nasze media!",
-        ES: "Redes Sociales",
       },
-      body: {
-        EN: "",
-        PL: "",
-        ES: "",
+    },
+    quote: {
+      header: {
+        EN: "Type of Quote",
+        PL: "Wybierz Wycenę",
       },
     },
   },

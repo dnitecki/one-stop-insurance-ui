@@ -4,13 +4,13 @@ import FactCheckIcon from "@mui/icons-material/FactCheck";
 
 const ContactForm = (content: ContactContentType) => {
   return (
-    <form className="form-container">
+    <form className="contact-form-container">
       <h2>
         <FactCheckIcon fontSize="inherit" /> {content.formTitle}
       </h2>
-      <div className="form-row">
+      <div className="contact-form-row">
         <input
-          className="form-input"
+          className="contact-form-input"
           type="text"
           id="fname"
           name="firstname"
@@ -18,7 +18,7 @@ const ContactForm = (content: ContactContentType) => {
           required
         />
         <input
-          className="form-input"
+          className="contact-form-input"
           type="text"
           id="lname"
           name="lastname"
@@ -26,9 +26,9 @@ const ContactForm = (content: ContactContentType) => {
           required
         />
       </div>
-      <div className="form-row">
+      <div className="contact-form-row">
         <input
-          className="form-input"
+          className="contact-form-input"
           type="email"
           id="email"
           name="email"
@@ -36,9 +36,9 @@ const ContactForm = (content: ContactContentType) => {
           required
         />
       </div>
-      <div className="form-row">
+      <div className="contact-form-row">
         <input
-          className="form-input"
+          className="contact-form-input"
           type="tel"
           id="phone"
           name="phone"
@@ -47,7 +47,7 @@ const ContactForm = (content: ContactContentType) => {
         />
 
         <select
-          className="form-select"
+          className="contact-form-select"
           id="policy-type"
           defaultValue="Policy Type"
           required
@@ -60,17 +60,21 @@ const ContactForm = (content: ContactContentType) => {
           <option value="other">Other</option>
         </select>
       </div>
-      <div className="form-row">
+      <div className="contact-form-row">
         <textarea
-          className="form-additional-info"
+          className="contact-form-additional-info"
           id="additional-info"
           rows={4}
           wrap="on"
           placeholder={content.addtlInfo}
         />
       </div>
-      <div className="form-row">
-        <button className="form-submit-btn" type="submit" value="Submit">
+      <div className="contact-form-row">
+        <button
+          className="contact-form-submit-btn"
+          type="submit"
+          value="Submit"
+        >
           <h2>{content.submit}</h2>
         </button>
       </div>

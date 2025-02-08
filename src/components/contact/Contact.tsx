@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import "./Contact.scss";
-import ContactForm from "../forms/ContactForm/ContactForm";
+import ContactForm from "../forms/contactForm/ContactForm";
 import Map from "../map/Map";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
