@@ -40,7 +40,7 @@ const Quote = () => {
           />
           <Step
             label={QuoteFormContent.stepper.stepFour[language]}
-            onClick={() => setActiveStep(4)}
+            onClick={() => setActiveStep(3)}
           />
         </Stepper>
       </div>
