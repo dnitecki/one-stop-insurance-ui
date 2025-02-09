@@ -11,6 +11,11 @@ import PersonalInfo from "../../components/forms/quoteForm/personalInfo/Personal
 const Quote = () => {
   const formInitialState = {
     type: EMPTY_STRING,
+    firstName: EMPTY_STRING,
+    lastName: EMPTY_STRING,
+    email: EMPTY_STRING,
+    dateOfBirth: EMPTY_STRING,
+    phone: EMPTY_STRING,
   };
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
