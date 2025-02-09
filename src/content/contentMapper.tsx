@@ -58,12 +58,6 @@ export const ContentMapper: ContentMapperType = {
         PL: "Obserwuj nasze media!",
       },
     },
-    quote: {
-      header: {
-        EN: "Type of Quote",
-        PL: "Wybierz Wycenę",
-      },
-    },
   },
 };
 export const experienceContent: ObjectIndexType = {
@@ -92,4 +86,21 @@ export const agencyContent: ObjectIndexType = {
       Lepsze ubezpieczenie w niższej cenie w <strong>Jednym</strong> miejscu
     </>
   ),
+};
+
+export const QuoteFormContent: any = {
+  stepper: {
+    stepOne: {
+      EN: "Select Type",
+      PL: "Wybierz Wycenę",
+    },
+    stepTwo: {
+      EN: "Complete Form",
+      PL: "Wypełnij",
+    },
+    stepThree: {
+      EN: "Verify",
+      PL: "Zweryfikuj",
+    },
+  },
 };

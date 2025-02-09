@@ -52,3 +52,9 @@ export type ContactContentType = {
   submit: string;
   or: string;
 };
+
+export type QuoteFormProps = {
+  setFormData: React.Dispatch<React.SetStateAction>;
+  setActiveStep: React.Dispatch<React.SetStateAction>;
+  formData?: any;
+};
