@@ -91,7 +91,7 @@ export const agencyContent: ObjectIndexType = {
 export const QuoteFormContent: any = {
   stepper: {
     stepOne: {
-      EN: "Select Type",
+      EN: "Quote Type",
       PL: "Wybierz Wycenę",
     },
     stepTwo: {
@@ -101,6 +101,18 @@ export const QuoteFormContent: any = {
     stepThree: {
       EN: "Verify",
       PL: "Zweryfikuj",
+    },
+  },
+  quoteStepOne: {
+    header: {
+      EN: "Select Quote Type",
+      PL: "Rodzaj Wyceny",
+    },
+  },
+  quoteStepTwo: {
+    header: {
+      EN: "Add Your Information",
+      PL: "Dodaj Dane",
     },
   },
 };
