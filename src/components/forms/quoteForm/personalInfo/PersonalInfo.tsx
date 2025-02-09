@@ -3,7 +3,7 @@ import { QuoteFormContent } from "../../../../content/contentMapper";
 import { QuoteFormProps } from "../../../../types/types";
 import { SeachParamEnum } from "../../../../enums/languageEnums";
 
-const QuoteStepTwo: React.FC<QuoteFormProps> = ({
+const PersonalInfo: React.FC<QuoteFormProps> = ({
   setFormData,
   setActiveStep,
   formData,
@@ -17,4 +17,4 @@ const QuoteStepTwo: React.FC<QuoteFormProps> = ({
   );
 };
 
-export default QuoteStepTwo;
+export default PersonalInfo;

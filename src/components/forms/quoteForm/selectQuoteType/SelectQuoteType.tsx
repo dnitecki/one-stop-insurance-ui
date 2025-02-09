@@ -5,10 +5,9 @@ import { QuoteFormContent } from "../../../../content/contentMapper";
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../../../enums/languageEnums";
 
-const QuoteStepOne: React.FC<QuoteFormProps> = ({
+const SelectQuoteType: React.FC<QuoteFormProps> = ({
   setFormData,
   setActiveStep,
-  formData,
 }) => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
@@ -47,4 +46,4 @@ const QuoteStepOne: React.FC<QuoteFormProps> = ({
   );
 };
 
-export default QuoteStepOne;
+export default SelectQuoteType;

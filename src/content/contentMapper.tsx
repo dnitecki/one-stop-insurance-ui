@@ -95,10 +95,14 @@ export const QuoteFormContent: any = {
       PL: "Wybierz Wycenę",
     },
     stepTwo: {
-      EN: "Complete Form",
-      PL: "Wypełnij",
+      EN: "Personal Information",
+      PL: "Dodaj Dane",
     },
     stepThree: {
+      EN: "Detailed Information",
+      PL: "Szczegółowe Dane",
+    },
+    stepFour: {
       EN: "Verify",
       PL: "Zweryfikuj",
     },

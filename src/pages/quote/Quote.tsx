@@ -1,30 +1,22 @@
 import "./Quote.scss";
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
-import { ContentMapper, QuoteFormContent } from "../../content/contentMapper";
+import { QuoteFormContent } from "../../content/contentMapper";
 import { Step, Stepper } from "react-form-stepper";
 import { useState } from "react";
 import { EMPTY_STRING } from "../../constants/constants";
-import QuoteStepOne from "../../components/forms/quoteForm/quoteStepOne/QuoteStepOne";
-import QuoteStepTwo from "../../components/forms/quoteForm/quoteStepTwo/QuoteStepTwo";
+import SelectQuoteType from "../../components/forms/quoteForm/selectQuoteType/SelectQuoteType";
+import PersonalInfo from "../../components/forms/quoteForm/personalInfo/PersonalInfo";
 
 const Quote = () => {
   const formInitialState = {
     type: EMPTY_STRING,
   };
-
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
   const [activeStep, setActiveStep] = useState(0);
   const [formData, setFormData] = useState(formInitialState);
 
-  const Step2 = () => {
-    return <div>{formData.type}</div>;
-  };
-
-  const Step3 = () => {
-    return <div>{formData.type}</div>;
-  };
   return (
     <div className="quote-container">
       <div className="stepper-container">
@@ -41,18 +33,21 @@ const Quote = () => {
             label={QuoteFormContent.stepper.stepThree[language]}
             onClick={() => setActiveStep(2)}
           />
+          <Step
+            label={QuoteFormContent.stepper.stepFour[language]}
+            onClick={() => setActiveStep(4)}
+          />
         </Stepper>
       </div>
       <div className="quote-step-container">
         {activeStep === 0 && (
-          <QuoteStepOne
+          <SelectQuoteType
             setActiveStep={setActiveStep}
             setFormData={setFormData}
-            formData={formData}
           />
         )}
         {activeStep === 1 && (
-          <QuoteStepTwo
+          <PersonalInfo
             setActiveStep={setActiveStep}
             setFormData={setFormData}
             formData={formData}
