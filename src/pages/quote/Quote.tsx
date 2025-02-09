@@ -16,6 +16,12 @@ const Quote = () => {
     email: EMPTY_STRING,
     dateOfBirth: EMPTY_STRING,
     phone: EMPTY_STRING,
+    street: EMPTY_STRING,
+    unit: EMPTY_STRING,
+    postalCode: EMPTY_STRING,
+    city: EMPTY_STRING,
+    state: EMPTY_STRING,
+    country: EMPTY_STRING,
   };
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
