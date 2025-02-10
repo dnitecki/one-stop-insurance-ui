@@ -28,14 +28,6 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    .quote-header {
-      display: flex;
-      width: 100%;
-      height: fit-content;
-      justify-content: center;
-      align-items: center;
-      color: var(--heading-text-color);
-    }
     button {
       display: flex;
       flex-direction: column;

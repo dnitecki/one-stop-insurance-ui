@@ -1,11 +1,11 @@
+import "../QuoteForm.scss";
+import { useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { QuoteFormContent } from "../../../../content/contentMapper";
 import { QuoteFormProps } from "../../../../types/types";
 import { SeachParamEnum } from "../../../../enums/languageEnums";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import "../QuoteForm.scss";
-import { useRef } from "react";
 
 const PersonalInfo: React.FC<QuoteFormProps> = ({
   setFormData,
@@ -37,6 +37,9 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         <h1>{QuoteFormContent.quoteStepTwo.header[language]}</h1>
       </div>
       <form ref={formRef} className="form-content">
+        <div className="form-header">
+          <h2>General</h2>
+        </div>
         <div className="form-row">
           <input
             className="form-input"
@@ -133,11 +136,38 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
             type="text"
             id="city"
             name="city"
-            placeholder="city"
+            placeholder="City"
             value={formData.city}
             onChange={handleChange}
             required
           />
+        </div>
+        <div className="form-row">
+          <select
+            className="form-select"
+            id="state"
+            name="state"
+            defaultValue="state"
+            required
+            value={formData.state}
+            onChange={handleChange}
+          >
+            <option hidden>State</option>
+            <option value="ohio">Ohio</option>
+            <option value="illinois">Illinois</option>
+          </select>
+          <select
+            className="form-select"
+            id="country"
+            name="country"
+            defaultValue="country"
+            required
+            value={formData.country}
+            onChange={handleChange}
+          >
+            <option hidden>Country</option>
+            <option value="US">United States</option>
+          </select>
         </div>
       </form>
       <div className="form-navigation">
