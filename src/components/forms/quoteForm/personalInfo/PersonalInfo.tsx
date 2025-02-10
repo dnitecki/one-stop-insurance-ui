@@ -38,7 +38,7 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
       </div>
       <form ref={formRef} className="form-content">
         <div className="form-header">
-          <h2>General</h2>
+          <h2>General Information</h2>
         </div>
         <div className="form-row">
           <input
@@ -97,7 +97,7 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
           />
         </div>
         <div className="form-header">
-          <h2>Address</h2>
+          <h2>Primary Address</h2>
         </div>
         <div className="form-row">
           <input
