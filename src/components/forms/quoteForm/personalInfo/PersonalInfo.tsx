@@ -41,106 +41,151 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
           <h2>General Information</h2>
         </div>
         <div className="form-row">
-          <input
-            className="form-input"
-            type="text"
-            id="fname"
-            name="firstName"
-            placeholder="First Name"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-          />
-          <input
-            className="form-input"
-            type="text"
-            id="lname"
-            name="lastName"
-            placeholder="Last Name"
-            value={formData.lastName}
-            onChange={handleChange}
-            required
-          />
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="text"
+              id="fname"
+              name="firstName"
+              placeholder=""
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+            <label className="form-label" htmlFor="fname">
+              First Name
+            </label>
+          </div>
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="text"
+              id="lname"
+              name="lastName"
+              placeholder=""
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+            <label className="form-label" htmlFor="lname">
+              Last Name
+            </label>
+          </div>
         </div>
         <div className="form-row">
-          <input
-            className="form-input"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder=""
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <label className="form-label" htmlFor="email">
+              Email
+            </label>
+          </div>
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder=""
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+            <label className="form-label" htmlFor="phone">
+              Phone
+            </label>
+          </div>
         </div>
         <div className="form-row">
-          <input
-            className="contact-form-input"
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-          <input
-            className="form-input"
-            type="text"
-            id="dateOfBirth"
-            name="dateOfBirth"
-            placeholder="Date Of Birth"
-            value={formData.dateOfBirth}
-            onChange={handleChange}
-            required
-          />
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="date"
+              id="dateOfBirth"
+              name="dateOfBirth"
+              value={formData.dateOfBirth}
+              onChange={handleChange}
+              required
+            />
+            <label className="form-label" htmlFor="dateOfBirth">
+              Date Of Birth
+            </label>
+          </div>
+          <div className="form-gap" />
         </div>
         <div className="form-header">
           <h2>Primary Address</h2>
         </div>
         <div className="form-row">
-          <input
-            className="form-input"
-            type="text"
-            id="street"
-            name="street"
-            placeholder="Street"
-            value={formData.street}
-            onChange={handleChange}
-            required
-          />
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="text"
+              id="street"
+              name="street"
+              placeholder=""
+              value={formData.street}
+              onChange={handleChange}
+              required
+            />
+            <label className="form-label" htmlFor="street">
+              Street
+            </label>
+          </div>
         </div>
         <div className="form-row">
-          <input
-            className="form-input"
-            type="text"
-            id="unit"
-            name="unit"
-            placeholder="Unit #"
-            value={formData.unit}
-            onChange={handleChange}
-          />
-          <input
-            className="form-input"
-            type="text"
-            id="postalCode"
-            name="postalCode"
-            placeholder="Postal Code"
-            value={formData.postalCode}
-            onChange={handleChange}
-            required
-          />
-          <input
-            className="form-input"
-            type="text"
-            id="city"
-            name="city"
-            placeholder="City"
-            value={formData.city}
-            onChange={handleChange}
-            required
-          />
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="text"
+              id="unit"
+              name="unit"
+              placeholder=""
+              value={formData.unit}
+              onChange={handleChange}
+            />
+            <label className="form-label" htmlFor="unit">
+              Unit #
+            </label>
+          </div>
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="text"
+              id="postalCode"
+              name="postalCode"
+              placeholder=""
+              value={formData.postalCode}
+              onChange={handleChange}
+              required
+            />
+            <label className="form-label" htmlFor="postalCode">
+              Postal Code
+            </label>
+          </div>
+          <div className="form-group">
+            <input
+              className="form-input"
+              type="text"
+              id="city"
+              name="city"
+              placeholder=""
+              value={formData.city}
+              onChange={handleChange}
+              required
+            />
+            <label className="form-label" htmlFor="city">
+              City
+            </label>
+          </div>
         </div>
         <div className="form-row">
           <select
