@@ -4,11 +4,13 @@ import Banner from "../../components/banner/Banner";
 import { useSearchParams } from "react-router-dom";
 import { OverviewMapper } from "../../mappers/overviewMapper";
 import { SeachParamEnum } from "../../enums/languageEnums";
-import { ContentMapper } from "../../content/contentMapper";
+import ContentMapper from "../../content/contentMapper.json";
+import { ContentMapperType } from "../../types/types";
 
 const Overview = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
+  const content: ContentMapperType = ContentMapper;
 
   return (
     <div className="overview-container" id="overview-container">
@@ -22,7 +24,7 @@ const Overview = () => {
             className="overview-section"
           >
             <div className="section-heading">
-              <h1>{ContentMapper?.sections[section.id]?.header[language]}</h1>
+              <h1>{content.sections[section.id].header[language]}</h1>
             </div>
             <div className="section-component">
               <section.Component />

@@ -4,18 +4,25 @@ import { SeachParamEnum } from "../../enums/languageEnums";
 import BeataHeadshot from "../../assets/webp/beata-headshot.webp";
 import BrokerAnimation from "../../assets/json/BrokerAnimation.json";
 import Lottie from "react-lottie-player";
-import { agencyContent, experienceContent } from "../../content/contentMapper";
+import ContentMapper from "../../content/contentMapper.json";
+import parse from "html-react-parser";
+import { ContentMapperType } from "../../types/types";
+import { EMPTY_STRING } from "../../constants/constants";
 
 const Agency = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
+  const content: ContentMapperType = ContentMapper;
+  const agencyContent = content?.sections.agency.body[language];
 
   return (
     <>
       <div className="experience-card">
         <div className="experience-container">
           <div className="experience-text">
-            <h2>{experienceContent[language]}</h2>
+            <h2>
+              {parse(agencyContent?.experienceContentOne ?? EMPTY_STRING)}
+            </h2>
           </div>
           <div className="headshot-container">
             <img
@@ -36,7 +43,7 @@ const Agency = () => {
           />
         </div>
         <div className="agency-text">
-          <h2>{agencyContent[language]}</h2>
+          <h2>{parse(agencyContent?.experienceContentTwo ?? EMPTY_STRING)}</h2>
         </div>
       </div>
     </>

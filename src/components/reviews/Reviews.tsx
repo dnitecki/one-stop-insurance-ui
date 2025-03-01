@@ -1,16 +1,18 @@
 import { useSearchParams } from "react-router-dom";
 import { ReviewMapper } from "../../mappers/reviewMapper";
-import "./Reviews.scss";
 import StarIcon from "@mui/icons-material/Star";
 import { SeachParamEnum } from "../../enums/languageEnums";
-import { ContentMapper } from "../../content/contentMapper";
+import ContentMapper from "../../content/contentMapper.json";
 import { useEffect, useState } from "react";
 import GoogleIcon from "../../assets/webp/google-icon.webp";
+import { ContentMapperType } from "../../types/types";
+import "./Reviews.scss";
 
 const Reviews = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
-  const content = ContentMapper?.sections?.reviews?.body[language];
+  const content: ContentMapperType = ContentMapper;
+  const reviewContent = content.sections.reviews.body[language];
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [isFading, setIsFading] = useState<boolean>(true);
 
@@ -38,7 +40,7 @@ const Reviews = () => {
     <div className="reviews-container">
       <div className="google-container">
         <div className="google-text">
-          <h2>{content}</h2>
+          <h2>{reviewContent?.subTitle}</h2>
         </div>
         <img className="google-icon" src={GoogleIcon} alt="google icon" />
       </div>
