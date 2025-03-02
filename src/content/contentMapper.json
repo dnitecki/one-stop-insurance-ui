@@ -1,5 +1,21 @@
 {
   "sections": {
+    "banner": {
+      "header": {
+        "EN": "Let us find the coverage you need.",
+        "PL": "Znajdziemy odpowiednie ubezpieczenie."
+      },
+      "body": {
+        "EN": {
+          "quoteCta": "Request a Quote",
+          "contactCta": "Contact Us"
+        },
+        "PL": {
+          "quoteCta": "Złóż o wycenę",
+          "contactCta": "Kontakt"
+        }
+      }
+    },
     "agency": {
       "header": {
         "EN": "Our Agency",

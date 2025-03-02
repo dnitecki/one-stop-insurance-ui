@@ -1,5 +1,3 @@
-import { useSearchParams } from "react-router-dom";
-import { SeachParamEnum } from "../../enums/languageEnums";
 import "./Contact.scss";
 import Map from "../map/Map";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -7,9 +5,6 @@ import EmailIcon from "@mui/icons-material/Email";
 import { INFO } from "../../constants/constants";
 
 const Contact = () => {
-  const [searchParams] = useSearchParams();
-  const language = searchParams.get(SeachParamEnum.LANG);
-
   return (
     <>
       <div className="contact-container">

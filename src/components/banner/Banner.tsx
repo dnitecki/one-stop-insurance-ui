@@ -4,28 +4,31 @@ import OneStopLogoText from "../../assets/png/one-stop-logo-text.png";
 import Skyline from "../../assets/png/chicago-skyline.png";
 import OneStopLogo from "../../assets/webp/one-stop-logo.webp";
 import BeataHeadshot from "../../assets/webp/beata-headshot.webp";
+import { useSearchParams } from "react-router-dom";
+import { SeachParamEnum } from "../../enums/languageEnums";
+import { ContentMapperType } from "../../types/types";
+import ContentMapper from "../../content/contentMapper.json";
 
 const Banner = () => {
+  const [searchParams] = useSearchParams();
+  const language = searchParams.get(SeachParamEnum.LANG);
+  const content: ContentMapperType = ContentMapper;
+  const bannerContent = content?.sections.banner;
   return (
     <section className="banner-container">
       <div className="banner-content">
-        <img
-          className="company-name"
-          src={OneStopLogoText}
-          alt="One Stop Insurance Agency"
-        />
         <div className="main-banner-image">
           <div className="banner-content-container">
             <div className="banner-cta-container">
               <div className="banner-cta-text">
-                <h1>Let us find the coverage you need.</h1>
+                <h1>{bannerContent.header[language]}</h1>
               </div>
               <div className="banner-cta-buttons">
                 <button className="banner-btn">
-                  <h2>Request a Quote</h2>
+                  <h2>{bannerContent.body[language].quoteCta}</h2>
                 </button>
                 <button className="banner-btn">
-                  <h2>Contact</h2>
+                  <h2>{bannerContent.body[language].contactCta}</h2>
                 </button>
               </div>
             </div>
