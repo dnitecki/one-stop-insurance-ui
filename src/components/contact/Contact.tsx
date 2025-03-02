@@ -1,20 +1,14 @@
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import "./Contact.scss";
-import ContactForm from "../forms/contactForm/ContactForm";
 import Map from "../map/Map";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { INFO } from "../../constants/constants";
-import ContentMapper from "../../content/contentMapper.json";
-import { ContactContentType, ContentMapperType } from "../../types/types";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
-  const contactContent: ContentMapperType = ContentMapper;
-  const content: ContactContentType =
-    contactContent.sections.contact.body[language];
 
   return (
     <>
@@ -31,11 +25,6 @@ const Contact = () => {
         </div>
         <div className="map-card">
           <Map />
-        </div>
-        <div className="contact-card">
-          <div className="contact-form-container">
-            <ContactForm {...content} />
-          </div>
         </div>
       </div>
     </>

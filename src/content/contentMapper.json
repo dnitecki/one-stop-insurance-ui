@@ -40,28 +40,6 @@
       "header": {
         "EN": "Contact Us",
         "PL": "Kontakt"
-      },
-      "body": {
-        "EN": {
-          "formTitle": "Request a Quote",
-          "firstName": "First Name",
-          "lastName": "Last Name",
-          "phoneNumber": "Phone Number",
-          "policyType": "Policy Type",
-          "addtlInfo": "Additional Information",
-          "submit": "Submit",
-          "or": "or"
-        },
-        "PL": {
-          "formTitle": "Poproś o Wycenę",
-          "firstName": "Imię",
-          "lastName": "Nazwisko",
-          "phoneNumber": "Numer Telefonu",
-          "policyType": "Rodzaj Polisy",
-          "addtlInfo": "Dodatkowe Informacje",
-          "submit": "Wyślij",
-          "or": "lub"
-        }
       }
     },
     "socialFeed": {

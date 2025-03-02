@@ -38,24 +38,6 @@
         color: var(--white);
       }
     }
-    .headshot-container {
-      display: flex;
-      height: 18rem;
-      width: 13rem;
-      overflow: hidden;
-      position: absolute;
-      bottom: 0;
-      right: -1rem;
-      .headshot {
-        display: flex;
-        object-fit: cover;
-        clip-path: inset(0 1px 0 0);
-        height: 100%;
-        width: 100%;
-        filter: drop-shadow(var(--shadow));
-        -webkit-filter: drop-shadow(var(--shadow));
-      }
-    }
   }
 }
 .agency-card {

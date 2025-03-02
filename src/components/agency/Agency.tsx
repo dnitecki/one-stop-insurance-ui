@@ -24,13 +24,6 @@ const Agency = () => {
               {parse(agencyContent?.experienceContentOne ?? EMPTY_STRING)}
             </h2>
           </div>
-          <div className="headshot-container">
-            <img
-              className="headshot"
-              src={BeataHeadshot}
-              alt="Beata Headshot"
-            />
-          </div>
         </div>
       </div>
       <div className="agency-card">
