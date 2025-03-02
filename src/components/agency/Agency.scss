@@ -1,88 +1,30 @@
-.experience-card-container {
+.agency-container {
   display: flex;
-  width: 100%;
+  width: 80%;
+  height: 100%;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.experience-container {
+  display: flex;
+  height: 100%;
+  width: 30rem;
+  gap: 2rem;
+  flex-direction: column;
   .experience-card {
     display: flex;
     position: relative;
-    width: 90%;
+    width: 100%;
     height: auto;
     justify-content: center;
     align-items: center;
     border-radius: var(--border-radius);
     background: linear-gradient(
       90deg,
-      rgba(204, 4, 4, 1) 0%,
-      rgba(161, 3, 3, 1) 70%
-    );
-    color: var(--white);
-    .experience-container {
-      display: flex;
-      position: relative;
-      min-height: 15rem;
-      max-height: 20rem;
-      align-items: center;
-      width: 100%;
-      overflow-y: visible;
-      .experience-text {
-        height: 100%;
-        padding: 2rem;
-        display: flex;
-        float: left;
-        width: 65%;
-        z-index: 1;
-        h2 {
-          font-weight: 400;
-          font-size: 32px;
-        }
-        strong {
-          font-weight: 700;
-          font-size: 38px;
-          line-height: 0;
-          color: var(--white);
-        }
-      }
-    }
-  }
-}
-.agency-card-container {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  .agency-card {
-    display: flex;
-    position: relative;
-    height: 100%;
-    align-items: center;
-    overflow: hidden;
-    width: 90%;
-    min-height: 15rem;
-    max-height: 20rem;
-    border-radius: var(--border-radius);
-    background: linear-gradient(
-      90deg,
       rgb(214, 214, 214) 0%,
       var(--primary-gray) 70%
     );
-    .agency-text {
-      height: 100%;
-      display: flex;
-      float: right;
-      width: 55%;
-      z-index: 1;
-      padding: 2rem;
-      text-align: right;
-      color: var(--black);
-      h2 {
-        font-weight: 400;
-        font-size: 32px;
-      }
-      strong {
-        font-weight: 700;
-        font-size: 38px;
-        line-height: 0;
-        color: var(--primary-red);
-      }
-    }
     .icon-container {
       display: flex;
       height: 100%;
@@ -97,29 +39,15 @@
       }
     }
   }
-}
-
-@media (max-width: 700px) {
-  .agency-card {
-    .agency-text {
-      h2 {
-        font-size: 26px;
-      }
-      strong {
-        font-size: 30px;
-      }
-    }
-  }
-  .experience-card {
-    .experience-container {
-      .experience-text {
-        h2 {
-          font-size: 26px;
-        }
-        strong {
-          font-size: 30px;
-        }
-      }
+  .experience-text {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    h2 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: 400;
     }
   }
 }
