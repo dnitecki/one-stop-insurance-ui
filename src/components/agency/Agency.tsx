@@ -16,26 +16,32 @@ const Agency = () => {
 
   return (
     <>
-      <div className="experience-card">
-        <div className="experience-container">
-          <div className="experience-text">
-            <h2>
-              {parse(agencyContent?.experienceContentOne ?? EMPTY_STRING)}
-            </h2>
+      <div className="experience-card-container">
+        <div className="experience-card">
+          <div className="experience-container">
+            <div className="experience-text">
+              <h2>
+                {parse(agencyContent?.experienceContentOne ?? EMPTY_STRING)}
+              </h2>
+            </div>
           </div>
         </div>
       </div>
-      <div className="agency-card">
-        <div className="icon-container">
-          <Lottie
-            animationData={BrokerAnimation}
-            className="player"
-            play
-            loop
-          />
-        </div>
-        <div className="agency-text">
-          <h2>{parse(agencyContent?.experienceContentTwo ?? EMPTY_STRING)}</h2>
+      <div className="agency-card-container">
+        <div className="agency-card">
+          <div className="icon-container">
+            <Lottie
+              animationData={BrokerAnimation}
+              className="player"
+              play
+              loop
+            />
+          </div>
+          <div className="agency-text">
+            <h2>
+              {parse(agencyContent?.experienceContentTwo ?? EMPTY_STRING)}
+            </h2>
+          </div>
         </div>
       </div>
     </>

@@ -1,32 +1,77 @@
-.experience-card {
+.experience-card-container {
   display: flex;
-  position: relative;
   width: 100%;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-  border-radius: var(--border-radius);
-  background: linear-gradient(
-    90deg,
-    rgba(204, 4, 4, 1) 0%,
-    rgba(161, 3, 3, 1) 70%
-  );
-  color: var(--white);
-  .experience-container {
+  .experience-card {
     display: flex;
     position: relative;
+    width: 90%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    background: linear-gradient(
+      90deg,
+      rgba(204, 4, 4, 1) 0%,
+      rgba(161, 3, 3, 1) 70%
+    );
+    color: var(--white);
+    .experience-container {
+      display: flex;
+      position: relative;
+      min-height: 15rem;
+      max-height: 20rem;
+      align-items: center;
+      width: 100%;
+      overflow-y: visible;
+      .experience-text {
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        float: left;
+        width: 65%;
+        z-index: 1;
+        h2 {
+          font-weight: 400;
+          font-size: 32px;
+        }
+        strong {
+          font-weight: 700;
+          font-size: 38px;
+          line-height: 0;
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+.agency-card-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  .agency-card {
+    display: flex;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+    width: 90%;
     min-height: 15rem;
     max-height: 20rem;
-    align-items: center;
-    width: 100%;
-    overflow-y: visible;
-    .experience-text {
+    border-radius: var(--border-radius);
+    background: linear-gradient(
+      90deg,
+      rgb(214, 214, 214) 0%,
+      var(--primary-gray) 70%
+    );
+    .agency-text {
       height: 100%;
-      padding: 1rem;
       display: flex;
-      float: left;
-      width: 65%;
+      float: right;
+      width: 55%;
       z-index: 1;
+      padding: 2rem;
+      text-align: right;
+      color: var(--black);
       h2 {
         font-weight: 400;
         font-size: 32px;
@@ -35,60 +80,25 @@
         font-weight: 700;
         font-size: 38px;
         line-height: 0;
-        color: var(--white);
+        color: var(--primary-red);
+      }
+    }
+    .icon-container {
+      display: flex;
+      height: 100%;
+      width: 45%;
+      justify-content: center;
+      align-items: center;
+      .broker-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
       }
     }
   }
 }
-.agency-card {
-  display: flex;
-  position: relative;
-  height: 100%;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-  min-height: 15rem;
-  max-height: 20rem;
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  background: linear-gradient(
-    90deg,
-    rgb(214, 214, 214) 0%,
-    var(--primary-gray) 70%
-  );
-  .agency-text {
-    height: 100%;
-    display: flex;
-    float: right;
-    width: 55%;
-    z-index: 1;
-    text-align: right;
-    color: var(--black);
-    h2 {
-      font-weight: 400;
-      font-size: 32px;
-    }
-    strong {
-      font-weight: 700;
-      font-size: 38px;
-      line-height: 0;
-      color: var(--primary-red);
-    }
-  }
-  .icon-container {
-    display: flex;
-    height: 100%;
-    width: 45%;
-    justify-content: center;
-    align-items: center;
-    .broker-icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-    }
-  }
-}
+
 @media (max-width: 700px) {
   .agency-card {
     .agency-text {
