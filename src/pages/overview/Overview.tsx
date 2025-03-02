@@ -21,7 +21,7 @@ const Overview = () => {
           <section
             id={section.id}
             key={section.id}
-            className="overview-section"
+            className={`overview-section ${section.className}`}
           >
             <div className="section-heading">
               <h1>{content.sections[section.id].header[language]}</h1>

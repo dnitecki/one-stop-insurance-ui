@@ -4,6 +4,7 @@ import { LanguageEnumShort, LanguageEnumLong } from "../enums/languageEnums";
 export type OverviewMapperType = {
   id: string;
   Component: React.FC;
+  className?: string;
 };
 
 export type LanguageMapperType = {

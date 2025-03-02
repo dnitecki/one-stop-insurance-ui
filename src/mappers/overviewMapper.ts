@@ -13,6 +13,7 @@ export const OverviewMapper: OverviewMapperType[] = [
   {
     id: "services",
     Component: Services,
+    className: "services",
   },
   {
     id: "contact",
