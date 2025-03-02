@@ -1,7 +1,8 @@
 .reviews-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
+  max-width: 40rem;
   gap: 1rem;
   align-items: center;
 }
@@ -41,12 +42,10 @@
   align-items: center;
   padding: 1rem 1rem;
   opacity: 0;
-  background: linear-gradient(
-    90deg,
-    rgb(233, 233, 233) 0%,
-    var(--primary-gray) 70%
-  );
+  background-color: var(--white);
   border-radius: var(--border-radius);
+  filter: drop-shadow(var(--shadow));
+  -webkit-filter: drop-shadow(var(--shadow));
   transition: opacity 0.5s ease-in-out;
 }
 .review-card.fade-in {
@@ -83,7 +82,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-
   justify-content: center;
   align-items: center;
   text-align: left;
@@ -98,6 +96,12 @@
   height: fit-content;
   align-items: flex-end;
   h3 {
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .reviews-container {
+    width: 100%;
   }
 }

@@ -3,12 +3,14 @@ import Contact from "../components/contact/Contact";
 import Reviews from "../components/reviews/Reviews";
 import Services from "../components/services/Services";
 import SocialFeed from "../components/socialFeed/SocialFeed";
+import { EMPTY_STRING } from "../constants/constants";
 import { OverviewMapperType } from "../types/types";
 
 export const OverviewMapper: OverviewMapperType[] = [
   {
     id: "agency",
     Component: Agency,
+    className: EMPTY_STRING,
   },
   {
     id: "services",
@@ -18,13 +20,16 @@ export const OverviewMapper: OverviewMapperType[] = [
   {
     id: "contact",
     Component: Contact,
+    className: EMPTY_STRING,
   },
   {
     id: "reviews",
     Component: Reviews,
+    className: "reviews",
   },
   {
     id: "socialFeed",
     Component: SocialFeed,
+    className: EMPTY_STRING,
   },
 ];

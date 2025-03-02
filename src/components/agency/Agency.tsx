@@ -7,6 +7,7 @@ import ContentMapper from "../../content/contentMapper.json";
 import parse from "html-react-parser";
 import { ContentMapperType } from "../../types/types";
 import { EMPTY_STRING } from "../../constants/constants";
+import GroupPhoto from "../../assets/webp/group-photo.webp";
 
 const Agency = () => {
   const [searchParams] = useSearchParams();
@@ -19,13 +20,8 @@ const Agency = () => {
       <div className="agency-container">
         <div className="experience-container">
           <div className="experience-card">
-            <div className="icon-container">
-              <Lottie
-                animationData={BrokerAnimation}
-                className="player"
-                play
-                loop
-              />
+            <div className="photo-container">
+              <img className="photo" src={GroupPhoto} alt="Group Photo" />
             </div>
           </div>
           <div className="experience-text">
