@@ -29,7 +29,7 @@ export type ReviewMapperType = {
 export type ContentMapperType = {
   sections: {
     [index: string]: {
-      header: {
+      header?: {
         [index: string]: string;
       };
       body?: {

@@ -7,21 +7,26 @@ import LanguageSelector from "../languageSelector/LanguageSelector";
 import { INFO } from "../../constants/constants";
 import { Link, useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
+import { ContentMapperType } from "../../types/types";
+import ContentMapper from "../../content/contentMapper.json";
 
 const Header = () => {
   const [searchParams] = useSearchParams();
-  const languageParam = searchParams.get(SeachParamEnum.LANG);
+  const language = searchParams.get(SeachParamEnum.LANG);
+  const content: ContentMapperType = ContentMapper;
+  const bannerContent = content?.sections.header.body[language];
+
   return (
     <nav className="header-container">
       <div className="header-logo">
-        <Link to={`/?lang=${languageParam}`} title="Home">
+        <Link to={`/?lang=${language}`} title="Home">
           <img src={logo} alt="one stop logo" />
         </Link>
       </div>
       <div className="header-options">
-        <Link to={`/requestquote?lang=${languageParam}`} title="Get A Quote">
+        <Link to={`/requestquote?lang=${language}`} title="Get A Quote">
           <FactCheckIcon fontSize="inherit" />
-          <p>Get A Quote</p>
+          <p>{bannerContent?.quoteText}</p>
         </Link>
         <a href={INFO.PHONE_HREF} title="Call">
           <PhoneIcon fontSize="inherit" />

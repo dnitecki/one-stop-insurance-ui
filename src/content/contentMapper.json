@@ -1,5 +1,15 @@
 {
   "sections": {
+    "header": {
+      "body": {
+        "EN": {
+          "quoteText": "Get a Quote"
+        },
+        "PL": {
+          "quoteText": "Uzyskaj Wycenę"
+        }
+      }
+    },
     "banner": {
       "header": {
         "EN": "Let us find the coverage you need.",
@@ -11,7 +21,7 @@
           "contactCta": "Contact Us"
         },
         "PL": {
-          "quoteCta": "Złóż o wycenę",
+          "quoteCta": "Uzyskaj Wycenę",
           "contactCta": "Kontakt"
         }
       }

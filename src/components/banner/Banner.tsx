@@ -1,7 +1,5 @@
 import "./Banner.scss";
-import OneStopLogoText from "../../assets/png/one-stop-logo-text.png";
 import Skyline from "../../assets/png/chicago-skyline.png";
-import OneStopLogo from "../../assets/webp/one-stop-logo.webp";
 import BeataHeadshot from "../../assets/webp/beata-headshot.webp";
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
@@ -19,11 +17,6 @@ const Banner = () => {
         <div className="main-banner-image">
           <div className="banner-content-container">
             <div className="banner-cta-container">
-              {/* <img
-                src={OneStopLogo}
-                className="one-stop-logo"
-                alt="One Stop Logo"
-              /> */}
               <div className="banner-cta-text">
                 <h1>{bannerContent?.header[language]}</h1>
               </div>
