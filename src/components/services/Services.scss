@@ -109,3 +109,8 @@
 .collapse {
   transform: rotate(180deg);
 }
+@media (max-width: 700px) {
+  .services-content {
+    width: 100% !important;
+  }
+}

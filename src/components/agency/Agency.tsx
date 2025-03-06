@@ -1,7 +1,7 @@
 import "./Agency.scss";
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
-import BrokerAnimation from "../../assets/json/BrokerAnimation.json";
+import QuoteAnimation from "../../assets/json/QuoteAnimation.json";
 import Lottie from "react-lottie-player";
 import ContentMapper from "../../content/contentMapper.json";
 import parse from "html-react-parser";
@@ -34,7 +34,7 @@ const Agency = () => {
           <div className="experience-card">
             <div className="icon-container">
               <Lottie
-                animationData={BrokerAnimation}
+                animationData={QuoteAnimation}
                 className="player"
                 play
                 loop

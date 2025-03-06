@@ -37,7 +37,8 @@
         align-items: center;
         justify-content: flex-end;
         height: 100%;
-        width: 40%;
+        overflow: hidden;
+        width: 60%;
         .headshot {
           display: flex;
           clip-path: inset(0 1px 0 0);
@@ -51,7 +52,7 @@
         display: flex;
         color: var(--white);
         height: 100%;
-        width: 60%;
+        width: 100%;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -125,6 +126,25 @@
       object-fit: contain;
       object-position: center;
       z-index: 1;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .banner-content-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    .banner-cta-container {
+      padding: 0 !important;
+    }
+    .headshot-container {
+      .headshot {
+        display: flex;
+        clip-path: inset(0 1px 0 0);
+        height: 100% !important;
+        width: auto;
+        filter: drop-shadow(var(--shadow));
+        -webkit-filter: drop-shadow(var(--shadow));
+      }
     }
   }
 }

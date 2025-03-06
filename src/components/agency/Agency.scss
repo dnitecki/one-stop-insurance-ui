@@ -13,14 +13,15 @@
   max-width: 30rem;
   gap: 3rem;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   .experience-card {
     display: flex;
     position: relative;
-    width: 100%;
-    height: 15rem;
+    width: 20rem;
+    height: 20rem;
     justify-content: center;
     align-items: center;
-    overflow: auto;
     position: relative;
     border-radius: var(--border-radius);
     background: linear-gradient(
@@ -31,14 +32,15 @@
     .icon-container {
       display: flex;
       height: 100%;
-      width: 45%;
+      width: auto;
       justify-content: center;
       align-items: center;
-      .broker-icon {
+      .player {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        height: 100%;
+        width: auto;
       }
     }
     .photo-container {
@@ -47,10 +49,10 @@
       width: auto;
       .photo {
         display: flex;
-        object-fit: cover;
+        object-fit: contain;
         clip-path: inset(0 1px 0 0);
         height: 100%;
-        width: 100%;
+        width: auto;
         filter: drop-shadow(var(--shadow));
         -webkit-filter: drop-shadow(var(--shadow));
       }
