@@ -8,6 +8,11 @@ import { OverviewMapperType } from "../types/types";
 
 export const OverviewMapper: OverviewMapperType[] = [
   {
+    id: "reviews",
+    Component: Reviews,
+    className: "reviews",
+  },
+  {
     id: "agency",
     Component: Agency,
     className: EMPTY_STRING,
@@ -22,11 +27,7 @@ export const OverviewMapper: OverviewMapperType[] = [
     Component: Contact,
     className: EMPTY_STRING,
   },
-  {
-    id: "reviews",
-    Component: Reviews,
-    className: "reviews",
-  },
+
   {
     id: "socialFeed",
     Component: SocialFeed,

@@ -60,9 +60,10 @@
         padding: 2rem;
         .banner-cta-text {
           display: flex;
-          color: var(--black);
+          color: var(--heading-text-color);
           text-align: center;
           max-width: 40rem;
+          padding: 0 2rem;
           h1 {
             font-size: 40px;
           }
@@ -135,6 +136,11 @@
     align-items: center;
     .banner-cta-container {
       padding: 0 !important;
+      .banner-cta-text {
+        h1 {
+          font-size: 34px !important;
+        }
+      }
     }
     .headshot-container {
       .headshot {

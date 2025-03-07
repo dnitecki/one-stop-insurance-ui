@@ -19,15 +19,18 @@
   overflow-x: hidden;
   .services {
     background-color: var(--primary-gray);
+    border-radius: var(--border-radius);
   }
   .reviews {
+    margin-top: 2rem;
     background-color: var(--primary-gray);
+    border-radius: var(--border-radius);
   }
   .overview-section {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 3rem;
+    padding-top: 3rem;
     padding-bottom: 3rem;
     .section-heading {
       z-index: 2;
@@ -47,6 +50,19 @@
       width: 100%;
       justify-content: center;
       align-items: center;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .overview-section {
+    padding-top: 2rem !important;
+  }
+  .section-heading {
+    margin-bottom: 1rem;
+    h1 {
+      font-size: 34px;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 }

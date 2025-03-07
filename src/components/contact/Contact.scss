@@ -21,6 +21,8 @@
   align-items: center;
   width: 100%;
   height: fit-content;
+  filter: drop-shadow(var(--shadow));
+  -webkit-filter: drop-shadow(var(--shadow));
 }
 .contact-option-container {
   display: flex;
