@@ -1,10 +1,10 @@
 import { useSearchParams } from "react-router-dom";
-import { ReviewMapper } from "../../mappers/reviewMapper";
+import ReviewMapper from "../../content/reviewMapper.json";
 import StarIcon from "@mui/icons-material/Star";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import ContentMapper from "../../content/contentMapper.json";
 import GoogleIcon from "../../assets/webp/google-icon.webp";
-import { ContentMapperType } from "../../types/types";
+import { ContentMapperType, ReviewMapperType } from "../../types/types";
 import "./Reviews.scss";
 
 const Reviews = () => {
@@ -12,6 +12,7 @@ const Reviews = () => {
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = ContentMapper;
   const reviewContent = content.sections.reviews.body[language];
+  const reviews: ReviewMapperType[] = ReviewMapper;
 
   return (
     <div className="reviews-container">
@@ -22,7 +23,7 @@ const Reviews = () => {
         <img className="google-icon" src={GoogleIcon} alt="google icon" />
       </div>
       <div className="review-container">
-        {ReviewMapper.map((review) => (
+        {reviews.map((review) => (
           <div className="review-card">
             <div className="review-card-content">
               <div className="review-rating">
