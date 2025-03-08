@@ -5,6 +5,7 @@
 }
 .banner-content {
   display: flex;
+  position: relative;
   height: 100%;
   width: 100%;
   flex-direction: column;
@@ -29,20 +30,34 @@
       display: flex;
       width: 100%;
       height: 100%;
-      max-width: 80rem;
+      max-width: 90rem;
       z-index: 1;
       .headshot-container {
         display: flex;
+        position: relative;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
         height: 100%;
         overflow: hidden;
-        width: 60%;
+        width: 50rem;
+        .name-tag {
+          position: absolute;
+          display: flex;
+          width: fit-content;
+          top: 16rem;
+          left: 0;
+          justify-content: center;
+          z-index: 1;
+          text-align: right;
+          filter: drop-shadow(var(--shadow));
+          -webkit-filter: drop-shadow(var(--shadow));
+          flex-direction: column;
+        }
         .headshot {
           display: flex;
           clip-path: inset(0 1px 0 0);
-          height: 80%;
+          height: 70%;
           width: auto;
           filter: drop-shadow(var(--shadow));
           -webkit-filter: drop-shadow(var(--shadow));
@@ -57,15 +72,16 @@
         align-items: center;
         flex-direction: column;
         gap: 2rem;
-        padding: 2rem;
-        .banner-cta-text {
+
+        .banner-logo {
           display: flex;
-          color: var(--heading-text-color);
-          text-align: center;
-          max-width: 40rem;
-          padding: 0 2rem;
-          h1 {
-            font-size: 40px;
+          width: 100%;
+          padding: 1rem;
+          max-width: 30rem;
+          .one-stop-logo {
+            display: flex;
+            height: 100%;
+            width: 100%;
           }
         }
         .banner-cta-buttons {
@@ -86,6 +102,8 @@
             gap: 0.5rem;
             outline: 2px solid transparent;
             transition: all 200ms ease;
+            filter: drop-shadow(var(--shadow));
+            -webkit-filter: drop-shadow(var(--shadow));
             h2 {
               display: flex;
               align-items: center;
@@ -117,40 +135,15 @@
         rgba(0, 0, 0, 0)
       );
     }
-    .one-stop-logo {
-      display: flex;
-      width: 100%;
-      max-width: 17rem;
-      min-width: 10rem;
-      padding-left: 3rem;
-      padding-right: 3rem;
-      object-fit: contain;
-      object-position: center;
-      z-index: 1;
-    }
   }
 }
 @media (max-width: 700px) {
   .banner-content-container {
-    flex-direction: column-reverse;
     align-items: center;
-    .banner-cta-container {
-      padding: 0 !important;
-      .banner-cta-text {
-        h1 {
-          font-size: 34px !important;
-        }
-      }
-    }
-    .headshot-container {
-      .headshot {
-        display: flex;
-        clip-path: inset(0 1px 0 0);
-        height: 100% !important;
-        width: auto;
-        filter: drop-shadow(var(--shadow));
-        -webkit-filter: drop-shadow(var(--shadow));
-      }
-    }
+  }
+}
+@media (max-width: 1000px) {
+  .headshot-container {
+    display: none !important;
   }
 }

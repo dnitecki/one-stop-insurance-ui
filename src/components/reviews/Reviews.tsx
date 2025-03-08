@@ -23,8 +23,8 @@ const Reviews = () => {
         <img className="google-icon" src={GoogleIcon} alt="google icon" />
       </div>
       <div className="review-container">
-        {reviews.map((review) => (
-          <div className="review-card">
+        {reviews.map((review, index) => (
+          <div className="review-card" key={index}>
             <div className="review-card-content">
               <div className="review-rating">
                 <StarIcon className="star-icon" fontSize="inherit" />
