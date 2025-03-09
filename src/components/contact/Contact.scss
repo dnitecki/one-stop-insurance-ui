@@ -35,7 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 20rem;
     height: fit-content;
     background-color: var(--primary-red);
     border-radius: var(--border-radius);
@@ -88,5 +88,8 @@
   }
   .contact-option-container {
     flex-direction: column;
+  }
+  .contact-option-btn {
+    width: 100% !important;
   }
 }
