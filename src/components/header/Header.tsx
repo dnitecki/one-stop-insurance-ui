@@ -24,7 +24,11 @@ const Header = () => {
         </Link>
       </div>
       <div className="header-options">
-        <Link to={`/requestquote?lang=${language}`} title="Get A Quote">
+        <Link
+          to={`/requestquote?lang=${language}`}
+          title="Get A Quote"
+          id="quoteLink"
+        >
           <FactCheckIcon fontSize="inherit" />
           <p>{bannerContent?.quoteText}</p>
         </Link>
