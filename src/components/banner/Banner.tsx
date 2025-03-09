@@ -16,7 +16,10 @@ const Banner = () => {
   const scrollToContactSection = () => {
     const section = document.getElementById("contact");
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -70;
+      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
