@@ -20,9 +20,10 @@
 }
 .services-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  width: 30rem;
+  width: 100%;
+  max-width: 50rem;
   font-size: 25px;
   p {
     font-size: 18px;
@@ -80,6 +81,6 @@
 }
 @media (max-width: 700px) {
   .services-content {
-    width: 100% !important;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -20,7 +20,7 @@ const Header = () => {
     <nav className="header-container">
       <div className="header-logo">
         <Link to={`/?lang=${language}`} title="Home">
-          <img src={logo} alt="one stop logo" />
+          <img src={logo} alt="One Stop Logo" />
         </Link>
       </div>
       <div className="header-options">
