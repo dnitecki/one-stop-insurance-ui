@@ -12,6 +12,12 @@ const Banner = () => {
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = ContentMapper;
   const bannerContent = content.sections.banner;
+  const scrollToSection = () => {
+    const section = document.getElementById("contact");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="banner-container">
@@ -35,7 +41,7 @@ const Banner = () => {
                   <h2>{bannerContent.body[language]?.quoteCta}</h2>
                 </Link>
 
-                <button className="banner-btn">
+                <button className="banner-btn" onClick={scrollToSection}>
                   <h2>{bannerContent.body[language]?.contactCta}</h2>
                 </button>
               </div>

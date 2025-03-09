@@ -4,9 +4,7 @@ import { SeachParamEnum } from "../../enums/languageEnums";
 import QuoteAnimation from "../../assets/json/QuoteAnimation.json";
 import Lottie from "react-lottie-player";
 import ContentMapper from "../../content/contentMapper.json";
-import parse from "html-react-parser";
 import { ContentMapperType } from "../../types/types";
-import { EMPTY_STRING } from "../../constants/constants";
 import GroupPhoto from "../../assets/webp/group-photo.webp";
 
 const Agency = () => {
@@ -25,9 +23,7 @@ const Agency = () => {
             </div>
           </div>
           <div className="experience-text">
-            <h2>
-              {parse(agencyContent?.experienceContentOne ?? EMPTY_STRING)}
-            </h2>
+            <h2>{agencyContent?.experienceContentOne}</h2>
           </div>
         </div>
         <div className="experience-container">
@@ -42,9 +38,7 @@ const Agency = () => {
             </div>
           </div>
           <div className="experience-text">
-            <h2>
-              {parse(agencyContent?.experienceContentTwo ?? EMPTY_STRING)}
-            </h2>
+            <h2>{agencyContent?.experienceContentTwo}</h2>
           </div>
         </div>
       </div>

@@ -33,12 +33,12 @@
       },
       "body": {
         "EN": {
-          "experienceContentOne": "<span>We have more than <strong>30 years</strong> of combined insurance experience.</span>",
-          "experienceContentTwo": "<span>Your <strong>One Stop</strong> Shop for smart savings and smarter coverage.</span>"
+          "experienceContentOne": "We have more than 30 years of combined insurance experience.",
+          "experienceContentTwo": "Your One Stop Shop for smart savings and smarter coverage."
         },
         "PL": {
-          "experienceContentOne": "<span>Mamy ponad <strong>30 lat</strong> wspólnego doświadczenia z ubezpieczeniem.</span>",
-          "experienceContentTwo": "<span>Lepsze ubezpieczenie w niższej cenie w <strong>Jednym</strong> miejscu</span>"
+          "experienceContentOne": "Mamy ponad 30 lat wspólnego doświadczenia z ubezpieczeniem.",
+          "experienceContentTwo": "Lepsze ubezpieczenie w niższej cenie w Jednym miejscu"
         }
       }
     },
