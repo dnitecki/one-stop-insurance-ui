@@ -7,7 +7,7 @@ import { LINKS } from "../../constants/constants";
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <footer className="footer-container">
       <div className="footer-content">
         <div className="link-cluster">
           <a href={LINKS.FB} target="_blank" rel="noreferrer" title="Facebook">
@@ -36,7 +36,7 @@ const Footer = () => {
           <p>&nbsp;by Dominick Nitecki</p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

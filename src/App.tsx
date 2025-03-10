@@ -24,13 +24,15 @@ export default function App() {
     <div className="app">
       <div className="app-container" id="app-container">
         <Header />
-        <div className="page-container" id="page-container">
-          <Routes>
-            <Route index path="/" element={<Overview />} />
-            <Route path="/requestquote" element={<Quote />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </div>
+        <main>
+          <div className="page-container" id="page-container">
+            <Routes>
+              <Route index path="/" element={<Overview />} />
+              <Route path="/requestquote" element={<Quote />} />
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </div>
+        </main>
         <Footer />
       </div>
     </div>

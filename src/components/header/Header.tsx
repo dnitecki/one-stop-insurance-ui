@@ -17,7 +17,7 @@ const Header = () => {
   const bannerContent = content?.sections.header.body[language];
 
   return (
-    <nav className="header-container">
+    <header className="header-container">
       <div className="header-logo">
         <Link to={`/?lang=${language}`} title="Home">
           <img src={logo} alt="One Stop Logo" />
@@ -40,7 +40,7 @@ const Header = () => {
         </a>
         <LanguageSelector />
       </div>
-    </nav>
+    </header>
   );
 };
 
