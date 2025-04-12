@@ -34,7 +34,7 @@ const Reviews = () => {
                 <p>{review.review}</p>
               </div>
               <div className="review-name">
-                <h3>-{review.name}</h3>
+                <h3>{review.name}</h3>
               </div>
             </div>
           </div>
