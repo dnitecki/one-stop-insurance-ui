@@ -42,6 +42,9 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-row">
           <div className="form-group">
+            <label className="form-label" htmlFor="fname">
+              First Name
+            </label>
             <input
               className="form-input"
               type="text"
@@ -52,11 +55,11 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
               onChange={handleChange}
               required
             />
-            <label className="form-label" htmlFor="fname">
-              First Name
-            </label>
           </div>
           <div className="form-group">
+            <label className="form-label" htmlFor="lname">
+              Last Name
+            </label>
             <input
               className="form-input"
               type="text"
@@ -67,13 +70,13 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
               onChange={handleChange}
               required
             />
-            <label className="form-label" htmlFor="lname">
-              Last Name
-            </label>
           </div>
         </div>
         <div className="form-row">
           <div className="form-group">
+            <label className="form-label" htmlFor="email">
+              Email
+            </label>
             <input
               className="form-input"
               type="email"
@@ -84,11 +87,11 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
               onChange={handleChange}
               required
             />
-            <label className="form-label" htmlFor="email">
-              Email
-            </label>
           </div>
           <div className="form-group">
+            <label className="form-label" htmlFor="phone">
+              Phone
+            </label>
             <input
               className="form-input"
               type="tel"
@@ -99,13 +102,13 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
               onChange={handleChange}
               required
             />
-            <label className="form-label" htmlFor="phone">
-              Phone
-            </label>
           </div>
         </div>
         <div className="form-row">
           <div className="form-group">
+            <label className="form-label" htmlFor="dateOfBirth">
+              Date Of Birth
+            </label>
             <input
               className="form-input"
               type="date"
@@ -115,9 +118,6 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
               onChange={handleChange}
               required
             />
-            <label className="form-label" htmlFor="dateOfBirth">
-              Date Of Birth
-            </label>
           </div>
           <div className="form-gap" />
         </div>
@@ -126,6 +126,9 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-row">
           <div className="form-group">
+            <label className="form-label" htmlFor="street">
+              Street
+            </label>
             <input
               className="form-input"
               type="text"
@@ -136,13 +139,13 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
               onChange={handleChange}
               required
             />
-            <label className="form-label" htmlFor="street">
-              Street
-            </label>
           </div>
         </div>
         <div className="form-row">
           <div className="form-group">
+            <label className="form-label" htmlFor="unit">
+              Unit #
+            </label>
             <input
               className="form-input"
               type="text"
@@ -152,11 +155,11 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
               value={formData.unit}
               onChange={handleChange}
             />
-            <label className="form-label" htmlFor="unit">
-              Unit #
-            </label>
           </div>
           <div className="form-group">
+            <label className="form-label" htmlFor="postalCode">
+              Postal Code
+            </label>
             <input
               className="form-input"
               type="text"
@@ -167,11 +170,11 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
               onChange={handleChange}
               required
             />
-            <label className="form-label" htmlFor="postalCode">
-              Postal Code
-            </label>
           </div>
           <div className="form-group">
+            <label className="form-label" htmlFor="city">
+              City
+            </label>
             <input
               className="form-input"
               type="text"
@@ -182,37 +185,46 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
               onChange={handleChange}
               required
             />
-            <label className="form-label" htmlFor="city">
-              City
-            </label>
           </div>
         </div>
         <div className="form-row">
-          <select
-            className="form-select"
-            id="state"
-            name="state"
-            defaultValue="state"
-            required
-            value={formData.state}
-            onChange={handleChange}
-          >
-            <option hidden>State</option>
-            <option value="ohio">Ohio</option>
-            <option value="illinois">Illinois</option>
-          </select>
-          <select
-            className="form-select"
-            id="country"
-            name="country"
-            defaultValue="country"
-            required
-            value={formData.country}
-            onChange={handleChange}
-          >
-            <option hidden>Country</option>
-            <option value="US">United States</option>
-          </select>
+          <div className="form-group">
+            <label className="form-label" htmlFor="state">
+              State
+            </label>
+            <select
+              className="form-select"
+              title="state"
+              id="state"
+              name="state"
+              defaultValue="state"
+              required
+              value={formData.state}
+              onChange={handleChange}
+            >
+              <option hidden>Select State</option>
+              <option value="ohio">Ohio</option>
+              <option value="illinois">Illinois</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label className="form-label" htmlFor="country">
+              Country
+            </label>
+            <select
+              className="form-select"
+              title="country"
+              id="country"
+              name="country"
+              defaultValue="country"
+              required
+              value={formData.country}
+              onChange={handleChange}
+            >
+              <option hidden>Select Country</option>
+              <option value="US">United States</option>
+            </select>
+          </div>
         </div>
       </form>
       <div className="form-navigation">

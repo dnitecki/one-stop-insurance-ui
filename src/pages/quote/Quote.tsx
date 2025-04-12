@@ -7,6 +7,7 @@ import { useState } from "react";
 import { EMPTY_STRING } from "../../constants/constants";
 import SelectQuoteType from "../../components/forms/quoteForm/selectQuoteType/SelectQuoteType";
 import PersonalInfo from "../../components/forms/quoteForm/personalInfo/PersonalInfo";
+import DetailedInfo from "../../components/forms/quoteForm/detailedInfo/DetailedInfo";
 
 const Quote = () => {
   const formInitialState = {
@@ -25,7 +26,7 @@ const Quote = () => {
   };
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
-  const [activeStep, setActiveStep] = useState(0);
+  const [activeStep, setActiveStep] = useState(1);
   const [formData, setFormData] = useState(formInitialState);
 
   return (
@@ -59,6 +60,13 @@ const Quote = () => {
         )}
         {activeStep === 1 && (
           <PersonalInfo
+            setActiveStep={setActiveStep}
+            setFormData={setFormData}
+            formData={formData}
+          />
+        )}
+        {activeStep === 2 && (
+          <DetailedInfo
             setActiveStep={setActiveStep}
             setFormData={setFormData}
             formData={formData}
