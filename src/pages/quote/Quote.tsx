@@ -1,13 +1,14 @@
 import "./Quote.scss";
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
-import { QuoteFormContent } from "../../content/contentMapper";
+import QuoteContentMapper from "../../content/quoteContentMapper.json";
 import { Step, Stepper } from "react-form-stepper";
 import { useState } from "react";
 import { EMPTY_STRING } from "../../constants/constants";
 import SelectQuoteType from "../../components/forms/quoteForm/selectQuoteType/SelectQuoteType";
 import PersonalInfo from "../../components/forms/quoteForm/personalInfo/PersonalInfo";
-import DetailedInfo from "../../components/forms/quoteForm/detailedInfo/DetailedInfo";
+import AutoDetailedInfo from "../../components/forms/quoteForm/detailedInfo/AutoDetailedInfo";
+import { ContentMapperType } from "../../types/types";
 
 const Quote = () => {
   const formInitialState = {
@@ -26,27 +27,23 @@ const Quote = () => {
   };
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
-  const [activeStep, setActiveStep] = useState(1);
+  const content: ContentMapperType = QuoteContentMapper;
+  const quoteContent = content?.sections.stepper.body[language];
+  const [activeStep, setActiveStep] = useState(2);
   const [formData, setFormData] = useState(formInitialState);
 
   return (
     <div className="quote-container">
       <div className="stepper-container">
         <Stepper activeStep={activeStep}>
+          <Step label={quoteContent.stepOne} onClick={() => setActiveStep(0)} />
+          <Step label={quoteContent.stepTwo} onClick={() => setActiveStep(1)} />
           <Step
-            label={QuoteFormContent.stepper.stepOne[language]}
-            onClick={() => setActiveStep(0)}
-          />
-          <Step
-            label={QuoteFormContent.stepper.stepTwo[language]}
-            onClick={() => setActiveStep(1)}
-          />
-          <Step
-            label={QuoteFormContent.stepper.stepThree[language]}
+            label={quoteContent.stepThree}
             onClick={() => setActiveStep(2)}
           />
           <Step
-            label={QuoteFormContent.stepper.stepFour[language]}
+            label={quoteContent.stepFour}
             onClick={() => setActiveStep(3)}
           />
         </Stepper>
@@ -66,7 +63,7 @@ const Quote = () => {
           />
         )}
         {activeStep === 2 && (
-          <DetailedInfo
+          <AutoDetailedInfo
             setActiveStep={setActiveStep}
             setFormData={setFormData}
             formData={formData}

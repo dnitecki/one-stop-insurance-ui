@@ -1,12 +1,11 @@
-import "../QuoteForm.scss";
-import { useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { QuoteFormProps } from "../../../../types/types";
 import { SeachParamEnum } from "../../../../enums/languageEnums";
+import { useRef } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const PersonalInfo: React.FC<QuoteFormProps> = ({
+const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
   setFormData,
   setActiveStep,
   formData,
@@ -23,7 +22,7 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
   const handleNext = () => {
     if (formRef.current) {
       if (formRef.current.checkValidity()) {
-        setActiveStep(2);
+        setActiveStep(3);
       } else {
         formRef.current.reportValidity();
       }
@@ -33,7 +32,7 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
   return (
     <div className="form-container">
       <div className="quote-header">
-        <h1>Add Your Information</h1>
+        <h1>Auto Details</h1>
       </div>
       <form ref={formRef} className="form-content">
         <div className="form-header">
@@ -231,7 +230,7 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
           className="form-submit-btn"
           type="button"
           onClick={() => {
-            setActiveStep(0);
+            setActiveStep(1);
           }}
         >
           <ArrowBackIcon fontSize="medium" />
@@ -246,4 +245,4 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
   );
 };
 
-export default PersonalInfo;
+export default AutoDetailedInfo;

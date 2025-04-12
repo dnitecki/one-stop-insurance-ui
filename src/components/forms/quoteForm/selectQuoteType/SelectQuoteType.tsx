@@ -1,7 +1,6 @@
 import { QuoteFormProps } from "../../../../types/types";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
-import { QuoteFormContent } from "../../../../content/contentMapper";
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../../../enums/languageEnums";
 
@@ -14,7 +13,7 @@ const SelectQuoteType: React.FC<QuoteFormProps> = ({
   return (
     <>
       <div className="quote-header">
-        <h1>{QuoteFormContent.quoteStepOne.header[language]}</h1>
+        <h1>Select Quote Type</h1>
       </div>
       <div className="quote-options-container">
         <button

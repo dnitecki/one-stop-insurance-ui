@@ -5,12 +5,12 @@ import OneStopLogo from "../../assets/png/one-stop-logo-text.png";
 import { Link, useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapperType } from "../../types/types";
-import ContentMapper from "../../content/contentMapper.json";
+import OverviewContentMapper from "../../content/overviewContentMapper.json";
 
 const Banner = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
-  const content: ContentMapperType = ContentMapper;
+  const content: ContentMapperType = OverviewContentMapper;
   const bannerContent = content.sections.banner;
 
   const scrollToContactSection = () => {

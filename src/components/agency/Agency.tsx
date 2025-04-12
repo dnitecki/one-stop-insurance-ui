@@ -3,14 +3,14 @@ import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import QuoteAnimation from "../../assets/json/QuoteAnimation.json";
 import Lottie from "react-lottie-player";
-import ContentMapper from "../../content/contentMapper.json";
+import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import { ContentMapperType } from "../../types/types";
 import GroupPhoto from "../../assets/webp/group-photo.webp";
 
 const Agency = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
-  const content: ContentMapperType = ContentMapper;
+  const content: ContentMapperType = OverviewContentMapper;
   const agencyContent = content?.sections.agency.body[language];
 
   return (

@@ -2,7 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import ReviewMapper from "../../content/reviewMapper.json";
 import StarIcon from "@mui/icons-material/Star";
 import { SeachParamEnum } from "../../enums/languageEnums";
-import ContentMapper from "../../content/contentMapper.json";
+import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import GoogleIcon from "../../assets/webp/google-icon.webp";
 import { ContentMapperType, ReviewMapperType } from "../../types/types";
 import "./Reviews.scss";
@@ -10,7 +10,7 @@ import "./Reviews.scss";
 const Reviews = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
-  const content: ContentMapperType = ContentMapper;
+  const content: ContentMapperType = OverviewContentMapper;
   const reviewContent = content.sections.reviews.body[language];
   const reviews: ReviewMapperType[] = ReviewMapper;
 

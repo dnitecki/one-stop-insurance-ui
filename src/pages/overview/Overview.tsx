@@ -4,13 +4,13 @@ import Banner from "../../components/banner/Banner";
 import { useSearchParams } from "react-router-dom";
 import { OverviewMapper } from "../../mappers/overviewMapper";
 import { SeachParamEnum } from "../../enums/languageEnums";
-import ContentMapper from "../../content/contentMapper.json";
+import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import { ContentMapperType } from "../../types/types";
 
 const Overview = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
-  const content: ContentMapperType = ContentMapper;
+  const content: ContentMapperType = OverviewContentMapper;
 
   return (
     <div className="overview-container" id="overview-container">

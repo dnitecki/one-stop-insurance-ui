@@ -1,0 +1,32 @@
+{
+  "sections": {
+    "stepper": {
+      "body": {
+        "EN": {
+          "stepOne": "Quote Type",
+          "stepTwo": "Personal Information",
+          "stepThree": "Detailed Information",
+          "stepFour": "Verify"
+        },
+        "PL": {
+          "stepOne": "Wybierz Wycenę",
+          "stepTwo": "Dodaj Dane",
+          "stepThree": "Szczegółowe Dane",
+          "stepFour": "Zweryfikuj"
+        }
+      }
+    },
+    "quoteType": {
+      "header": {
+        "EN": "Select Quote Type",
+        "PL": "Rodzaj Wyceny"
+      }
+    },
+    "personalInfo": {
+      "header": {
+        "EN": "Add Your Information",
+        "PL": "Dodaj Dane"
+      }
+    }
+  }
+}
