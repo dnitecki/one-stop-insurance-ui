@@ -126,4 +126,33 @@
   .form-select:focus {
     border: 2px solid var(--primary-red);
   }
+  .form-fieldset {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    height: fit-content;
+    border: none;
+  }
+  .form-radio-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .form-radio {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--primary-gray);
+    border-radius: 50%;
+    outline: 2px solid var(--black);
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+
+    &:checked {
+      background-color: var(--primary-red);
+    }
+  }
 }

@@ -143,7 +143,7 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         <div className="form-row">
           <div className="form-group">
             <label className="form-label" htmlFor="unit">
-              Unit #
+              Unit Number
             </label>
             <input
               className="form-input"

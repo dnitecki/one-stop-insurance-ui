@@ -9,6 +9,8 @@ import SelectQuoteType from "../../components/forms/quoteForm/selectQuoteType/Se
 import PersonalInfo from "../../components/forms/quoteForm/personalInfo/PersonalInfo";
 import AutoDetailedInfo from "../../components/forms/quoteForm/detailedInfo/AutoDetailedInfo";
 import { ContentMapperType } from "../../types/types";
+import HomeDetailedInfo from "../../components/forms/quoteForm/detailedInfo/HomeDetailedInfo";
+import { QuoteTypeEnum } from "../../enums/formEnums";
 
 const Quote = () => {
   const formInitialState = {
@@ -24,8 +26,17 @@ const Quote = () => {
     city: EMPTY_STRING,
     state: EMPTY_STRING,
     country: EMPTY_STRING,
+    driversLicenseNum: EMPTY_STRING,
+    occupation: EMPTY_STRING,
+    currentInsurer: EMPTY_STRING,
+    timeWithInsurer: EMPTY_STRING,
+    currentCoverages: EMPTY_STRING,
+    renewalDate: EMPTY_STRING,
+    homeOwner: EMPTY_STRING,
+    noOfResidents: EMPTY_STRING,
   };
   const [searchParams] = useSearchParams();
+  const { HOME, AUTO } = QuoteTypeEnum;
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = QuoteContentMapper;
   const quoteContent = content?.sections.stepper.body[language];
@@ -62,8 +73,15 @@ const Quote = () => {
             formData={formData}
           />
         )}
-        {activeStep === 2 && (
+        {activeStep === 2 && formData.type === AUTO && (
           <AutoDetailedInfo
+            setActiveStep={setActiveStep}
+            setFormData={setFormData}
+            formData={formData}
+          />
+        )}
+        {activeStep === 2 && formData.type === HOME && (
+          <HomeDetailedInfo
             setActiveStep={setActiveStep}
             setFormData={setFormData}
             formData={formData}

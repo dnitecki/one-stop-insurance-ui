@@ -36,35 +36,33 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
       </div>
       <form ref={formRef} className="form-content">
         <div className="form-header">
-          <h2>General Information</h2>
+          <h2>Driver Information</h2>
         </div>
         <div className="form-row">
           <div className="form-group">
-            <label className="form-label" htmlFor="fname">
-              First Name
+            <label className="form-label" htmlFor="driversLicenseNum">
+              Driver's License Number
             </label>
             <input
               className="form-input"
               type="text"
-              id="fname"
-              name="firstName"
-              placeholder=""
-              value={formData.firstName}
+              id="driversLicenseNum"
+              name="driversLicenseNum"
+              value={formData.driversLicenseNum}
               onChange={handleChange}
               required
             />
           </div>
           <div className="form-group">
-            <label className="form-label" htmlFor="lname">
-              Last Name
+            <label className="form-label" htmlFor="occupation">
+              Occupation/Degree
             </label>
             <input
               className="form-input"
               type="text"
-              id="lname"
-              name="lastName"
-              placeholder=""
-              value={formData.lastName}
+              id="occupation"
+              name="occupation"
+              value={formData.occupation}
               onChange={handleChange}
               required
             />
@@ -72,31 +70,29 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-row">
           <div className="form-group">
-            <label className="form-label" htmlFor="email">
-              Email
+            <label className="form-label" htmlFor="currentInsurer">
+              Current Insurer
             </label>
             <input
               className="form-input"
-              type="email"
-              id="email"
-              name="email"
-              placeholder=""
-              value={formData.email}
+              type="text"
+              id="currentInsurer"
+              name="currentInsurer"
+              value={formData.currentInsurer}
               onChange={handleChange}
               required
             />
           </div>
           <div className="form-group">
-            <label className="form-label" htmlFor="phone">
-              Phone
+            <label className="form-label" htmlFor="timeWithInsurer">
+              Time with Insurer (Years)
             </label>
             <input
               className="form-input"
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder=""
-              value={formData.phone}
+              type="text"
+              id="timeWithInsurer"
+              name="timeWithInsurer"
+              value={formData.timeWithInsurer}
               onChange={handleChange}
               required
             />
@@ -104,36 +100,29 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-row">
           <div className="form-group">
-            <label className="form-label" htmlFor="dateOfBirth">
-              Date Of Birth
+            <label className="form-label" htmlFor="currentCoverages">
+              Current Coverages
+            </label>
+            <input
+              className="form-input"
+              type="text"
+              id="currentCoverages"
+              name="currentCoverages"
+              value={formData.currentCoverages}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label className="form-label" htmlFor="renewalDate">
+              Policy Renewal Date
             </label>
             <input
               className="form-input"
               type="date"
-              id="dateOfBirth"
-              name="dateOfBirth"
-              value={formData.dateOfBirth}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-gap" />
-        </div>
-        <div className="form-header">
-          <h2>Primary Address</h2>
-        </div>
-        <div className="form-row">
-          <div className="form-group">
-            <label className="form-label" htmlFor="street">
-              Street
-            </label>
-            <input
-              className="form-input"
-              type="text"
-              id="street"
-              name="street"
-              placeholder=""
-              value={formData.street}
+              id="renewalDate"
+              name="renewalDate"
+              value={formData.renewalDate}
               onChange={handleChange}
               required
             />
@@ -141,89 +130,58 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-row">
           <div className="form-group">
-            <label className="form-label" htmlFor="unit">
-              Unit #
+            <label className="form-label" htmlFor="homeOwner">
+              Are you a homeowner?
             </label>
-            <input
-              className="form-input"
-              type="text"
-              id="unit"
-              name="unit"
-              placeholder=""
-              value={formData.unit}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form-group">
-            <label className="form-label" htmlFor="postalCode">
-              Postal Code
-            </label>
-            <input
-              className="form-input"
-              type="text"
-              id="postalCode"
-              name="postalCode"
-              placeholder=""
-              value={formData.postalCode}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label className="form-label" htmlFor="city">
-              City
-            </label>
-            <input
-              className="form-input"
-              type="text"
-              id="city"
-              name="city"
-              placeholder=""
-              value={formData.city}
-              onChange={handleChange}
-              required
-            />
+            <fieldset className="form-fieldset">
+              <label className="form-radio-label">
+                <input
+                  className="form-radio"
+                  type="radio"
+                  id="homeOwnerYes"
+                  name="homeOwner"
+                  value="yes"
+                  checked={formData.homeOwner === "yes"}
+                  onChange={handleChange}
+                  required
+                />
+                Yes
+              </label>
+              <label className="form-radio-label">
+                <input
+                  className="form-radio"
+                  type="radio"
+                  id="homeOwnerNo"
+                  name="homeOwner"
+                  value="no"
+                  checked={formData.homeOwner === "no"}
+                  onChange={handleChange}
+                  required
+                />
+                No
+              </label>
+            </fieldset>
           </div>
         </div>
-        <div className="form-row">
-          <div className="form-group">
-            <label className="form-label" htmlFor="state">
-              State
-            </label>
-            <select
-              className="form-select"
-              title="state"
-              id="state"
-              name="state"
-              defaultValue="state"
-              required
-              value={formData.state}
-              onChange={handleChange}
-            >
-              <option hidden>Select State</option>
-              <option value="ohio">Ohio</option>
-              <option value="illinois">Illinois</option>
-            </select>
+        {formData.homeOwner === "yes" && (
+          <div className="form-row">
+            <div className="form-group">
+              <label className="form-label" htmlFor="noOfResidents">
+                Number of Residents
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                id="noOfResidents"
+                name="noOfResidents"
+                value={formData.noOfResidents}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-gap" />
           </div>
-          <div className="form-group">
-            <label className="form-label" htmlFor="country">
-              Country
-            </label>
-            <select
-              className="form-select"
-              title="country"
-              id="country"
-              name="country"
-              defaultValue="country"
-              required
-              value={formData.country}
-              onChange={handleChange}
-            >
-              <option hidden>Select Country</option>
-              <option value="US">United States</option>
-            </select>
-          </div>
-        </div>
+        )}
       </form>
       <div className="form-navigation">
         <button
