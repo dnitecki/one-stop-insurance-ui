@@ -40,9 +40,13 @@
       align-items: center;
       gap: 1rem;
       border-radius: var(--border-radius);
+      transition: all 200ms ease;
       svg {
         font-size: 60px;
       }
+    }
+    button:hover {
+      background-color: var(--secondary-red);
     }
   }
 }
