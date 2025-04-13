@@ -13,8 +13,35 @@ import HomeDetailedInfo from "../../components/forms/quoteForm/detailedInfo/Home
 import { QuoteTypeEnum } from "../../enums/formEnums";
 
 const Quote = () => {
-  const formInitialState = {
-    type: EMPTY_STRING,
+  type FormData = {
+    type: string;
+    firstName: string;
+    lastName: string;
+    email: string;
+    dateOfBirth: string;
+    phone: string;
+    street: string;
+    unit: string;
+    postalCode: string;
+    city: string;
+    state: string;
+    country: string;
+    driversLicenseNum: string;
+    occupation: string;
+    currentInsurer: string;
+    timeWithInsurer: string;
+    currentCoverages: string;
+    renewalDate: string;
+    homeOwner: string;
+    noOfResidents: string;
+    married: string;
+    spouseName: string;
+    additionalDriver: string;
+    additionalDrivers: any[];
+  };
+
+  const formInitialState: FormData = {
+    type: "auto",
     firstName: EMPTY_STRING,
     lastName: EMPTY_STRING,
     email: EMPTY_STRING,
@@ -34,13 +61,17 @@ const Quote = () => {
     renewalDate: EMPTY_STRING,
     homeOwner: EMPTY_STRING,
     noOfResidents: EMPTY_STRING,
+    married: EMPTY_STRING,
+    spouseName: EMPTY_STRING,
+    additionalDriver: EMPTY_STRING,
+    additionalDrivers: [],
   };
   const [searchParams] = useSearchParams();
   const { HOME, AUTO } = QuoteTypeEnum;
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = QuoteContentMapper;
   const quoteContent = content?.sections.stepper.body[language];
-  const [activeStep, setActiveStep] = useState(0);
+  const [activeStep, setActiveStep] = useState(2);
   const [formData, setFormData] = useState(formInitialState);
 
   return (
