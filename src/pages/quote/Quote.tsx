@@ -5,11 +5,11 @@ import QuoteContentMapper from "../../content/quoteContentMapper.json";
 import { Step, Stepper } from "react-form-stepper";
 import { useState } from "react";
 import { EMPTY_STRING } from "../../constants/constants";
-import SelectQuoteType from "../../components/forms/quoteForm/selectQuoteType/SelectQuoteType";
-import PersonalInfo from "../../components/forms/quoteForm/personalInfo/PersonalInfo";
-import AutoDetailedInfo from "../../components/forms/quoteForm/detailedInfo/AutoDetailedInfo";
+import SelectQuoteType from "../../components/forms/quoteForm/SelectQuoteType";
+import PersonalInfo from "../../components/forms/quoteForm/PersonalInfo";
+import AutoDetailedInfo from "../../components/forms/quoteForm/AutoDetailedInfo";
 import { ContentMapperType } from "../../types/types";
-import HomeDetailedInfo from "../../components/forms/quoteForm/detailedInfo/HomeDetailedInfo";
+import HomeDetailedInfo from "../../components/forms/quoteForm/HomeDetailedInfo";
 import { QuoteTypeEnum } from "../../enums/formEnums";
 
 const Quote = () => {
@@ -41,7 +41,7 @@ const Quote = () => {
   };
 
   const formInitialState: FormData = {
-    type: "auto",
+    type: EMPTY_STRING,
     firstName: EMPTY_STRING,
     lastName: EMPTY_STRING,
     email: EMPTY_STRING,
@@ -71,7 +71,7 @@ const Quote = () => {
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = QuoteContentMapper;
   const quoteContent = content?.sections.stepper.body[language];
-  const [activeStep, setActiveStep] = useState(2);
+  const [activeStep, setActiveStep] = useState(0);
   const [formData, setFormData] = useState(formInitialState);
 
   return (
