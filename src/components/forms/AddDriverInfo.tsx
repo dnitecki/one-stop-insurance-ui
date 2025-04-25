@@ -113,7 +113,12 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
         </div>
       </form>
       <div className="form-row">
-        <button className="form-submit-btn" onClick={addAdditionalDriver}>
+        <button
+          className="form-submit-btn"
+          onClick={addAdditionalDriver}
+          type="button"
+          title="Add Driver"
+        >
           <p>+ Add Driver</p>
         </button>
       </div>
@@ -134,6 +139,7 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
             <button
               className="form-delete-btn"
               type="button"
+              title="Delete Driver"
               onClick={() => removeAdditionalDriver(driver)}
             >
               <DeleteIcon fontSize="inherit" />

@@ -41,7 +41,7 @@ const Quote = () => {
   };
 
   const formInitialState: FormData = {
-    type: "auto",
+    type: EMPTY_STRING,
     firstName: EMPTY_STRING,
     lastName: EMPTY_STRING,
     email: EMPTY_STRING,
@@ -71,7 +71,7 @@ const Quote = () => {
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = QuoteContentMapper;
   const quoteContent = content?.sections.stepper.body[language];
-  const [activeStep, setActiveStep] = useState(2);
+  const [activeStep, setActiveStep] = useState(0);
   const [formData, setFormData] = useState(formInitialState);
 
   return (
