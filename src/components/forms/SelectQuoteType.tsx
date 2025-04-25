@@ -1,8 +1,8 @@
-import { QuoteFormProps } from "../../../types/types";
+import { QuoteFormProps } from "../../types/types";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
 import { useSearchParams } from "react-router-dom";
-import { SeachParamEnum } from "../../../enums/languageEnums";
+import { SeachParamEnum } from "../../enums/languageEnums";
 
 const SelectQuoteType: React.FC<QuoteFormProps> = ({
   setFormData,

@@ -11,6 +11,9 @@
   z-index: 0;
   overflow: hidden;
 }
+.rfm-marquee-container {
+  overflow: hidden;
+}
 .scroller-partners {
   display: flex;
   width: 100%;
@@ -64,5 +67,20 @@
   .scroller-partners {
     gap: 1.5rem;
     padding-right: 1.5rem;
+    .travelers {
+      width: 8rem;
+    }
+    .progressive {
+      width: 8rem;
+    }
+    .erie {
+      width: 6rem;
+    }
+    .foremost {
+      width: 8rem;
+    }
+    .openly {
+      width: 4rem;
+    }
   }
 }

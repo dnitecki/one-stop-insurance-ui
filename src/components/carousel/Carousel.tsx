@@ -9,7 +9,12 @@ import OpenlyLogo from "../../assets/webp/openly-ins.webp";
 const Carousel = () => {
   return (
     <section className="scroller-container">
-      <Marquee gradient={true} gradientWidth={50} speed={30}>
+      <Marquee
+        gradient={true}
+        gradientWidth={50}
+        speed={30}
+        style={{ overflow: "hidden" }}
+      >
         <div className="scroller-partners">
           <img
             src={ProgressiveLogo}

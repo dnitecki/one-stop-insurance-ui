@@ -1,8 +1,8 @@
-import "./QuoteForm.scss";
+import "./FormStyles.scss";
 import { useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import { QuoteFormProps } from "../../../types/types";
-import { SeachParamEnum } from "../../../enums/languageEnums";
+import { QuoteFormProps } from "../../types/types";
+import { SeachParamEnum } from "../../enums/languageEnums";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
