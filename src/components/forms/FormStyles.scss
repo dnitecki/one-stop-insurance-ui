@@ -41,7 +41,7 @@
 .form-nav-btn:focus {
   outline: 2px solid var(--black);
 }
-.form-submit-btn {
+.form-add-btn {
   display: flex;
   height: 100%;
   width: fit-content;
@@ -51,19 +51,19 @@
   padding: 0.1rem 0.3rem;
   border-radius: var(--border-radius);
   color: var(--black);
-  column-gap: 1rem;
+  column-gap: 0.5rem;
   outline: 2px solid transparent;
   transition: all 200ms ease;
   p {
     display: flex;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
   }
 }
-.form-submit-btn:hover {
+.form-add-btn:hover {
   outline: 2px solid var(--secondary-gray);
 }
-.form-submit-btn:focus {
+.form-add-btn:focus {
   outline: 2px solid var(--secondary-gray);
 }
 .form-delete-btn {

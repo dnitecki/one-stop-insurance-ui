@@ -4,6 +4,7 @@ import HomeWorkIcon from "@mui/icons-material/HomeWork";
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import QuoteContentMapper from "../../content/quoteContentMapper.json";
+import { QuoteTypeEnum } from "../../enums/formEnums";
 
 const SelectQuoteType: React.FC<QuoteFormProps> = ({
   setFormData,
@@ -25,7 +26,7 @@ const SelectQuoteType: React.FC<QuoteFormProps> = ({
             setActiveStep(1);
             setFormData((prevFormData: any) => ({
               ...prevFormData,
-              type: "auto",
+              type: QuoteTypeEnum.AUTO,
             }));
           }}
         >
@@ -37,7 +38,7 @@ const SelectQuoteType: React.FC<QuoteFormProps> = ({
             setActiveStep(1);
             setFormData((prevFormData: any) => ({
               ...prevFormData,
-              type: "home",
+              type: QuoteTypeEnum.HOME,
             }));
           }}
         >

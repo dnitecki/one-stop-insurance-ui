@@ -59,3 +59,30 @@ export type QuoteFormProps = {
   setActiveStep?: React.Dispatch<React.SetStateAction>;
   formData?: any;
 };
+
+export type QuoteFormData = {
+  type: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  dateOfBirth: string;
+  phone: string;
+  street: string;
+  unit: string;
+  postalCode: string;
+  city: string;
+  state: string;
+  country: string;
+  driversLicenseNum: string;
+  occupation: string;
+  currentInsurer: string;
+  timeWithInsurer: string;
+  currentCoverages: string;
+  renewalDate: string;
+  homeOwner: string;
+  noOfResidents: string;
+  married: string;
+  spouseName: string;
+  additionalDriver: string;
+  additionalDrivers: any[];
+};

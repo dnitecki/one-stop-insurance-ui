@@ -1,3 +1,5 @@
+import { QuoteFormData } from "../types/types";
+
 export const EMPTY_STRING = "";
 
 export const LINKS = {
@@ -13,4 +15,31 @@ export const INFO = {
   EMAIL: "bnitecki@onestopinsurance.net",
   PHONE_HREF: "tel:+16304008111",
   EMAIL_HREF: "mailto:bnitecki@onestopinsurance.net",
+};
+
+export const formInitialState: QuoteFormData = {
+  type: "auto",
+  firstName: EMPTY_STRING,
+  lastName: EMPTY_STRING,
+  email: EMPTY_STRING,
+  dateOfBirth: EMPTY_STRING,
+  phone: EMPTY_STRING,
+  street: EMPTY_STRING,
+  unit: EMPTY_STRING,
+  postalCode: EMPTY_STRING,
+  city: EMPTY_STRING,
+  state: EMPTY_STRING,
+  country: EMPTY_STRING,
+  driversLicenseNum: EMPTY_STRING,
+  occupation: EMPTY_STRING,
+  currentInsurer: EMPTY_STRING,
+  timeWithInsurer: EMPTY_STRING,
+  currentCoverages: EMPTY_STRING,
+  renewalDate: EMPTY_STRING,
+  homeOwner: EMPTY_STRING,
+  noOfResidents: EMPTY_STRING,
+  married: EMPTY_STRING,
+  spouseName: EMPTY_STRING,
+  additionalDriver: EMPTY_STRING,
+  additionalDrivers: [],
 };

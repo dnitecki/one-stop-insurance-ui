@@ -120,6 +120,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
             type="date"
             id="renewalDate"
             name="renewalDate"
+            placeholder="mm/dd/yyyy"
             value={formData.renewalDate}
             onChange={handleChange}
             required

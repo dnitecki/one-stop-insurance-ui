@@ -1,4 +1,5 @@
-import DeleteIcon from "@mui/icons-material/Delete";
+import DeleteIcon from "@mui/icons-material/DeleteOutline";
+import AddIcon from "@mui/icons-material/Add";
 import { useRef, useState } from "react";
 import { EMPTY_STRING } from "../../constants/constants";
 import { QuoteFormProps } from "../../types/types";
@@ -54,6 +55,26 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
       <div className="form-header">
         <h2>Add Driver(s)</h2>
       </div>
+      {formData.additionalDrivers.map((driver: any, index: number) => (
+        <div className="form-row" key={index}>
+          <div className="form-group">
+            <h3>
+              {index + 1}.&nbsp;&nbsp;{driver.firstName}&nbsp;
+              {driver.lastName}
+            </h3>
+          </div>
+          <div>
+            <button
+              className="form-delete-btn"
+              type="button"
+              title="Delete Driver"
+              onClick={() => removeAdditionalDriver(driver)}
+            >
+              <DeleteIcon fontSize="inherit" />
+            </button>
+          </div>
+        </div>
+      ))}
       <form ref={driverRef} className="form-add-driver">
         <div className="form-group">
           <label className="form-label" htmlFor="additionalDriverName">
@@ -106,6 +127,7 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
             type="date"
             id="additionalDateOfBirth"
             name="dateOfBirth"
+            placeholder="mm/dd/yyyy"
             value={additionalDriver.dateOfBirth}
             onChange={handleDriverChange}
             required
@@ -114,39 +136,15 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
       </form>
       <div className="form-row">
         <button
-          className="form-submit-btn"
+          className="form-add-btn"
           onClick={addAdditionalDriver}
           type="button"
           title="Add Driver"
         >
-          <p>+ Add Driver</p>
+          <AddIcon fontSize="medium" />
+          <p>Add Driver</p>
         </button>
       </div>
-      {formData.additionalDrivers.length > 0 && (
-        <div className="form-header">
-          <h2>Additional Drivers:</h2>
-        </div>
-      )}
-      {formData.additionalDrivers.map((driver: any, index: number) => (
-        <div className="form-row" key={index}>
-          <div className="form-group">
-            <h3>
-              {index + 1}.&nbsp;&nbsp;{driver.firstName}&nbsp;
-              {driver.lastName}
-            </h3>
-          </div>
-          <div>
-            <button
-              className="form-delete-btn"
-              type="button"
-              title="Delete Driver"
-              onClick={() => removeAdditionalDriver(driver)}
-            >
-              <DeleteIcon fontSize="inherit" />
-            </button>
-          </div>
-        </div>
-      ))}
     </>
   );
 };
