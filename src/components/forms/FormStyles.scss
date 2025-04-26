@@ -157,7 +157,8 @@
     pointer-events: none;
   }
   .form-input {
-    height: fit-content;
+    height: auto;
+    display: block;
     padding: 0.5rem;
     box-sizing: border-box;
     width: 100%;
@@ -169,14 +170,15 @@
     transition: all 300ms ease-in-out;
   }
   .form-input:focus {
-    border: 2px solid var(--primary-red);
+    border: 2px solid var(--tertiary-gray);
   }
   .form-select {
-    display: flex;
-    height: fit-content;
+    display: block;
+    height: auto;
     padding: 0.2rem;
     border-radius: var(--border-radius);
     border: 2px solid var(--secondary-gray);
+    background-color: var(--white);
     padding: 0.5rem;
     box-sizing: border-box;
     font-size: 18px;
@@ -187,7 +189,7 @@
     transition: all 300ms ease-in-out;
   }
   .form-select:focus {
-    border: 2px solid var(--primary-red);
+    border: 2px solid var(--tertiary-gray);
   }
   .form-fieldset {
     display: flex;
