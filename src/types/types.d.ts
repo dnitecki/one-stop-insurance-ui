@@ -60,7 +60,7 @@ export type QuoteFormProps = {
   formData?: any;
 };
 
-export type QuoteFormData = {
+export type QuoteFormDataType = {
   type: string;
   firstName: string;
   lastName: string;
@@ -84,10 +84,21 @@ export type QuoteFormData = {
   married: string;
   spouseName: string;
   additionalDriver: string;
-  additionalDrivers: any[];
+  additionalDrivers: DriverFormDataType[];
+  vehicles: VehicleFormDataType[];
 };
 
-export type DriverFormData = Pick<
-  QuoteFormData,
+export type DriverFormDataType = Pick<
+  QuoteFormDataType,
   "firstName" | "lastName" | "driversLicenseNum" | "dateOfBirth"
 >;
+
+export type VehicleFormDataType = {
+  year: string;
+  make: string;
+  model: string;
+  financing: string;
+  vin: string;
+  mileage: string;
+  orignalOwner: string;
+};

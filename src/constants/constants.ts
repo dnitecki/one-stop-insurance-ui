@@ -1,4 +1,8 @@
-import { DriverFormData, QuoteFormData } from "../types/types";
+import {
+  DriverFormDataType,
+  QuoteFormDataType,
+  VehicleFormDataType,
+} from "../types/types";
 
 export const EMPTY_STRING = "";
 
@@ -17,8 +21,8 @@ export const INFO = {
   EMAIL_HREF: "mailto:bnitecki@onestopinsurance.net",
 };
 
-export const formInitialState: QuoteFormData = {
-  type: EMPTY_STRING,
+export const formInitialState: QuoteFormDataType = {
+  type: "auto",
   firstName: EMPTY_STRING,
   lastName: EMPTY_STRING,
   email: EMPTY_STRING,
@@ -42,11 +46,22 @@ export const formInitialState: QuoteFormData = {
   spouseName: EMPTY_STRING,
   additionalDriver: EMPTY_STRING,
   additionalDrivers: [],
+  vehicles: [],
 };
 
-export const driverInitialState: DriverFormData = {
+export const driverInitialState: DriverFormDataType = {
   firstName: EMPTY_STRING,
   lastName: EMPTY_STRING,
   driversLicenseNum: EMPTY_STRING,
   dateOfBirth: EMPTY_STRING,
+};
+
+export const vehicleInitialState: VehicleFormDataType = {
+  year: EMPTY_STRING,
+  make: EMPTY_STRING,
+  model: EMPTY_STRING,
+  financing: EMPTY_STRING,
+  vin: EMPTY_STRING,
+  mileage: EMPTY_STRING,
+  orignalOwner: EMPTY_STRING,
 };

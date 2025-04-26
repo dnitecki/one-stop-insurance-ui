@@ -1,10 +1,15 @@
 import { useSearchParams } from "react-router-dom";
-import { QuoteFormProps } from "../../types/types";
+import {
+  QuoteFormDataType,
+  QuoteFormProps,
+  VehicleFormDataType,
+} from "../../types/types";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { useRef, useState } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import AddDriverInfo from "./AddDriverInfo";
+import { vehicleInitialState } from "../../constants/constants";
 
 const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
   setFormData,
@@ -14,11 +19,23 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
   const formRef = useRef<HTMLFormElement>(null);
-  const [additionalVehicle, setAdditionalVehicle] = useState([]);
+  const [vehicles, setVehicles] =
+    useState<VehicleFormDataType>(vehicleInitialState);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
-    setFormData((prevFormData: any) => ({ ...prevFormData, [name]: value }));
+    setFormData((prevFormData: QuoteFormDataType) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  const handleVehicleChange = (e: any) => {
+    const { name, value } = e.target;
+    setVehicles((prevVehicles: VehicleFormDataType) => ({
+      ...prevVehicles,
+      [name]: value,
+    }));
   };
 
   const handleNext = () => {
@@ -262,6 +279,48 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         )}
         <div className="form-header">
           <h2>Add Vehicles</h2>
+        </div>
+        <div className="form-group">
+          <label className="form-label" htmlFor="make">
+            Make
+          </label>
+          <input
+            className="form-input"
+            type="text"
+            id="make"
+            name="make"
+            value={vehicles.make}
+            onChange={handleVehicleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label className="form-label" htmlFor="model">
+            Model
+          </label>
+          <input
+            className="form-input"
+            type="text"
+            id="model"
+            name="model"
+            value={vehicles.model}
+            onChange={handleVehicleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label className="form-label" htmlFor="year">
+            Year
+          </label>
+          <input
+            className="form-input"
+            type="number"
+            id="year"
+            name="year"
+            value={vehicles.year}
+            onChange={handleVehicleChange}
+            required
+          />
         </div>
       </form>
       <div className="form-navigation">
