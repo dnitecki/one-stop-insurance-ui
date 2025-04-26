@@ -78,14 +78,20 @@ const Quote = () => {
     <div className="quote-container">
       <div className="stepper-container">
         <Stepper activeStep={activeStep}>
-          <Step label={quoteContent.stepOne} onClick={() => setActiveStep(0)} />
-          <Step label={quoteContent.stepTwo} onClick={() => setActiveStep(1)} />
           <Step
-            label={quoteContent.stepThree}
+            label={quoteContent?.stepOne}
+            onClick={() => setActiveStep(0)}
+          />
+          <Step
+            label={quoteContent?.stepTwo}
+            onClick={() => setActiveStep(1)}
+          />
+          <Step
+            label={quoteContent?.stepThree}
             onClick={() => setActiveStep(2)}
           />
           <Step
-            label={quoteContent.stepFour}
+            label={quoteContent?.stepFour}
             onClick={() => setActiveStep(3)}
           />
         </Stepper>

@@ -3,7 +3,7 @@
     "stepper": {
       "body": {
         "EN": {
-          "stepOne": "Quote Type",
+          "stepOne": "Select Quote",
           "stepTwo": "Personal Information",
           "stepThree": "Detailed Information",
           "stepFour": "Verify"
@@ -17,15 +17,59 @@
       }
     },
     "quoteType": {
-      "header": {
-        "EN": "Select Quote Type",
-        "PL": "Rodzaj Wyceny"
+      "body": {
+        "EN": {
+          "header": "Quote Type",
+          "auto": "Auto",
+          "home": "Home"
+        },
+        "PL": {
+          "header": "Rodzaj Wyceny",
+          "auto": "Samochód",
+          "home": "Dom"
+        }
       }
     },
     "personalInfo": {
-      "header": {
-        "EN": "Add Your Information",
-        "PL": "Dodaj Dane"
+      "body": {
+        "EN": {
+          "header": "Add Your Information",
+          "requiredField": "* indicates a required field",
+          "generalInfo": "General Information",
+          "primaryAddress": "Primary Address",
+          "firstName": "First Name",
+          "lastName": "Last Name",
+          "email": "Email",
+          "phone": "Phone Number",
+          "dateOfBirth": "Date of Birth",
+          "street": "street",
+          "unit": "Unit Number",
+          "postalCode": "Postal Code",
+          "city": "City",
+          "state": "State",
+          "country": "Country",
+          "stateSelect": "Select State",
+          "countrySelect": "Select Country"
+        },
+        "PL": {
+          "header": "Dodaj Swoje Dane",
+          "requiredField": "* oznacza pole wymagane",
+          "generalInfo": "Ogólne Informacje",
+          "primaryAddress": "Adres Główny",
+          "firstName": "Imię",
+          "lastName": "Nazwisko",
+          "email": "E-mail",
+          "phone": "Numer Telefonu",
+          "dateOfBirth": "Data Urodzenia",
+          "street": "Ulica",
+          "unit": "Numer Lokalu",
+          "postalCode": "Kod Pocztowy",
+          "city": "Miasto",
+          "state": "Stan",
+          "country": "Kraj",
+          "stateSelect": "Wybierz Województwo",
+          "countrySelect": "Wybierz Kraj"
+        }
       }
     }
   }

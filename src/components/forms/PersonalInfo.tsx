@@ -1,10 +1,11 @@
 import "./FormStyles.scss";
 import { useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import { QuoteFormProps } from "../../types/types";
+import { ContentMapperType, QuoteFormProps } from "../../types/types";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import QuoteContentMapper from "../../content/quoteContentMapper.json";
 
 const PersonalInfo: React.FC<QuoteFormProps> = ({
   setFormData,
@@ -13,6 +14,8 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
 }) => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
+  const content: ContentMapperType = QuoteContentMapper;
+  const personalInfoContent = content?.sections.personalInfo.body[language];
   const formRef = useRef<HTMLFormElement>(null);
 
   const handleChange = (e: any) => {
@@ -33,23 +36,24 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
   return (
     <div className="form-container">
       <div className="quote-header">
-        <h1>Add Your Information</h1>
+        <h1>{personalInfoContent?.header}</h1>
       </div>
       <form ref={formRef} className="form-content">
         <div className="form-header">
-          <h2>General Information</h2>
-          <p className="form-required-field">* indicates a required field</p>
+          <h2>{personalInfoContent?.generalInfo}</h2>
+          <p className="form-required-field">
+            {personalInfoContent?.requiredField}
+          </p>
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="fname">
-            First Name
+            {personalInfoContent?.firstName}*
           </label>
           <input
             className="form-input"
             type="text"
             id="fname"
             name="firstName"
-            placeholder=""
             value={formData.firstName}
             onChange={handleChange}
             required
@@ -57,14 +61,13 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="lname">
-            Last Name
+            {personalInfoContent?.lastName}*
           </label>
           <input
             className="form-input"
             type="text"
             id="lname"
             name="lastName"
-            placeholder=""
             value={formData.lastName}
             onChange={handleChange}
             required
@@ -72,14 +75,13 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="email">
-            Email
+            {personalInfoContent?.email}*
           </label>
           <input
             className="form-input"
             type="email"
             id="email"
             name="email"
-            placeholder=""
             value={formData.email}
             onChange={handleChange}
             required
@@ -87,7 +89,7 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="phone">
-            Phone
+            {personalInfoContent?.phone}*
           </label>
           <input
             className="form-input"
@@ -102,7 +104,7 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="dateOfBirth">
-            Date Of Birth
+            {personalInfoContent?.dateOfBirth}*
           </label>
           <input
             className="form-input"
@@ -110,23 +112,23 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
             id="dateOfBirth"
             name="dateOfBirth"
             value={formData.dateOfBirth}
+            placeholder="mm/dd/yyyy"
             onChange={handleChange}
             required
           />
         </div>
         <div className="form-header">
-          <h2>Primary Address</h2>
+          <h2>{personalInfoContent?.primaryAddress}</h2>
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="street">
-            Street
+            {personalInfoContent?.street}*
           </label>
           <input
             className="form-input"
             type="text"
             id="street"
             name="street"
-            placeholder=""
             value={formData.street}
             onChange={handleChange}
             required
@@ -134,28 +136,26 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="unit">
-            Unit Number
+            {personalInfoContent?.unit}
           </label>
           <input
             className="form-input"
             type="text"
             id="unit"
             name="unit"
-            placeholder=""
             value={formData.unit}
             onChange={handleChange}
           />
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="postalCode">
-            Postal Code
+            {personalInfoContent?.postalCode}*
           </label>
           <input
             className="form-input"
             type="text"
             id="postalCode"
             name="postalCode"
-            placeholder=""
             value={formData.postalCode}
             onChange={handleChange}
             required
@@ -163,14 +163,13 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="city">
-            City
+            {personalInfoContent?.city}*
           </label>
           <input
             className="form-input"
             type="text"
             id="city"
             name="city"
-            placeholder=""
             value={formData.city}
             onChange={handleChange}
             required
@@ -178,7 +177,7 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="state">
-            State
+            {personalInfoContent?.state}*
           </label>
           <select
             className="form-select"
@@ -189,14 +188,14 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
             value={formData.state}
             onChange={handleChange}
           >
-            <option hidden>Select State</option>
+            <option hidden>{personalInfoContent?.stateSelect}</option>
             <option value="ohio">Ohio</option>
             <option value="illinois">Illinois</option>
           </select>
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="country">
-            Country
+            {personalInfoContent?.country}*
           </label>
           <select
             className="form-select"
@@ -207,7 +206,7 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
             value={formData.country}
             onChange={handleChange}
           >
-            <option hidden>Select Country</option>
+            <option hidden>{personalInfoContent?.countrySelect}</option>
             <option value="US">United States</option>
           </select>
         </div>
