@@ -185,7 +185,6 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
             title="state"
             id="state"
             name="state"
-            defaultValue="state"
             required
             value={formData.state}
             onChange={handleChange}
@@ -204,7 +203,6 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
             title="country"
             id="country"
             name="country"
-            defaultValue="country"
             required
             value={formData.country}
             onChange={handleChange}
