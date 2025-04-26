@@ -6,13 +6,13 @@
           "stepOne": "Select Quote",
           "stepTwo": "Personal Information",
           "stepThree": "Detailed Information",
-          "stepFour": "Verify"
+          "stepFour": "Submit"
         },
         "PL": {
           "stepOne": "Wybierz Wycenę",
           "stepTwo": "Dodaj Dane",
           "stepThree": "Szczegółowe Dane",
-          "stepFour": "Zweryfikuj"
+          "stepFour": "Wyślij"
         }
       }
     },
