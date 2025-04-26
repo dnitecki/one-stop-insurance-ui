@@ -107,16 +107,25 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 2rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   .form-header {
     display: flex;
     width: 100%;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem 0;
     h2 {
       font-size: 24px;
       font-weight: 500;
+    }
+    .form-required-field {
+      display: flex;
+      width: auto;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 14px;
     }
   }
   .form-row {
@@ -208,5 +217,14 @@
     &:checked {
       background-color: var(--primary-red);
     }
+  }
+}
+@media (max-width: 700px) {
+  .form-container {
+    gap: 2rem;
+  }
+  .form-header {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }

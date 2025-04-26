@@ -39,6 +39,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
       <form ref={formRef} className="form-content">
         <div className="form-header">
           <h2>Driver Information</h2>
+          <p className="form-required-field">* indicates a required field</p>
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="driversLicenseNum">
