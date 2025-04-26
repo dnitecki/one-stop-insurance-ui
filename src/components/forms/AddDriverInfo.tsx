@@ -6,7 +6,8 @@ import { driverInitialState } from "../../constants/constants";
 
 const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
   const driverRef = useRef<HTMLFormElement>(null);
-  const [additionalDriver, setAdditionalDriver] = useState(driverInitialState);
+  const [additionalDriver, setAdditionalDriver] =
+    useState<DriverFormData>(driverInitialState);
 
   const handleDriverChange = (e: any) => {
     const { name, value } = e.target;
@@ -48,26 +49,26 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
       <div className="form-header">
         <h2>Add Driver(s)</h2>
       </div>
-      {formData.additionalDrivers.map((driver: any, index: number) => (
-        <div className="form-row" key={index}>
-          <div className="form-group">
-            <h3>
-              {index + 1}.&nbsp;&nbsp;{driver.firstName}&nbsp;
-              {driver.lastName}
-            </h3>
-          </div>
-          <div>
-            <button
-              className="form-delete-btn"
-              type="button"
-              title="Delete Driver"
-              onClick={() => removeAdditionalDriver(driver)}
-            >
-              <DeleteIcon fontSize="inherit" />
-            </button>
-          </div>
-        </div>
-      ))}
+      {formData.additionalDrivers.length > 0 && (
+        <ul className="form-list">
+          {formData.additionalDrivers.map((driver: any, index: number) => (
+            <li className="form-list-item" key={index}>
+              <h3>
+                {index + 1}.&nbsp;&nbsp;{driver.firstName}&nbsp;
+                {driver.lastName}
+              </h3>
+              <button
+                className="form-delete-btn"
+                type="button"
+                title="Delete Driver"
+                onClick={() => removeAdditionalDriver(driver)}
+              >
+                <DeleteIcon fontSize="inherit" />
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
       <form ref={driverRef} className="form-add-driver">
         <div className="form-group">
           <label className="form-label" htmlFor="additionalDriverName">
