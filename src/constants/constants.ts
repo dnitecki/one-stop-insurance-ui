@@ -18,7 +18,7 @@ export const INFO = {
 };
 
 export const formInitialState: QuoteFormData = {
-  type: "auto",
+  type: EMPTY_STRING,
   firstName: EMPTY_STRING,
   lastName: EMPTY_STRING,
   email: EMPTY_STRING,
