@@ -86,3 +86,8 @@ export type QuoteFormData = {
   additionalDriver: string;
   additionalDrivers: any[];
 };
+
+export type DriverFormData = Pick<
+  QuoteFormData,
+  "firstName" | "lastName" | "driversLicenseNum" | "dateOfBirth"
+>;

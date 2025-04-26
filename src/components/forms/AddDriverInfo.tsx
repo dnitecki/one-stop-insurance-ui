@@ -1,17 +1,10 @@
 import DeleteIcon from "@mui/icons-material/DeleteOutline";
 import AddIcon from "@mui/icons-material/Add";
 import { useRef, useState } from "react";
-import { EMPTY_STRING } from "../../constants/constants";
-import { QuoteFormProps } from "../../types/types";
+import { DriverFormData, QuoteFormProps } from "../../types/types";
+import { driverInitialState } from "../../constants/constants";
 
 const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
-  const driverInitialState: any = {
-    firstName: EMPTY_STRING,
-    lastName: EMPTY_STRING,
-    driversLicenseNum: EMPTY_STRING,
-    dateOfBirth: EMPTY_STRING,
-  };
-
   const driverRef = useRef<HTMLFormElement>(null);
   const [additionalDriver, setAdditionalDriver] = useState(driverInitialState);
 
@@ -41,7 +34,7 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
     }
   };
 
-  const removeAdditionalDriver = (driver: any) => {
+  const removeAdditionalDriver = (driver: DriverFormData) => {
     setFormData((prevFormData: any) => ({
       ...prevFormData,
       additionalDrivers: prevFormData.additionalDrivers.filter(

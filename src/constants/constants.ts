@@ -1,4 +1,4 @@
-import { QuoteFormData } from "../types/types";
+import { DriverFormData, QuoteFormData } from "../types/types";
 
 export const EMPTY_STRING = "";
 
@@ -42,4 +42,11 @@ export const formInitialState: QuoteFormData = {
   spouseName: EMPTY_STRING,
   additionalDriver: EMPTY_STRING,
   additionalDrivers: [],
+};
+
+export const driverInitialState: DriverFormData = {
+  firstName: EMPTY_STRING,
+  lastName: EMPTY_STRING,
+  driversLicenseNum: EMPTY_STRING,
+  dateOfBirth: EMPTY_STRING,
 };
