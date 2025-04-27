@@ -10,6 +10,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import AddDriverInfo from "./AddDriverInfo";
 import { vehicleInitialState } from "../../constants/constants";
+import AddIcon from "@mui/icons-material/Add";
 
 const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
   setFormData,
@@ -19,6 +20,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
   const formRef = useRef<HTMLFormElement>(null);
+  const vehicleRef = useRef<HTMLFormElement>(null);
   const [vehicles, setVehicles] =
     useState<VehicleFormDataType>(vehicleInitialState);
 
@@ -38,6 +40,21 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
     }));
   };
 
+  const addVehicle = (e: any) => {
+    e.preventDefault();
+    if (vehicleRef.current) {
+      if (vehicleRef.current.checkValidity()) {
+        setFormData((prevFormData: QuoteFormDataType) => ({
+          ...prevFormData,
+          vehicles: [...prevFormData.vehicles, vehicles],
+        }));
+        setVehicles(vehicleInitialState);
+      } else {
+        vehicleRef.current.reportValidity();
+      }
+    }
+  };
+
   const handleNext = () => {
     if (formRef.current) {
       if (formRef.current.checkValidity()) {
@@ -55,37 +72,10 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
       </div>
       <form ref={formRef} className="form-content">
         <div className="form-header">
-          <h2>Driver Information</h2>
+          <h2>Policy Information</h2>
           <p className="form-required-field">* indicates a required field</p>
         </div>
-        <div className="form-group">
-          <label className="form-label" htmlFor="driversLicenseNum">
-            Driver's License Number
-          </label>
-          <input
-            className="form-input"
-            type="text"
-            id="driversLicenseNum"
-            name="driversLicenseNum"
-            value={formData.driversLicenseNum}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label" htmlFor="occupation">
-            Occupation/Degree
-          </label>
-          <input
-            className="form-input"
-            type="text"
-            id="occupation"
-            name="occupation"
-            value={formData.occupation}
-            onChange={handleChange}
-            required
-          />
-        </div>
+
         <div className="form-group">
           <label className="form-label" htmlFor="currentInsurer">
             Current Insurer
@@ -280,47 +270,179 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         <div className="form-header">
           <h2>Add Vehicles</h2>
         </div>
-        <div className="form-group">
-          <label className="form-label" htmlFor="make">
-            Make
-          </label>
-          <input
-            className="form-input"
-            type="text"
-            id="make"
-            name="make"
-            value={vehicles.make}
-            onChange={handleVehicleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label" htmlFor="model">
-            Model
-          </label>
-          <input
-            className="form-input"
-            type="text"
-            id="model"
-            name="model"
-            value={vehicles.model}
-            onChange={handleVehicleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label className="form-label" htmlFor="year">
-            Year
-          </label>
-          <input
-            className="form-input"
-            type="number"
-            id="year"
-            name="year"
-            value={vehicles.year}
-            onChange={handleVehicleChange}
-            required
-          />
+        {formData.vehicles.length > 0 && (
+          <ul className="form-list">
+            {formData.vehicles.map(
+              (vehicle: VehicleFormDataType, index: number) => (
+                <li className="form-list-item" key={index}>
+                  <h3>
+                    {index + 1}.&nbsp;&nbsp;{vehicle.year}&nbsp;
+                    {vehicle.make}&nbsp;{vehicle.model}
+                  </h3>
+                  {/* <button
+                  className="form-delete-btn"
+                  type="button"
+                  title="Delete Driver"
+                  onClick={() => removeAdditionalDriver(driver)}
+                >
+                  <DeleteIcon fontSize="inherit" />
+                </button> */}
+                </li>
+              )
+            )}
+          </ul>
+        )}
+        <form ref={vehicleRef} className="form-add-section">
+          <div className="form-group">
+            <label className="form-label" htmlFor="make">
+              Make
+            </label>
+            <input
+              className="form-input"
+              type="text"
+              id="make"
+              name="make"
+              value={vehicles.make}
+              onChange={handleVehicleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label className="form-label" htmlFor="model">
+              Model
+            </label>
+            <input
+              className="form-input"
+              type="text"
+              id="model"
+              name="model"
+              value={vehicles.model}
+              onChange={handleVehicleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label className="form-label" htmlFor="year">
+              Year
+            </label>
+            <input
+              className="form-input"
+              type="number"
+              id="year"
+              min={1940}
+              pattern="\d{4}"
+              placeholder="YYYY"
+              name="year"
+              value={vehicles.year}
+              onChange={handleVehicleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label className="form-label" htmlFor="vin">
+              Vehicle Identification Number (VIN)
+            </label>
+            <input
+              className="form-input"
+              type="text"
+              id="vin"
+              name="vin"
+              value={vehicles.vin}
+              onChange={handleVehicleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label className="form-label" htmlFor="mileage">
+              Mileage
+            </label>
+            <input
+              className="form-input"
+              type="text"
+              id="mileage"
+              name="mileage"
+              value={vehicles.mileage}
+              onChange={handleVehicleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label className="form-label" htmlFor="financing">
+              Financing?
+            </label>
+            <fieldset className="form-fieldset">
+              <label className="form-radio-label">
+                <input
+                  className="form-radio"
+                  type="radio"
+                  id="financingYes"
+                  name="financing"
+                  value="yes"
+                  checked={vehicles.financing === "yes"}
+                  onChange={handleVehicleChange}
+                  required
+                />
+                Yes
+              </label>
+              <label className="form-radio-label">
+                <input
+                  className="form-radio"
+                  type="radio"
+                  id="financingNo"
+                  name="financing"
+                  value="no"
+                  checked={vehicles.financing === "no"}
+                  onChange={handleVehicleChange}
+                  required
+                />
+                No
+              </label>
+            </fieldset>
+          </div>
+          <div className="form-group">
+            <label className="form-label" htmlFor="firstOwner">
+              First Owner?
+            </label>
+            <fieldset className="form-fieldset">
+              <label className="form-radio-label">
+                <input
+                  className="form-radio"
+                  type="radio"
+                  id="firstOwnerYes"
+                  name="firstOwner"
+                  value="yes"
+                  checked={vehicles.firstOwner === "yes"}
+                  onChange={handleVehicleChange}
+                  required
+                />
+                Yes
+              </label>
+              <label className="form-radio-label">
+                <input
+                  className="form-radio"
+                  type="radio"
+                  id="firstOwnerNo"
+                  name="firstOwner"
+                  value="no"
+                  checked={vehicles.firstOwner === "no"}
+                  onChange={handleVehicleChange}
+                  required
+                />
+                No
+              </label>
+            </fieldset>
+          </div>
+        </form>
+        <div className="form-row">
+          <button
+            className="form-add-btn"
+            onClick={addVehicle}
+            type="button"
+            title="Add Vehicle"
+          >
+            <AddIcon fontSize="medium" />
+            <p>Add Vehicle</p>
+          </button>
         </div>
       </form>
       <div className="form-navigation">

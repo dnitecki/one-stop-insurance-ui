@@ -22,7 +22,7 @@ export const INFO = {
 };
 
 export const formInitialState: QuoteFormDataType = {
-  type: "auto",
+  type: EMPTY_STRING,
   firstName: EMPTY_STRING,
   lastName: EMPTY_STRING,
   email: EMPTY_STRING,
@@ -63,5 +63,5 @@ export const vehicleInitialState: VehicleFormDataType = {
   financing: EMPTY_STRING,
   vin: EMPTY_STRING,
   mileage: EMPTY_STRING,
-  orignalOwner: EMPTY_STRING,
+  firstOwner: EMPTY_STRING,
 };

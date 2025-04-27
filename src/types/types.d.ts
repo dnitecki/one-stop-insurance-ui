@@ -57,7 +57,7 @@ export type ContactContentType = {
 export type QuoteFormProps = {
   setFormData: React.Dispatch<React.SetStateAction>;
   setActiveStep?: React.Dispatch<React.SetStateAction>;
-  formData?: any;
+  formData?: QuoteFormDataType;
 };
 
 export type QuoteFormDataType = {
@@ -100,5 +100,5 @@ export type VehicleFormDataType = {
   financing: string;
   vin: string;
   mileage: string;
-  orignalOwner: string;
+  firstOwner: string;
 };

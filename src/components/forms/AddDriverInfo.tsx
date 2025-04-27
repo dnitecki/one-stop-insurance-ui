@@ -69,7 +69,7 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
           ))}
         </ul>
       )}
-      <form ref={driverRef} className="form-add-driver">
+      <form ref={driverRef} className="form-add-section">
         <div className="form-group">
           <label className="form-label" htmlFor="additionalDriverName">
             First Name

@@ -117,6 +117,34 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
             required
           />
         </div>
+        <div className="form-group">
+          <label className="form-label" htmlFor="driversLicenseNum">
+            {personalInfoContent?.driversLicense}*
+          </label>
+          <input
+            className="form-input"
+            type="text"
+            id="driversLicenseNum"
+            name="driversLicenseNum"
+            value={formData.driversLicenseNum}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label className="form-label" htmlFor="occupation">
+            {personalInfoContent?.occupation}*
+          </label>
+          <input
+            className="form-input"
+            type="text"
+            id="occupation"
+            name="occupation"
+            value={formData.occupation}
+            onChange={handleChange}
+            required
+          />
+        </div>
         <div className="form-header">
           <h2>{personalInfoContent?.primaryAddress}</h2>
         </div>
