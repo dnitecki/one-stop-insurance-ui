@@ -11,6 +11,7 @@ import AutoDetailedInfo from "../../components/forms/AutoDetailedInfo";
 import { ContentMapperType } from "../../types/types";
 import HomeDetailedInfo from "../../components/forms/HomeDetailedInfo";
 import { QuoteTypeEnum } from "../../enums/formEnums";
+import SubmitInfo from "../../components/forms/SubmitInfo";
 
 const Quote = () => {
   const [searchParams] = useSearchParams();
@@ -18,7 +19,7 @@ const Quote = () => {
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = QuoteContentMapper;
   const quoteContent = content?.sections.stepper.body[language];
-  const [activeStep, setActiveStep] = useState(0);
+  const [activeStep, setActiveStep] = useState(3);
   const [formData, setFormData] = useState(formInitialState);
 
   return (
@@ -71,6 +72,7 @@ const Quote = () => {
             formData={formData}
           />
         )}
+        {activeStep === 3 && <SubmitInfo />}
       </div>
     </div>
   );
