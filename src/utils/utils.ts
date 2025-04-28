@@ -12,13 +12,15 @@ export const formatFormTableData = (
     const value = formData[key];
 
     if (!Array.isArray(value)) {
-      return {
-        label: content?.[key as string] || EMPTY_STRING,
-        value: value,
-      };
-    } else {
-      return [];
+      if (key !== "type") {
+        return {
+          label: content?.[key as string] || EMPTY_STRING,
+          value: value,
+        };
+      }
     }
+    return [];
   });
+
   return tableData;
 };
