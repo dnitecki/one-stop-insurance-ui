@@ -68,9 +68,9 @@ export const formInitialState: QuoteFormDataType = {
   timeWithInsurer: "2 years",
   renewalDate: "2023-12-31",
   currentCoverages: "Liability, Collision",
-  homeOwner: "no",
+  homeOwner: "yes",
   noOfResidents: "1",
-  married: "no",
+  married: "yes",
   spouseName: "John Doe",
   additionalDriver: "yes",
   additionalDrivers: [
