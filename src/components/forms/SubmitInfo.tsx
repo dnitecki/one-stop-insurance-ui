@@ -20,8 +20,8 @@ const SubmitInfo: React.FC<QuoteFormProps> = ({ formData }) => {
         <tbody>
           {tableData.map((item, index) => (
             <tr key={index}>
-              <td>{item.label}</td>
-              <td>{item.value}</td>
+              <td>{item?.label}</td>
+              <td>{item?.value}</td>
             </tr>
           ))}
         </tbody>

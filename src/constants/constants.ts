@@ -80,8 +80,23 @@ export const formInitialState: QuoteFormDataType = {
       driversLicenseNum: "D987654321",
       dateOfBirth: "1992-02-02",
     },
+    {
+      firstName: "Jane",
+      lastName: "Doe",
+      driversLicenseNum: "D987654321",
+      dateOfBirth: "1992-02-02",
+    },
   ],
   vehicles: [
+    {
+      year: "2020",
+      make: "Toyota",
+      model: "Camry",
+      financing: "Leased",
+      vin: "1HGBH41JXMN109186",
+      mileage: "15000",
+      firstOwner: "Yes",
+    },
     {
       year: "2020",
       make: "Toyota",

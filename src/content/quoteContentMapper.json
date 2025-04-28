@@ -19,6 +19,7 @@
     "form": {
       "body": {
         "EN": {
+          "type": "Quote Type",
           "quoteTypeHeader": "Quote Type",
           "auto": "Auto",
           "home": "Home",
@@ -33,16 +34,19 @@
           "dateOfBirth": "Date of Birth",
           "driversLicenseNum": "Driver License Number",
           "occupation": "Occupation/Degree",
-          "street": "street",
+          "street": "Street",
           "unit": "Unit Number",
           "postalCode": "Postal Code",
           "city": "City",
           "state": "State",
           "country": "Country",
           "stateSelect": "Select State",
-          "countrySelect": "Select Country"
+          "countrySelect": "Select Country",
+          "additionalDrivers": "Additional Drivers",
+          "vehicles": "Vehicle"
         },
         "PL": {
+          "type": "Rodzaj Wyceny",
           "quoteTypeHeader": "Rodzaj Wyceny",
           "auto": "Samochód",
           "home": "Dom",
@@ -52,7 +56,7 @@
           "primaryAddress": "Adres Główny",
           "firstName": "Imię",
           "lastName": "Nazwisko",
-          "email": "E-mail",
+          "email": "Email",
           "phone": "Numer Telefonu",
           "dateOfBirth": "Data Urodzenia",
           "driversLicenseNum": "Numer Prawa Jazdy",
@@ -64,7 +68,9 @@
           "state": "Stan",
           "country": "Kraj",
           "stateSelect": "Wybierz Województwo",
-          "countrySelect": "Wybierz Kraj"
+          "countrySelect": "Wybierz Kraj",
+          "additionalDrivers": "Dodatkowi Kierowcy",
+          "vehicles": "Pojazd"
         }
       }
     }
