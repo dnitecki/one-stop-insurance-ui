@@ -13,12 +13,12 @@ const SelectQuoteType: React.FC<QuoteFormProps> = ({
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = QuoteContentMapper;
-  const selectQuoteContent = content?.sections.quoteType.body[language];
+  const formContent = content?.sections.form.body[language];
 
   return (
     <>
       <div className="quote-header">
-        <h1>{selectQuoteContent?.header}</h1>
+        <h1>{formContent?.header}</h1>
       </div>
       <div className="quote-options-container">
         <button
@@ -31,7 +31,7 @@ const SelectQuoteType: React.FC<QuoteFormProps> = ({
           }}
         >
           <DirectionsCarIcon fontSize="inherit" />
-          <h2>{selectQuoteContent?.auto}</h2>
+          <h2>{formContent?.auto}</h2>
         </button>
         <button
           onClick={() => {
@@ -43,7 +43,7 @@ const SelectQuoteType: React.FC<QuoteFormProps> = ({
           }}
         >
           <HomeWorkIcon fontSize="inherit" />
-          <h2>{selectQuoteContent?.home}</h2>
+          <h2>{formContent?.home}</h2>
         </button>
       </div>
     </>

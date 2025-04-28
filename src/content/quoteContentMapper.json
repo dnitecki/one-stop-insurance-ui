@@ -16,24 +16,13 @@
         }
       }
     },
-    "quoteType": {
+    "form": {
       "body": {
         "EN": {
-          "header": "Quote Type",
+          "quoteTypeHeader": "Quote Type",
           "auto": "Auto",
-          "home": "Home"
-        },
-        "PL": {
-          "header": "Rodzaj Wyceny",
-          "auto": "Samochód",
-          "home": "Dom"
-        }
-      }
-    },
-    "personalInfo": {
-      "body": {
-        "EN": {
-          "header": "Add Your Information",
+          "home": "Home",
+          "personalInfoHeader": "Add Your Information",
           "requiredField": "* indicates a required field",
           "generalInfo": "General Information",
           "primaryAddress": "Primary Address",
@@ -42,7 +31,7 @@
           "email": "Email",
           "phone": "Phone Number",
           "dateOfBirth": "Date of Birth",
-          "driversLicense": "Driver License Number",
+          "driversLicenseNum": "Driver License Number",
           "occupation": "Occupation/Degree",
           "street": "street",
           "unit": "Unit Number",
@@ -54,7 +43,10 @@
           "countrySelect": "Select Country"
         },
         "PL": {
-          "header": "Dodaj Swoje Dane",
+          "quoteTypeHeader": "Rodzaj Wyceny",
+          "auto": "Samochód",
+          "home": "Dom",
+          "personalInfoHeader": "Dodaj Swoje Dane",
           "requiredField": "* oznacza pole wymagane",
           "generalInfo": "Ogólne Informacje",
           "primaryAddress": "Adres Główny",
@@ -63,7 +55,7 @@
           "email": "E-mail",
           "phone": "Numer Telefonu",
           "dateOfBirth": "Data Urodzenia",
-          "driversLicense": "Numer Prawa Jazdy",
+          "driversLicenseNum": "Numer Prawa Jazdy",
           "occupation": "Zawód/Stopień",
           "street": "Ulica",
           "unit": "Numer Lokalu",

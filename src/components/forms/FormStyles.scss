@@ -236,6 +236,28 @@
     }
   }
 }
+.form-table {
+  display: flex;
+  width: 100%;
+  max-width: 40rem;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+  tbody {
+    width: 100%;
+  }
+  tr:nth-child(even) {
+    background-color: var(--primary-gray);
+  }
+  tr {
+    width: 100%;
+  }
+  td {
+    width: 100%;
+    border: 1px solid var(--secondary-gray);
+    padding: 8px;
+  }
+}
 @media (max-width: 700px) {
   .form-container {
     gap: 2rem;

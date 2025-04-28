@@ -72,7 +72,7 @@ const Quote = () => {
             formData={formData}
           />
         )}
-        {activeStep === 3 && <SubmitInfo />}
+        {activeStep === 3 && <SubmitInfo formData={formData} />}
       </div>
     </div>
   );
