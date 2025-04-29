@@ -34,6 +34,8 @@ const SelectQuoteType: React.FC<QuoteFormProps> = ({
           <h2>{formContent?.auto}</h2>
         </button>
         <button
+          id="home"
+          disabled
           onClick={() => {
             setActiveStep(1);
             setFormData((prevFormData: any) => ({

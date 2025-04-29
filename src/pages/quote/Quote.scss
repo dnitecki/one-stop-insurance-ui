@@ -57,6 +57,12 @@
     button:hover {
       background-color: var(--secondary-red);
     }
+    button#home {
+      background-color: var(--secondary-gray);
+      svg {
+        font-size: 70px;
+      }
+    }
   }
 }
 @media (max-width: 700px) {
