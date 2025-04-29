@@ -19,7 +19,7 @@ const Quote = () => {
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = QuoteContentMapper;
   const quoteContent = content?.sections.stepper.body[language];
-  const [activeStep, setActiveStep] = useState(3);
+  const [activeStep, setActiveStep] = useState(0);
   const [formData, setFormData] = useState(formInitialState);
 
   return (
@@ -72,7 +72,9 @@ const Quote = () => {
             formData={formData}
           />
         )}
-        {activeStep === 3 && <SubmitInfo formData={formData} />}
+        {activeStep === 3 && (
+          <SubmitInfo formData={formData} setActiveStep={setActiveStep} />
+        )}
       </div>
     </div>
   );

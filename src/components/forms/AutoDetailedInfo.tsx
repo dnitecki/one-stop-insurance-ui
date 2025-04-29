@@ -1,5 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import {
+  ContentMapperType,
   QuoteFormDataType,
   QuoteFormProps,
   VehicleFormDataType,
@@ -11,6 +12,9 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import AddDriverInfo from "./AddDriverInfo";
 import { vehicleInitialState } from "../../constants/constants";
 import AddIcon from "@mui/icons-material/Add";
+import QuoteContentMapper from "../../content/quoteContentMapper.json";
+import DeleteIcon from "@mui/icons-material/DeleteOutline";
+import { handleBack, handleNext } from "../../utils/utils";
 
 const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
   setFormData,
@@ -19,6 +23,8 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
 }) => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
+  const content: ContentMapperType = QuoteContentMapper;
+  const formContent = content?.sections.form.body[language];
   const formRef = useRef<HTMLFormElement>(null);
   const vehicleRef = useRef<HTMLFormElement>(null);
   const [vehicles, setVehicles] =
@@ -55,30 +61,26 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
     }
   };
 
-  const handleNext = () => {
-    if (formRef.current) {
-      if (formRef.current.checkValidity()) {
-        setActiveStep(3);
-      } else {
-        formRef.current.reportValidity();
-      }
-    }
+  const removeVehicle = (vehicle: VehicleFormDataType) => {
+    setFormData((prevFormData: QuoteFormDataType) => ({
+      ...prevFormData,
+      vehicles: prevFormData.vehicles.filter(
+        (v: VehicleFormDataType) => v !== vehicle
+      ),
+    }));
   };
 
   return (
     <div className="form-container">
-      <div className="quote-header">
-        <h1>Auto Details</h1>
-      </div>
       <form ref={formRef} className="form-content">
         <div className="form-header">
-          <h2>Policy Information</h2>
+          <h2>{formContent?.policyInfo}</h2>
           <p className="form-required-field">* indicates a required field</p>
         </div>
 
         <div className="form-group">
           <label className="form-label" htmlFor="currentInsurer">
-            Current Insurer
+            {formContent?.currentInsurer}*
           </label>
           <input
             className="form-input"
@@ -92,7 +94,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="timeWithInsurer">
-            Time with Insurer (Years)
+            {formContent?.timeWithInsurer}*
           </label>
           <input
             className="form-input"
@@ -106,7 +108,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="currentCoverages">
-            Current Coverages
+            {formContent?.currentCoverages}*
           </label>
           <input
             className="form-input"
@@ -120,7 +122,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="renewalDate">
-            Policy Renewal Date
+            {formContent?.renewalDate}*
           </label>
           <input
             className="form-input"
@@ -135,7 +137,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="homeOwner">
-            Are you a homeowner?
+            {formContent?.homeOwner}*
           </label>
           <fieldset className="form-fieldset">
             <label className="form-radio-label">
@@ -144,12 +146,12 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                 type="radio"
                 id="homeOwnerYes"
                 name="homeOwner"
-                value="yes"
-                checked={formData.homeOwner === "yes"}
+                value="Yes"
+                checked={formData.homeOwner === "Yes"}
                 onChange={handleChange}
                 required
               />
-              Yes
+              {formContent?.yes}
             </label>
             <label className="form-radio-label">
               <input
@@ -157,19 +159,19 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                 type="radio"
                 id="homeOwnerNo"
                 name="homeOwner"
-                value="no"
-                checked={formData.homeOwner === "no"}
+                value="No"
+                checked={formData.homeOwner === "No"}
                 onChange={handleChange}
                 required
               />
-              No
+              {formContent?.no}
             </label>
           </fieldset>
         </div>
-        {formData.homeOwner === "yes" && (
+        {formData.homeOwner === "Yes" && (
           <div className="form-group">
             <label className="form-label" htmlFor="noOfResidents">
-              Number of Residents
+              {formContent?.noOfResidents}*
             </label>
             <input
               className="form-input"
@@ -184,7 +186,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         )}
         <div className="form-group">
           <label className="form-label" htmlFor="married">
-            Are you Married?
+            {formContent?.married}*
           </label>
           <fieldset className="form-fieldset">
             <label className="form-radio-label">
@@ -193,12 +195,12 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                 type="radio"
                 id="marriedYes"
                 name="married"
-                value="yes"
-                checked={formData.married === "yes"}
+                value="Yes"
+                checked={formData.married === "Yes"}
                 onChange={handleChange}
                 required
               />
-              Yes
+              {formContent?.yes}
             </label>
             <label className="form-radio-label">
               <input
@@ -206,19 +208,19 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                 type="radio"
                 id="marriedNo"
                 name="married"
-                value="no"
-                checked={formData.married === "no"}
+                value="No"
+                checked={formData.married === "No"}
                 onChange={handleChange}
                 required
               />
-              No
+              {formContent?.no}
             </label>
           </fieldset>
         </div>
-        {formData.married === "yes" && (
+        {formData.married === "Yes" && (
           <div className="form-group">
             <label className="form-label" htmlFor="spouseName">
-              Name of Spouse
+              {formContent?.spouseName}*
             </label>
             <input
               className="form-input"
@@ -233,7 +235,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         )}
         <div className="form-group">
           <label className="form-label" htmlFor="additionalDriver">
-            Add Additional Driver(s)?
+            {formContent?.additionalDriver}*
           </label>
           <fieldset className="form-fieldset">
             <label className="form-radio-label">
@@ -242,12 +244,12 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                 type="radio"
                 id="additionalDriverYes"
                 name="additionalDriver"
-                value="yes"
-                checked={formData.additionalDriver === "yes"}
+                value="Yes"
+                checked={formData.additionalDriver === "Yes"}
                 onChange={handleChange}
                 required
               />
-              Yes
+              {formContent?.yes}
             </label>
             <label className="form-radio-label">
               <input
@@ -255,20 +257,24 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                 type="radio"
                 id="additionalDriverNo"
                 name="additionalDriver"
-                value="no"
-                checked={formData.additionalDriver === "no"}
+                value="No"
+                checked={formData.additionalDriver === "No"}
                 onChange={handleChange}
                 required
               />
-              No
+              {formContent?.no}
             </label>
           </fieldset>
         </div>
-        {formData.additionalDriver === "yes" && (
-          <AddDriverInfo setFormData={setFormData} formData={formData} />
+        {formData.additionalDriver === "Yes" && (
+          <AddDriverInfo
+            setFormData={setFormData}
+            formData={formData}
+            formContent={formContent}
+          />
         )}
         <div className="form-header">
-          <h2>Add Vehicles</h2>
+          <h2>{formContent?.addVehicles}</h2>
         </div>
         {formData.vehicles.length > 0 && (
           <ul className="form-list">
@@ -279,14 +285,14 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                     {index + 1}.&nbsp;&nbsp;{vehicle.year}&nbsp;
                     {vehicle.make}&nbsp;{vehicle.model}
                   </h3>
-                  {/* <button
-                  className="form-delete-btn"
-                  type="button"
-                  title="Delete Driver"
-                  onClick={() => removeAdditionalDriver(driver)}
-                >
-                  <DeleteIcon fontSize="inherit" />
-                </button> */}
+                  <button
+                    className="form-delete-btn"
+                    type="button"
+                    title="Delete Driver"
+                    onClick={() => removeVehicle(vehicle)}
+                  >
+                    <DeleteIcon fontSize="inherit" />
+                  </button>
                 </li>
               )
             )}
@@ -295,7 +301,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
         <form ref={vehicleRef} className="form-add-section">
           <div className="form-group">
             <label className="form-label" htmlFor="make">
-              Make
+              {formContent?.make}*
             </label>
             <input
               className="form-input"
@@ -309,7 +315,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
           </div>
           <div className="form-group">
             <label className="form-label" htmlFor="model">
-              Model
+              {formContent?.model}*
             </label>
             <input
               className="form-input"
@@ -323,7 +329,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
           </div>
           <div className="form-group">
             <label className="form-label" htmlFor="year">
-              Year
+              {formContent?.year}*
             </label>
             <input
               className="form-input"
@@ -340,7 +346,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
           </div>
           <div className="form-group">
             <label className="form-label" htmlFor="vin">
-              Vehicle Identification Number (VIN)
+              {formContent?.vin}*
             </label>
             <input
               className="form-input"
@@ -354,7 +360,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
           </div>
           <div className="form-group">
             <label className="form-label" htmlFor="mileage">
-              Mileage
+              {formContent?.mileage}*
             </label>
             <input
               className="form-input"
@@ -368,7 +374,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
           </div>
           <div className="form-group">
             <label className="form-label" htmlFor="financing">
-              Financing?
+              {formContent?.financing}*
             </label>
             <fieldset className="form-fieldset">
               <label className="form-radio-label">
@@ -377,12 +383,12 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                   type="radio"
                   id="financingYes"
                   name="financing"
-                  value="yes"
-                  checked={vehicles.financing === "yes"}
+                  value="Yes"
+                  checked={vehicles.financing === "Yes"}
                   onChange={handleVehicleChange}
                   required
                 />
-                Yes
+                {formContent?.yes}
               </label>
               <label className="form-radio-label">
                 <input
@@ -390,18 +396,18 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                   type="radio"
                   id="financingNo"
                   name="financing"
-                  value="no"
-                  checked={vehicles.financing === "no"}
+                  value="No"
+                  checked={vehicles.financing === "No"}
                   onChange={handleVehicleChange}
                   required
                 />
-                No
+                {formContent?.no}
               </label>
             </fieldset>
           </div>
           <div className="form-group">
             <label className="form-label" htmlFor="firstOwner">
-              First Owner?
+              {formContent?.firstOwner}*
             </label>
             <fieldset className="form-fieldset">
               <label className="form-radio-label">
@@ -410,12 +416,12 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                   type="radio"
                   id="firstOwnerYes"
                   name="firstOwner"
-                  value="yes"
-                  checked={vehicles.firstOwner === "yes"}
+                  value="Yes"
+                  checked={vehicles.firstOwner === "Yes"}
                   onChange={handleVehicleChange}
                   required
                 />
-                Yes
+                {formContent?.yes}
               </label>
               <label className="form-radio-label">
                 <input
@@ -423,12 +429,12 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
                   type="radio"
                   id="firstOwnerNo"
                   name="firstOwner"
-                  value="no"
-                  checked={vehicles.firstOwner === "no"}
+                  value="No"
+                  checked={vehicles.firstOwner === "No"}
                   onChange={handleVehicleChange}
                   required
                 />
-                No
+                {formContent?.no}
               </label>
             </fieldset>
           </div>
@@ -441,7 +447,7 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
             title="Add Vehicle"
           >
             <AddIcon fontSize="medium" />
-            <p>Add Vehicle</p>
+            <p>{formContent?.addVehicle}</p>
           </button>
         </div>
       </form>
@@ -450,14 +456,20 @@ const AutoDetailedInfo: React.FC<QuoteFormProps> = ({
           className="form-nav-btn"
           type="button"
           onClick={() => {
-            setActiveStep(1);
+            handleBack(setActiveStep);
           }}
         >
           <ArrowBackIcon fontSize="medium" />
-          <p>Back</p>
+          <p>{formContent?.back}</p>
         </button>
-        <button className="form-nav-btn" type="button" onClick={handleNext}>
-          <p>Next</p>
+        <button
+          className="form-nav-btn"
+          type="button"
+          onClick={() => {
+            handleNext(setActiveStep, formRef);
+          }}
+        >
+          <p>{formContent?.next}</p>
           <ArrowForwardIcon fontSize="medium" />
         </button>
       </div>

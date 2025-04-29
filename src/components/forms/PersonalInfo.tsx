@@ -6,6 +6,7 @@ import { SeachParamEnum } from "../../enums/languageEnums";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import QuoteContentMapper from "../../content/quoteContentMapper.json";
+import { handleBack, handleNext } from "../../utils/utils";
 
 const PersonalInfo: React.FC<QuoteFormProps> = ({
   setFormData,
@@ -23,21 +24,8 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
     setFormData((prevFormData: any) => ({ ...prevFormData, [name]: value }));
   };
 
-  const handleNext = () => {
-    if (formRef.current) {
-      if (formRef.current.checkValidity()) {
-        setActiveStep(2);
-      } else {
-        formRef.current.reportValidity();
-      }
-    }
-  };
-
   return (
     <div className="form-container">
-      <div className="quote-header">
-        <h1>{formContent?.header}</h1>
-      </div>
       <form ref={formRef} className="form-content">
         <div className="form-header">
           <h2>{formContent?.generalInfo}</h2>
@@ -242,14 +230,20 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
           className="form-nav-btn"
           type="button"
           onClick={() => {
-            setActiveStep(0);
+            handleBack(setActiveStep);
           }}
         >
           <ArrowBackIcon fontSize="medium" />
-          <p>Back</p>
+          <p>{formContent?.back}</p>
         </button>
-        <button className="form-nav-btn" type="button" onClick={handleNext}>
-          <p>Next</p>
+        <button
+          className="form-nav-btn"
+          type="button"
+          onClick={() => {
+            handleNext(setActiveStep, formRef);
+          }}
+        >
+          <p>{formContent?.next}</p>
           <ArrowForwardIcon fontSize="medium" />
         </button>
       </div>

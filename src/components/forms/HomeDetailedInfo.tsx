@@ -1,4 +1,4 @@
-import { QuoteFormProps } from "../../../../types/types";
+import { QuoteFormProps } from "../../types/types";
 
 const HomeDetailedInfo: React.FC<QuoteFormProps> = ({
   setFormData,

@@ -4,7 +4,11 @@ import { useRef, useState } from "react";
 import { DriverFormDataType, QuoteFormProps } from "../../types/types";
 import { driverInitialState } from "../../constants/constants";
 
-const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
+const AddDriverInfo: React.FC<QuoteFormProps> = ({
+  setFormData,
+  formData,
+  formContent,
+}) => {
   const driverRef = useRef<HTMLFormElement>(null);
   const [additionalDriver, setAdditionalDriver] =
     useState<DriverFormDataType>(driverInitialState);
@@ -47,7 +51,7 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
   return (
     <>
       <div className="form-header">
-        <h2>Add Driver(s)</h2>
+        <h2>{formContent?.addDrivers}</h2>
       </div>
       {formData.additionalDrivers.length > 0 && (
         <ul className="form-list">
@@ -72,7 +76,7 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
       <form ref={driverRef} className="form-add-section">
         <div className="form-group">
           <label className="form-label" htmlFor="additionalDriverName">
-            First Name
+            {formContent?.firstName}*
           </label>
           <input
             className="form-input"
@@ -86,7 +90,7 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="additionalDriverName">
-            Last Name
+            {formContent?.lastName}*
           </label>
           <input
             className="form-input"
@@ -100,7 +104,7 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="additionalDriverLicenseNum">
-            Drivers License Number
+            {formContent?.driversLicenseNum}*
           </label>
           <input
             className="form-input"
@@ -114,7 +118,7 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
         </div>
         <div className="form-group">
           <label className="form-label" htmlFor="additionalDateOfBirth">
-            Date of Birth
+            {formContent?.dateOfBirth}*
           </label>
           <input
             className="form-input"
@@ -136,7 +140,7 @@ const AddDriverInfo: React.FC<QuoteFormProps> = ({ setFormData, formData }) => {
           title="Add Driver"
         >
           <AddIcon fontSize="medium" />
-          <p>Add Driver</p>
+          <p>{formContent?.addDriver}</p>
         </button>
       </div>
     </>

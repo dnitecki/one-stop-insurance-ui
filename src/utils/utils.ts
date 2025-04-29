@@ -1,5 +1,4 @@
 import { EMPTY_STRING } from "../constants/constants";
-import { QuoteTypeEnum } from "../enums/formEnums";
 import { QuoteFormDataType } from "../types/types";
 
 export const formatFormTableData = (
@@ -23,4 +22,25 @@ export const formatFormTableData = (
   });
 
   return tableData;
+};
+
+export const handleBack = (
+  setActiveStep: React.Dispatch<React.SetStateAction<number>>
+) => {
+  setActiveStep((prevStep) => prevStep - 1);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+export const handleNext = (
+  setActiveStep: React.Dispatch<React.SetStateAction<number>>,
+  formRef: React.RefObject<HTMLFormElement>
+) => {
+  if (formRef.current) {
+    if (formRef.current.checkValidity()) {
+      setActiveStep((prevStep) => prevStep + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      formRef.current.reportValidity();
+    }
+  }
 };

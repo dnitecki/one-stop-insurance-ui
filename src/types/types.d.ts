@@ -58,6 +58,7 @@ export type QuoteFormProps = {
   setFormData?: React.Dispatch<React.SetStateAction>;
   setActiveStep?: React.Dispatch<React.SetStateAction>;
   formData?: QuoteFormDataType;
+  formContent?: any;
 };
 
 export type QuoteFormDataType = {
