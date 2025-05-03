@@ -1,7 +1,11 @@
 import "./FormStyles.scss";
 import { useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import { ContentMapperType, QuoteFormProps } from "../../types/types";
+import {
+  ContentMapperType,
+  QuoteFormDataType,
+  QuoteFormProps,
+} from "../../types/types";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -21,7 +25,10 @@ const PersonalInfo: React.FC<QuoteFormProps> = ({
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
-    setFormData((prevFormData: any) => ({ ...prevFormData, [name]: value }));
+    setFormData((prevFormData: QuoteFormDataType) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
   };
 
   return (

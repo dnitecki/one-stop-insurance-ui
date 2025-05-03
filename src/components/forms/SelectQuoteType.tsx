@@ -1,4 +1,8 @@
-import { ContentMapperType, QuoteFormProps } from "../../types/types";
+import {
+  ContentMapperType,
+  QuoteFormDataType,
+  QuoteFormProps,
+} from "../../types/types";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
 import { useSearchParams } from "react-router-dom";
@@ -24,7 +28,7 @@ const SelectQuoteType: React.FC<QuoteFormProps> = ({
         <button
           onClick={() => {
             setActiveStep(1);
-            setFormData((prevFormData: any) => ({
+            setFormData((prevFormData: QuoteFormDataType) => ({
               ...prevFormData,
               type: QuoteTypeEnum.AUTO,
             }));
@@ -38,7 +42,7 @@ const SelectQuoteType: React.FC<QuoteFormProps> = ({
           disabled
           onClick={() => {
             setActiveStep(1);
-            setFormData((prevFormData: any) => ({
+            setFormData((prevFormData: QuoteFormDataType) => ({
               ...prevFormData,
               type: QuoteTypeEnum.HOME,
             }));
