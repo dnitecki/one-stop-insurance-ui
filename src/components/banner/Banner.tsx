@@ -54,7 +54,11 @@ const Banner = () => {
                   <h2>{bannerContent.body[language]?.quoteCta}</h2>
                 </Link>
 
-                <button className="banner-btn" onClick={scrollToContactSection}>
+                <button
+                  className="banner-btn"
+                  onClick={scrollToContactSection}
+                  title="Contact Us"
+                >
                   <h2>{bannerContent.body[language]?.contactCta}</h2>
                 </button>
               </div>
