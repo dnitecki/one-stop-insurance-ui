@@ -1,7 +1,8 @@
 import "./Banner.scss";
 import Skyline from "../../assets/png/chicago-skyline.png";
 import BeataHeadshot from "../../assets/webp/beata-headshot.webp";
-import OneStopLogo from "../../assets/png/one-stop-logo-text.png";
+import OneStopText from "../../assets/png/one-stop-logo-text.png";
+import OneStopIcon from "../../assets/webp/one-stop-logo.webp";
 import { Link, useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapperType } from "../../types/types";
@@ -34,8 +35,13 @@ const Banner = () => {
             <div className="banner-cta-container">
               <div className="banner-logo">
                 <img
-                  className="one-stop-logo"
-                  src={OneStopLogo}
+                  className="one-stop-icon"
+                  src={OneStopIcon}
+                  alt="One Stop Insurance"
+                />
+                <img
+                  className="one-stop-text"
+                  src={OneStopText}
                   alt="One Stop Insurance"
                 />
               </div>

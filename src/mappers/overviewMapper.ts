@@ -31,6 +31,6 @@ export const OverviewMapper: OverviewMapperType[] = [
   {
     id: "socialFeed",
     Component: SocialFeed,
-    className: EMPTY_STRING,
+    className: "social-feed",
   },
 ];

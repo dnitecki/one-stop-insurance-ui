@@ -75,13 +75,26 @@
 
         .banner-logo {
           display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.5rem;
+          align-items: center;
           width: 100%;
           padding: 1rem;
           max-width: 30rem;
-          .one-stop-logo {
+          .one-stop-text {
             display: flex;
             height: 100%;
             width: 100%;
+            max-width: 20rem;
+          }
+          .one-stop-icon {
+            display: flex;
+            width: 100%;
+            max-width: 13rem;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
           }
         }
         .banner-cta-buttons {

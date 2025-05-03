@@ -15,6 +15,7 @@ const SocialFeed = () => {
           href={LINKS.FB}
           target="_blank"
           rel="noreferrer"
+          title="Facebook"
         >
           <FacebookIcon fontSize="inherit" />
         </a>
@@ -23,6 +24,7 @@ const SocialFeed = () => {
           href={LINKS.INSTA}
           target="_blank"
           rel="noreferrer"
+          title="Instagram"
         >
           <InstagramIcon fontSize="inherit" />
         </a>
@@ -31,16 +33,18 @@ const SocialFeed = () => {
           href={LINKS.LINKEDIN}
           target="_blank"
           rel="noreferrer"
+          title="LinkedIn"
         >
           <LinkedInIcon fontSize="inherit" />
         </a>
         <img className="right-arrow" src={Arrow} alt="arrow" />
       </div>
       <iframe
+        className="instagram-feed"
+        title="Instagram Feed"
         width="100%"
         height="500"
         src="https://www.instagram.com/onestopinsuranceagency/embed/"
-        title="instagram-feed"
       />
     </div>
   );

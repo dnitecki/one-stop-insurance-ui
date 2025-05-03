@@ -43,6 +43,11 @@
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+.instagram-feed {
+  border-radius: var(--border-radius);
+  display: flex;
+  filter: drop-shadow(var(--shadow));
+}
 @media (max-width: 700px) {
   .feed-container {
     width: 100%;

@@ -6,7 +6,6 @@
   width: 100%;
   height: 100%;
   background-color: var(--white);
-  margin-bottom: 2rem;
 }
 .overview-content {
   display: flex;
@@ -22,6 +21,10 @@
   }
   .reviews {
     margin-top: 2rem;
+    background-color: var(--primary-gray);
+    border-radius: var(--border-radius);
+  }
+  .social-feed {
     background-color: var(--primary-gray);
     border-radius: var(--border-radius);
   }
