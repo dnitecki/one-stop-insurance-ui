@@ -15,25 +15,28 @@
   align-items: center;
   flex-direction: column;
   overflow-x: hidden;
-  .services {
-    background-color: var(--primary-gray);
-    border-radius: var(--border-radius);
-  }
   .reviews {
     margin-top: 2rem;
     background-color: var(--primary-gray);
-    border-radius: var(--border-radius);
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
+  .services {
+    background-color: var(--primary-gray);
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
   .social-feed {
     background-color: var(--primary-gray);
-    border-radius: var(--border-radius);
+    border-top-right-radius: 50px;
   }
   .overview-section {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
     .section-heading {
       z-index: 2;
       justify-content: center;

@@ -102,7 +102,7 @@
           width: 100%;
           justify-content: center;
           align-items: center;
-          gap: 1rem;
+          gap: 1.5rem;
           .banner-btn {
             display: flex;
             justify-content: center;
@@ -111,7 +111,7 @@
             height: fit-content;
             background-color: var(--primary-red);
             border-radius: var(--border-radius);
-            padding: 1rem 1rem;
+            padding: 0.7rem 1rem;
             gap: 0.5rem;
             outline: 2px solid transparent;
             transition: all 200ms ease;
