@@ -37,7 +37,7 @@ const Banner = () => {
                 <img
                   className="one-stop-icon"
                   src={OneStopIcon}
-                  alt="One Stop Insurance"
+                  alt="One Stop Insurance Icon"
                 />
                 <img
                   className="one-stop-text"
