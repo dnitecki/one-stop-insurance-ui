@@ -47,7 +47,7 @@
       color: var(--heading-text-color);
     }
     .section-component {
-      padding: 1rem;
+      padding: 2rem;
       display: flex;
       gap: 1rem;
       flex-direction: column;
@@ -64,5 +64,8 @@
       padding-left: 2rem;
       padding-right: 2rem;
     }
+  }
+  .section-component {
+    padding: 1rem !important;
   }
 }
