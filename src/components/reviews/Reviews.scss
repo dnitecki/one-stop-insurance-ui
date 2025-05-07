@@ -106,6 +106,21 @@
   }
   .review-card {
     width: 100%;
-    min-height: 12rem;
+    height: 100%;
+  }
+  .review-rating {
+    h3 {
+      font-size: 22px;
+    }
+  }
+  .review-content {
+    p {
+      font-size: 16px;
+    }
+  }
+  .review-name {
+    h3 {
+      font-size: 22px;
+    }
   }
 }

@@ -18,18 +18,17 @@
   .reviews {
     margin-top: 2rem;
     background-color: var(--primary-gray);
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    border-radius: var(--border-radius);
   }
   .services {
     background-color: var(--primary-gray);
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-radius: var(--border-radius);
   }
 
   .social-feed {
     background-color: var(--primary-gray);
-    border-top-right-radius: 50px;
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
   }
   .overview-section {
     display: flex;
@@ -64,6 +63,10 @@
       padding-left: 2rem;
       padding-right: 2rem;
     }
+  }
+  .overview-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
   .section-component {
     padding: 1rem !important;

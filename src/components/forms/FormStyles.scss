@@ -167,7 +167,6 @@
     padding: 0 5px;
     color: var(--black);
     font-size: 18px;
-    border-radius: var(--border-radius);
     transition: 0.3s ease-in-out;
     pointer-events: none;
   }
@@ -180,7 +179,7 @@
     color: var(--black);
     background-color: var(--white);
     border: 2px solid var(--secondary-gray);
-    border-radius: var(--border-radius);
+    border-radius: var(--input-border-radius);
     font-size: 18px;
     transition: all 300ms ease-in-out;
   }
@@ -191,7 +190,7 @@
     display: block;
     height: auto;
     padding: 0.2rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--input-border-radius);
     border: 2px solid var(--secondary-gray);
     background-color: var(--white);
     padding: 0.5rem;

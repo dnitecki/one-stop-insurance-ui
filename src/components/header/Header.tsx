@@ -18,27 +18,29 @@ const Header = () => {
 
   return (
     <header className="header-container">
-      <div className="header-logo">
-        <Link to={`/?lang=${language}`} title="Home">
-          <img src={logo} alt="One Stop Logo" />
-        </Link>
-      </div>
-      <div className="header-options">
-        <Link
-          to={`/requestquote?lang=${language}`}
-          title="Get A Quote"
-          id="quoteLink"
-        >
-          <FactCheckIcon fontSize="inherit" />
-          <p>{bannerContent?.quoteText}</p>
-        </Link>
-        <a href={INFO.PHONE_HREF} title="Call">
-          <PhoneIcon fontSize="inherit" />
-        </a>
-        <a href={INFO.EMAIL_HREF} title="Email">
-          <EmailIcon fontSize="inherit" />
-        </a>
-        <LanguageSelector />
+      <div className="header-content">
+        <div className="header-logo">
+          <Link to={`/?lang=${language}`} title="Home">
+            <img src={logo} alt="One Stop Logo" />
+          </Link>
+        </div>
+        <div className="header-options">
+          <Link
+            to={`/requestquote?lang=${language}`}
+            title="Get A Quote"
+            id="quoteLink"
+          >
+            <FactCheckIcon fontSize="inherit" />
+            <p>{bannerContent?.quoteText}</p>
+          </Link>
+          <a href={INFO.PHONE_HREF} title="Call">
+            <PhoneIcon fontSize="inherit" />
+          </a>
+          <a href={INFO.EMAIL_HREF} title="Email">
+            <EmailIcon fontSize="inherit" />
+          </a>
+          <LanguageSelector />
+        </div>
       </div>
     </header>
   );
