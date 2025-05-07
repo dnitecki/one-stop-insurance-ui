@@ -8,7 +8,7 @@ import PageNotFound from "./pages/pageNotFound/PageNotFound";
 import { LanguageEnumShort, SeachParamEnum } from "./enums/languageEnums";
 import { useEffect } from "react";
 
-export default function App() {
+export const App = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const languageParam = searchParams.get(SeachParamEnum.LANG);
   const setInitLanguage = () => {
@@ -35,4 +35,6 @@ export default function App() {
       <Footer />
     </div>
   );
-}
+};
+
+export default App;
