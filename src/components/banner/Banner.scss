@@ -125,7 +125,6 @@
               font-size: 20px;
             }
           }
-          .banner-btn:hover,
           .banner-btn:focus {
             background-color: var(--secondary-red);
           }
@@ -158,5 +157,10 @@
 @media (max-width: 1000px) {
   .headshot-container {
     display: none !important;
+  }
+}
+@media (hover: hover) {
+  .banner-btn:hover {
+    background-color: var(--secondary-red) !important;
   }
 }
