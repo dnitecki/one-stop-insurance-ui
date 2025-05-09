@@ -29,32 +29,47 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
   gap: 1rem;
-  color: var(--white);
   .contact-option-btn {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 20rem;
+    width: 100%;
+    box-sizing: border-box;
     height: fit-content;
-    background-color: var(--primary-red);
+    background-color: var(--primary-gray);
     border-radius: var(--border-radius);
-    padding: 0.7rem 0rem;
+    padding: 0.7rem 1rem;
     font-size: 24px;
     gap: 0.5rem;
     outline: 2px solid transparent;
     transition: all 200ms ease;
-    h2 {
+    .contact-icon {
       display: flex;
-      align-items: center;
+      min-width: 3rem;
+      height: 3rem;
+      color: var(--white);
       justify-content: center;
-      gap: 0.5rem;
-      font-size: 20px;
+      align-items: center;
+      text-align: center;
+      background-color: var(--primary-red);
+      border-radius: 50%;
     }
-  }
-  .contact-option-btn:hover,
-  .contact-option-btn:focus {
-    background-color: var(--secondary-red);
+    .contact-text {
+      display: flex;
+      flex-grow: 1;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 20px;
+      }
+    }
   }
 }
 .contact-card {
@@ -71,11 +86,6 @@
   border-radius: var(--border-radius);
   background-color: var(--primary-red);
   color: var(--white);
-  hr {
-    width: 80%;
-    color: var(--white);
-    border-style: solid;
-  }
 }
 
 @media (max-width: 700px) {
@@ -87,9 +97,23 @@
     padding: 1rem;
   }
   .contact-option-container {
-    flex-direction: column;
+    .contact-option-btn {
+      width: 100%;
+      .contact-icon {
+        display: flex;
+        min-width: 2.5rem;
+        height: 2.5rem;
+      }
+      .contact-text {
+        h2 {
+          font-size: 16px;
+        }
+      }
+    }
   }
-  .contact-option-btn {
-    width: 100% !important;
+}
+@media (max-width: 1000px) {
+  .contact-option-container {
+    flex-direction: column;
   }
 }

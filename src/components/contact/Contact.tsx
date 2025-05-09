@@ -10,12 +10,20 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-option-container">
           <a className="contact-option-btn" href={INFO.PHONE_HREF}>
-            <PhoneIcon fontSize="inherit" />
-            <h2>{INFO.PHONE}</h2>
+            <div className="contact-icon">
+              <PhoneIcon fontSize="inherit" />
+            </div>
+            <div className="contact-text">
+              <h2>{INFO.PHONE}</h2>
+            </div>
           </a>
           <a className="contact-option-btn" href={INFO.EMAIL_HREF}>
-            <EmailIcon fontSize="inherit" />
-            <h2>Email</h2>
+            <div className="contact-icon">
+              <EmailIcon fontSize="inherit" />
+            </div>
+            <div className="contact-text">
+              <h2>{INFO.EMAIL}</h2>
+            </div>
           </a>
         </div>
         <div className="map-card">
