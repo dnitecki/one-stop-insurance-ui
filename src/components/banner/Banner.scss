@@ -153,6 +153,9 @@
   .banner-content-container {
     align-items: center;
   }
+  .skyline {
+    object-position: -600px !important;
+  }
 }
 @media (max-width: 1000px) {
   .banner-cta-container {
