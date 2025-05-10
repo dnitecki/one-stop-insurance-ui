@@ -7,25 +7,13 @@ import { Link, useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapperType } from "../../types/types";
 import OverviewContentMapper from "../../content/overviewContentMapper.json";
+import { scrollToContactSection } from "../../utils/utils";
 
 const Banner = () => {
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = OverviewContentMapper;
   const bannerContent = content.sections.banner;
-
-  const scrollToContactSection = () => {
-    const section = document.getElementById("contact");
-    if (section) {
-      const headerHeightOffset = -70;
-      const y =
-        section.getBoundingClientRect().top +
-        window.scrollY +
-        headerHeightOffset;
-
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="banner-container">

@@ -44,3 +44,14 @@ export const handleNext = (
     }
   }
 };
+
+export const scrollToContactSection = () => {
+  const section = document.getElementById("contact");
+  if (section) {
+    const headerHeightOffset = -70;
+    const y =
+      section.getBoundingClientRect().top + window.scrollY + headerHeightOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+};
