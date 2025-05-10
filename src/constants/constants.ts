@@ -15,7 +15,7 @@ export const LINKS = {
 export const INFO = {
   ADDRESS: "130 N. Bloomingdale Rd, Bloomingdale, IL.",
   HOURS: "Monday - Friday: 9:00AM - 5:00PM",
-  PHONE: "(630) 400-8111",
+  PHONE: "+1 (630) 400-8111",
   EMAIL: "bnitecki@onestopinsurance.net",
   PHONE_HREF: "tel:+16304008111",
   EMAIL_HREF: "mailto:bnitecki@onestopinsurance.net",
