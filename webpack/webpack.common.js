@@ -53,15 +53,15 @@ module.exports = {
       manifest: "./public/manifest.json",
       filename: "index.html",
     }),
-    new MiniCssExtractPlugin(),
     new PurgeCSSPlugin({
       paths: glob.sync(`${PATHS.src}/**/*`, {
         nodir: true,
       }),
       safelist: {
-        standard: [/^leaflet-/],
+        standard: [/^leaflet-/, /^RFS-LabelContainer/],
       },
     }),
+    new MiniCssExtractPlugin(),
   ],
   stats: "errors-only",
 };
