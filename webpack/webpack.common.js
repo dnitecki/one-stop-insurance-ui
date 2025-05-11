@@ -1,6 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+const glob = require("glob-all");
+
+const PATHS = {
+  src: path.join(__dirname, "../src"),
+};
 
 module.exports = {
   entry: path.resolve(__dirname, "..", "./src/index.tsx"),
@@ -48,6 +54,14 @@ module.exports = {
       filename: "index.html",
     }),
     new MiniCssExtractPlugin(),
+    new PurgeCSSPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`, {
+        nodir: true,
+      }),
+      safelist: {
+        standard: [/^leaflet-/],
+      },
+    }),
   ],
   stats: "errors-only",
 };
