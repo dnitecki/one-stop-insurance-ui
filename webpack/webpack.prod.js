@@ -15,7 +15,6 @@ module.exports = {
     new webpack.DefinePlugin({
       "process.env.name": JSON.stringify("production"),
     }),
-    new CompressionPlugin(),
     new PurgeCSSPlugin({
       paths: glob.sync(`${PATHS.src}/**/*`, {
         nodir: true,
@@ -24,5 +23,6 @@ module.exports = {
         standard: [/^leaflet-/],
       },
     }),
+    new CompressionPlugin(),
   ],
 };
