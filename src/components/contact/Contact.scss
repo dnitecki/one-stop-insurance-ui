@@ -99,12 +99,14 @@
   .contact-option-container {
     .contact-option-btn {
       width: 100%;
+      gap: 1rem;
       .contact-icon {
         display: flex;
         min-width: 2.5rem;
         height: 2.5rem;
       }
       .contact-text {
+        justify-content: flex-start;
         h2 {
           font-size: 18px;
         }
