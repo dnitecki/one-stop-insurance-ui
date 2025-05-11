@@ -44,7 +44,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "..", "./build"),
-    filename: "[name].[contenthash].js",
+    filename: "bundle.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -61,9 +61,7 @@ module.exports = {
         standard: [/^leaflet-/, /^RFS-LabelContainer/],
       },
     }),
-    new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css",
-    }),
+    new MiniCssExtractPlugin(),
   ],
   stats: "errors-only",
 };

@@ -153,8 +153,14 @@
   .banner-content-container {
     align-items: center;
   }
-  .skyline {
-    object-position: -600px !important;
+  .banner-content {
+    .main-banner-image {
+      .skyline {
+        object-position: -650px;
+        filter: blur(3px);
+        opacity: 0.2;
+      }
+    }
   }
 }
 @media (max-width: 1000px) {
