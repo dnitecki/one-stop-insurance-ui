@@ -1,5 +1,12 @@
 const webpack = require("webpack");
 const CompressionPlugin = require("compression-webpack-plugin");
+const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+const glob = require("glob-all");
+const path = require("path");
+
+const PATHS = {
+  src: path.join(__dirname, "../src"),
+};
 
 module.exports = {
   mode: "production",
@@ -9,5 +16,13 @@ module.exports = {
       "process.env.name": JSON.stringify("production"),
     }),
     new CompressionPlugin(),
+    new PurgeCSSPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`, {
+        nodir: true,
+      }),
+      safelist: {
+        standard: [/^leaflet-/],
+      },
+    }),
   ],
 };
