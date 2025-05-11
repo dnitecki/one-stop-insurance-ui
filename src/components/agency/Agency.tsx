@@ -6,6 +6,7 @@ import Lottie from "react-lottie-player";
 import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import { ContentMapperType } from "../../types/types";
 import GroupPhoto from "../../assets/webp/group-photo.webp";
+import OneStopIcon from "../../assets/png/one-stop-icon-white.png";
 
 const Agency = () => {
   const [searchParams] = useSearchParams();
@@ -19,7 +20,12 @@ const Agency = () => {
         <div className="experience-container">
           <div className="experience-card">
             <div className="photo-container">
-              <img className="photo" src={GroupPhoto} alt="Group Photo" />
+              <img
+                className="agency-logo"
+                src={OneStopIcon}
+                alt="One Stop Icon"
+              />
+              <img className="group-photo" src={GroupPhoto} alt="Group Photo" />
             </div>
           </div>
           <div className="experience-text">

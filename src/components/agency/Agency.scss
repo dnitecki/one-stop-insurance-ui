@@ -56,12 +56,23 @@
       width: 100%;
       align-items: flex-end;
       justify-content: center;
-      .photo {
+      position: relative;
+      .agency-logo {
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        width: 12rem;
+        height: auto;
+        transform: translate(-50%, 0);
+        z-index: 1;
+      }
+      .group-photo {
         object-fit: contain;
         height: auto;
         width: 28rem;
         filter: drop-shadow(var(--shadow));
         -webkit-filter: drop-shadow(var(--shadow));
+        z-index: 2;
       }
     }
   }
