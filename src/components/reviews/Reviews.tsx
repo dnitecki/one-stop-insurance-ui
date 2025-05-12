@@ -6,6 +6,8 @@ import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import GoogleIcon from "../../assets/webp/google-icon.webp";
 import { ContentMapperType, ReviewMapperType } from "../../types/types";
 import "./Reviews.scss";
+import { useRef } from "react";
+import useVisibility from "../../hooks/useVisibility";
 
 const Reviews = () => {
   const [searchParams] = useSearchParams();
@@ -13,6 +15,8 @@ const Reviews = () => {
   const content: ContentMapperType = OverviewContentMapper;
   const reviewContent = content.sections.reviews.body[language];
   const reviews: ReviewMapperType[] = ReviewMapper;
+  const ref = useRef<HTMLDivElement>(null);
+  const isVisible = useVisibility(ref);
 
   return (
     <div className="reviews-container">
@@ -24,7 +28,12 @@ const Reviews = () => {
       </div>
       <div className="review-container">
         {reviews.map((review, index) => (
-          <div className="review-card" key={index}>
+          <div
+            className={`review-card ${isVisible ? "visible" : ""}`}
+            key={index}
+            ref={ref}
+            style={{ "--delay": `${index * 0.2}s` } as React.CSSProperties}
+          >
             <div className="review-card-content">
               <div className="review-rating">
                 <StarIcon className="star-icon" fontSize="inherit" />

@@ -38,15 +38,21 @@
 }
 .review-card {
   display: flex;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease, transform 0.5s ease;
   width: 25rem;
   height: 15rem;
   padding: 1rem 1rem;
   background-color: var(--white);
   border-radius: var(--border-radius);
-  filter: drop-shadow(var(--shadow));
-  -webkit-filter: drop-shadow(var(--shadow));
+  transition-delay: var(--delay, 0s);
 }
-
+.review-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: var(--shadow);
+}
 .review-card-content {
   display: flex;
   height: 100%;

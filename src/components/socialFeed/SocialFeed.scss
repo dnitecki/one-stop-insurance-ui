@@ -28,21 +28,6 @@
   border-radius: var(--border-radius);
   font-size: 40px;
 }
-.left-arrow {
-  display: flex;
-  height: 100%;
-  min-width: 4rem;
-  max-width: 7rem;
-}
-.right-arrow {
-  display: flex;
-  height: 100%;
-  min-width: 4rem;
-  max-width: 7rem;
-  -moz-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
 .instagram-feed {
   border-radius: var(--border-radius);
   display: flex;

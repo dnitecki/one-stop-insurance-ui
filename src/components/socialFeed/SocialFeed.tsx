@@ -2,14 +2,12 @@ import { LINKS } from "../../constants/constants";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Arrow from "../../assets/png/arrow.png";
 import "./SocialFeed.scss";
 
 const SocialFeed = () => {
   return (
     <div className="feed-container">
       <div className="media-links">
-        <img className="left-arrow" src={Arrow} alt="arrow" />
         <a
           className="link-container"
           href={LINKS.FB}
@@ -37,7 +35,6 @@ const SocialFeed = () => {
         >
           <LinkedInIcon fontSize="inherit" />
         </a>
-        <img className="right-arrow" src={Arrow} alt="arrow" />
       </div>
       <iframe
         className="instagram-feed"
