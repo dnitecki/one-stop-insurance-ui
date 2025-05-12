@@ -1,6 +1,7 @@
 import { useSearchParams } from "react-router-dom";
 import ReviewMapper from "../../content/reviewMapper.json";
 import StarIcon from "@mui/icons-material/Star";
+import { EMPTY_STRING } from "../../constants/constants";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import GoogleIcon from "../../assets/webp/google-icon.webp";
@@ -29,7 +30,7 @@ const Reviews = () => {
       <div className="review-container">
         {reviews.map((review, index) => (
           <div
-            className={`review-card ${isVisible ? "visible" : ""}`}
+            className={`review-card ${isVisible ? "visible" : EMPTY_STRING}`}
             key={index}
             ref={ref}
             style={{ "--delay": `${index * 0.2}s` } as React.CSSProperties}

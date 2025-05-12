@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 3rem;
   width: 80%;
-  max-width: 70rem;
+  max-width: 60rem;
 }
 .contact-form-container {
   display: flex;
@@ -21,8 +21,8 @@
   align-items: center;
   width: 100%;
   height: fit-content;
-  filter: drop-shadow(var(--shadow));
-  -webkit-filter: drop-shadow(var(--shadow));
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
 }
 .contact-option-container {
   display: flex;
