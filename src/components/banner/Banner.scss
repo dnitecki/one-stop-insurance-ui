@@ -45,8 +45,8 @@
           position: absolute;
           display: flex;
           width: fit-content;
-          top: 16rem;
-          left: 3rem;
+          top: 20rem;
+          left: 4rem;
           justify-content: center;
           z-index: 1;
           text-align: right;
@@ -158,6 +158,11 @@
         object-position: -650px;
       }
     }
+  }
+}
+@media (max-width: 1200px) {
+  .name-tag {
+    left: 1rem !important;
   }
 }
 @media (max-width: 1000px) {
