@@ -46,6 +46,28 @@
       "header": {
         "EN": "Our Services",
         "PL": "Nasze Usługi"
+      },
+      "body": {
+        "EN": {
+          "auto": "Auto",
+          "home": "Home",
+          "life": "Life",
+          "business": "Business",
+          "renters": "Renters",
+          "boat": "Boat",
+          "motorcycle": "Motorcycle",
+          "specialty": "Specialty"
+        },
+        "PL": {
+          "auto": "Samochód",
+          "home": "Dom",
+          "life": "Życie",
+          "business": "Biznes",
+          "renters": "Najemcy",
+          "boat": "Łódź",
+          "motorcycle": "Motocykl",
+          "specialty": "Specjalność"
+        }
       }
     },
     "reviews": {

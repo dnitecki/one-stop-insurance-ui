@@ -11,42 +11,34 @@ import ApartmentIcon from "@mui/icons-material/Apartment";
 export const ServicesMapper: ServiceMapperType[] = [
   {
     id: "auto",
-    text: "Auto",
     icon: DirectionsCarIcon,
   },
   {
     id: "home",
-    text: "Home",
     icon: HomeIcon,
   },
   {
     id: "life",
-    text: "Life",
     icon: FamilyRestroomIcon,
   },
   {
     id: "business",
-    text: "Business",
     icon: BusinessCenterIcon,
   },
   {
     id: "renters",
-    text: "Renters",
     icon: ApartmentIcon,
   },
   {
     id: "boat",
-    text: "Boat",
     icon: DirectionsBoatIcon,
   },
   {
     id: "motorcycle",
-    text: "Motorcycle",
     icon: TwoWheelerIcon,
   },
   {
     id: "specialty",
-    text: "Specialty",
     icon: HealthAndSafetyIcon,
   },
 ];

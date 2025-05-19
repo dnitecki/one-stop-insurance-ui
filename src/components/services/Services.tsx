@@ -1,15 +1,22 @@
 import "./Services.scss";
 import { ServicesMapper } from "../../mappers/servicesMapper";
-import { ServiceMapperType } from "../../types/types";
-
-const MainServices = ServicesMapper;
+import { ContentMapperType, ServiceMapperType } from "../../types/types";
+import OverviewContentMapper from "../../content/overviewContentMapper.json";
+import { useSearchParams } from "react-router-dom";
+import { SeachParamEnum } from "../../enums/languageEnums";
 
 const Services = () => {
+  const MainServices = ServicesMapper;
+  const [searchParams] = useSearchParams();
+  const language = searchParams.get(SeachParamEnum.LANG);
+  const content: ContentMapperType = OverviewContentMapper;
+  const serviceContent = content?.sections?.services?.body[language];
+
   return (
     <div className="services-container">
-      <div className="services-content">
+      <ul className="services-content">
         {MainServices.map((service: ServiceMapperType) => (
-          <div className="service-chip" key={service.id} id={service.id}>
+          <li className="service-chip" key={service.id} id={service.id}>
             <div className="content-container">
               <div className="service-icon">
                 <div className="icon">
@@ -17,12 +24,12 @@ const Services = () => {
                 </div>
               </div>
               <div className="service-name">
-                <p>{service.text}</p>
+                <p>{serviceContent[service.id]}</p>
               </div>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
