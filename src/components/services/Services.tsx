@@ -4,13 +4,15 @@ import { ContentMapperType, ServiceMapperType } from "../../types/types";
 import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
+import { EMPTY_STRING } from "../../constants/constants";
 
 const Services = () => {
   const MainServices = ServicesMapper;
   const [searchParams] = useSearchParams();
   const language = searchParams.get(SeachParamEnum.LANG);
   const content: ContentMapperType = OverviewContentMapper;
-  const serviceContent = content?.sections?.services?.body[language];
+  const serviceContent =
+    content?.sections?.services?.body[language] ?? EMPTY_STRING;
 
   return (
     <div className="services-container">

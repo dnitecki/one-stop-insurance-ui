@@ -23,14 +23,12 @@ export const App = () => {
   return (
     <div className="app-container" id="app-container">
       <Header />
-      <main>
-        <div className="page-container" id="page-container">
-          <Routes>
-            <Route index path="/" element={<Overview />} />
-            <Route path="/requestquote" element={<Quote />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </div>
+      <main className="page-container" id="page-container">
+        <Routes>
+          <Route index path="/" element={<Overview />} />
+          <Route path="/requestquote" element={<Quote />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
       </main>
       <Footer />
     </div>
