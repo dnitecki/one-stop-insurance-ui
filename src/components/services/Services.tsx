@@ -1,10 +1,6 @@
 import "./Services.scss";
 import { ServicesMapper } from "../../mappers/servicesMapper";
-import { ContentMapperType, ServiceMapperType } from "../../types/types";
-import OverviewContentMapper from "../../content/overviewContentMapper.json";
-import { useSearchParams } from "react-router-dom";
-import { SeachParamEnum } from "../../enums/languageEnums";
-import { EMPTY_STRING } from "../../constants/constants";
+import { ServiceMapperType } from "../../types/types";
 import useTranslateContent from "../../hooks/useTranslateContent";
 import { ContentSectionEnum } from "../../enums/enums";
 
