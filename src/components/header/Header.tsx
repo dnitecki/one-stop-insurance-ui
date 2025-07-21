@@ -5,16 +5,12 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import FactCheckIcon from "@mui/icons-material/FactCheck";
 import LanguageSelector from "../languageSelector/LanguageSelector";
 import { INFO } from "../../constants/constants";
-import { Link, useSearchParams } from "react-router-dom";
-import { SeachParamEnum } from "../../enums/languageEnums";
-import { ContentMapperType } from "../../types/types";
-import OverviewContentMapper from "../../content/overviewContentMapper.json";
+import { Link } from "react-router-dom";
+import useTranslateContent from "../../hooks/useTranslateContent";
+import { ContentSectionEnum } from "../../enums/enums";
 
 const Header = () => {
-  const [searchParams] = useSearchParams();
-  const language = searchParams.get(SeachParamEnum.LANG);
-  const content: ContentMapperType = OverviewContentMapper;
-  const bannerContent = content?.sections.header.body[language];
+  const { content, language } = useTranslateContent(ContentSectionEnum.HEADER);
 
   return (
     <header className="header-container">
@@ -31,7 +27,7 @@ const Header = () => {
             id="quoteLink"
           >
             <FactCheckIcon fontSize="inherit" />
-            <p>{bannerContent?.quoteText}</p>
+            <p>{content?.quoteText}</p>
           </Link>
           <a href={INFO.PHONE_HREF} title="Call">
             <PhoneIcon fontSize="inherit" />

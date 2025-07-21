@@ -5,14 +5,12 @@ import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import { useSearchParams } from "react-router-dom";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import { EMPTY_STRING } from "../../constants/constants";
+import useTranslateContent from "../../hooks/useTranslateContent";
+import { ContentSectionEnum } from "../../enums/enums";
 
 const Services = () => {
   const MainServices = ServicesMapper;
-  const [searchParams] = useSearchParams();
-  const language = searchParams.get(SeachParamEnum.LANG);
-  const content: ContentMapperType = OverviewContentMapper;
-  const serviceContent =
-    content?.sections?.services?.body[language] ?? EMPTY_STRING;
+  const { content } = useTranslateContent(ContentSectionEnum.SERVICES);
 
   return (
     <div className="services-container">
@@ -26,7 +24,7 @@ const Services = () => {
                 </div>
               </div>
               <div className="service-name">
-                <p>{serviceContent[service.id]}</p>
+                <p>{content[service.id]}</p>
               </div>
             </div>
           </li>

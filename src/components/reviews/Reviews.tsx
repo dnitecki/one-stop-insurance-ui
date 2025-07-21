@@ -9,12 +9,11 @@ import { ContentMapperType, ReviewMapperType } from "../../types/types";
 import "./Reviews.scss";
 import { useRef } from "react";
 import useVisibility from "../../hooks/useVisibility";
+import useTranslateContent from "../../hooks/useTranslateContent";
+import { ContentSectionEnum } from "../../enums/enums";
 
 const Reviews = () => {
-  const [searchParams] = useSearchParams();
-  const language = searchParams.get(SeachParamEnum.LANG);
-  const content: ContentMapperType = OverviewContentMapper;
-  const reviewContent = content.sections.reviews.body[language];
+  const { content } = useTranslateContent(ContentSectionEnum.REVIEWS);
   const reviews: ReviewMapperType[] = ReviewMapper;
   const ref = useRef<HTMLDivElement>(null);
   const isVisible = useVisibility(ref);
@@ -23,7 +22,7 @@ const Reviews = () => {
     <div className="reviews-container">
       <div className="google-container">
         <div className="google-text">
-          <h2>{reviewContent?.subTitle}</h2>
+          <h2>{content?.subTitle}</h2>
         </div>
         <img className="google-icon" src={GoogleIcon} alt="google icon" />
       </div>

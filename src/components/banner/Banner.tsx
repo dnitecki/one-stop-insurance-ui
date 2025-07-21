@@ -8,12 +8,11 @@ import { SeachParamEnum } from "../../enums/languageEnums";
 import { ContentMapperType } from "../../types/types";
 import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import { scrollToContactSection } from "../../utils/utils";
+import useTranslateContent from "../../hooks/useTranslateContent";
+import { ContentSectionEnum } from "../../enums/enums";
 
 const Banner = () => {
-  const [searchParams] = useSearchParams();
-  const language = searchParams.get(SeachParamEnum.LANG);
-  const content: ContentMapperType = OverviewContentMapper;
-  const bannerContent = content.sections.banner;
+  const { content, language } = useTranslateContent(ContentSectionEnum.BANNER);
 
   return (
     <section className="banner-container">
@@ -39,7 +38,7 @@ const Banner = () => {
                   title="Get A Quote"
                   className="banner-btn"
                 >
-                  <h2>{bannerContent.body[language]?.quoteCta}</h2>
+                  <h2>{content?.quoteCta}</h2>
                 </Link>
 
                 <button
@@ -47,7 +46,7 @@ const Banner = () => {
                   onClick={scrollToContactSection}
                   title="Contact Us"
                 >
-                  <h2>{bannerContent.body[language]?.contactCta}</h2>
+                  <h2>{content?.contactCta}</h2>
                 </button>
               </div>
             </div>

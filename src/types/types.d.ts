@@ -101,3 +101,8 @@ export type VehicleFormDataType = {
   mileage: string;
   firstOwner: string;
 };
+
+export type TranslateContentReturnType = {
+  content: { [key: string]: string };
+  language: LanguageEnumShort;
+};

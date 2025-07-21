@@ -1,18 +1,13 @@
 import "./Agency.scss";
-import { useSearchParams } from "react-router-dom";
-import { SeachParamEnum } from "../../enums/languageEnums";
 import QuoteAnimation from "../../assets/json/QuoteAnimation.json";
 import Lottie from "react-lottie-player";
-import OverviewContentMapper from "../../content/overviewContentMapper.json";
-import { ContentMapperType } from "../../types/types";
 import GroupPhoto from "../../assets/webp/group-photo.webp";
 import OneStopIcon from "../../assets/png/one-stop-icon-white.png";
+import useTranslateContent from "../../hooks/useTranslateContent";
+import { ContentSectionEnum } from "../../enums/enums";
 
 const Agency = () => {
-  const [searchParams] = useSearchParams();
-  const language = searchParams.get(SeachParamEnum.LANG);
-  const content: ContentMapperType = OverviewContentMapper;
-  const agencyContent = content?.sections.agency.body[language];
+  const { content } = useTranslateContent(ContentSectionEnum.AGENCY);
 
   return (
     <>
@@ -29,7 +24,7 @@ const Agency = () => {
             </div>
           </div>
           <div className="experience-text">
-            <h2>{agencyContent?.experienceContentOne}</h2>
+            <h2>{content?.experienceContentOne}</h2>
           </div>
         </div>
         <div className="experience-container">
@@ -44,7 +39,7 @@ const Agency = () => {
             </div>
           </div>
           <div className="experience-text">
-            <h2>{agencyContent?.experienceContentTwo}</h2>
+            <h2>{content?.experienceContentTwo}</h2>
           </div>
         </div>
       </div>
