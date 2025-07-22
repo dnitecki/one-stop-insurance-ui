@@ -7,18 +7,20 @@ import Quote from "./pages/quote/Quote";
 import PageNotFound from "./pages/pageNotFound/PageNotFound";
 import { LanguageEnumShort, SeachParamEnum } from "./enums/languageEnums";
 import { useEffect } from "react";
+import useTranslateContent from "./hooks/useTranslateContent";
 
 export const App = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const languageParam = searchParams.get(SeachParamEnum.LANG);
+  const { language } = useTranslateContent();
+  const [, setSearchParams] = useSearchParams();
   const setInitLanguage = () => {
-    if (!languageParam || !(languageParam in LanguageEnumShort)) {
+    if (!language || !(language in LanguageEnumShort)) {
       setSearchParams({ [SeachParamEnum.LANG]: LanguageEnumShort.EN });
     }
   };
+
   useEffect(() => {
     setInitLanguage();
-  });
+  }, [language]);
 
   return (
     <div className="app-container" id="app-container">
