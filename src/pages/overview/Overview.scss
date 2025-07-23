@@ -1,5 +1,6 @@
 .overview-container {
   display: flex;
+  overflow-y: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -64,11 +65,13 @@
       padding-right: 2rem;
     }
   }
-  .overview-section {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-  .section-component {
-    padding: 1rem !important;
+  .overview-content {
+    .overview-section {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      .section-component {
+        padding: 1rem;
+      }
+    }
   }
 }

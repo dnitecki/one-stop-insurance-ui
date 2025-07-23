@@ -2,7 +2,7 @@ import "./Agency.scss";
 import QuoteAnimation from "../../assets/json/QuoteAnimation.json";
 import Lottie from "react-lottie-player";
 import GroupPhoto from "../../assets/webp/group-photo.webp";
-import OneStopIcon from "../../assets/png/one-stop-icon-white.png";
+import OneStopIcon from "../../assets/webp/one-stop-logo.webp";
 import useTranslateContent from "../../hooks/useTranslateContent";
 import { ContentSectionEnum } from "../../enums/enums";
 
