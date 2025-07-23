@@ -39,11 +39,11 @@
     height: fit-content;
     background-color: var(--primary-gray);
     border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
     padding: 0.7rem 1rem;
     font-size: 24px;
     gap: 0.5rem;
     outline: 2px solid transparent;
-    transition: all 200ms ease;
     .contact-icon {
       display: flex;
       min-width: 3rem;
@@ -107,8 +107,9 @@
       }
       .contact-text {
         justify-content: flex-start;
+        width: 100%;
         h2 {
-          font-size: 18px;
+          font-size: 17px;
         }
       }
     }
