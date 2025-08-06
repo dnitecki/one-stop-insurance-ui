@@ -5,20 +5,26 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
   h1 {
     color: var(--heading-text-color);
+    display: flex;
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .home-btn {
     display: flex;
     color: var(--white);
     justify-content: center;
     align-items: center;
-    width: 12rem;
+    width: fit-content;
     height: fit-content;
     background-color: var(--primary-red);
     border-radius: var(--border-radius);
-    padding: 1rem 0rem;
+    padding: 1rem 1rem;
     font-size: 24px;
     gap: 0.5rem;
     outline: 2px solid transparent;

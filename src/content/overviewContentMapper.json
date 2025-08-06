@@ -95,6 +95,18 @@
         "EN": "Give Us a Follow!",
         "PL": "Obserwuj nasze media!"
       }
+    },
+    "pageNotFound": {
+      "body": {
+        "EN": {
+          "pageNotFound": "Page Not Found...",
+          "home": "Return to Home"
+        },
+        "PL": {
+          "pageNotFound": "Nie Znaleziono Strony...",
+          "home": "Strona Główna"
+        }
+      }
     }
   }
 }
