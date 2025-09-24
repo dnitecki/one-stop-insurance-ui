@@ -1,12 +1,9 @@
-import { useSearchParams } from "react-router-dom";
+import "./Reviews.scss";
 import ReviewMapper from "../../content/reviewMapper.json";
 import StarIcon from "@mui/icons-material/Star";
 import { EMPTY_STRING } from "../../constants/constants";
-import { SeachParamEnum } from "../../enums/languageEnums";
-import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import GoogleIcon from "../../assets/webp/google-icon.webp";
-import { ContentMapperType, ReviewMapperType } from "../../types/types";
-import "./Reviews.scss";
+import { ReviewMapperType } from "../../types/types";
 import { useRef } from "react";
 import useVisibility from "../../hooks/useVisibility";
 import useTranslateContent from "../../hooks/useTranslateContent";

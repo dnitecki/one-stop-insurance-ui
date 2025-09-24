@@ -1,6 +1,6 @@
+import "./LanguageSelector.scss";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import "./LanguageSelector.scss";
 import LanguageIcon from "@mui/icons-material/Language";
 import { LanguageEnumShort, SeachParamEnum } from "../../enums/languageEnums";
 import { LanguageMapper } from "../../mappers/languageMapper";

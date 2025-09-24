@@ -1,0 +1,71 @@
+.partners-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  max-width: 1400px;
+  align-items: center;
+  gap: 2rem;
+  .travelers {
+    width: clamp(5rem, 10vw, 10rem);
+    height: auto;
+    display: block;
+  }
+
+  .progressive {
+    width: clamp(5rem, 10vw, 10rem);
+    height: auto;
+    display: block;
+  }
+
+  .erie {
+    width: clamp(4rem, 8vw, 8rem);
+    height: auto;
+    display: block;
+  }
+
+  .foremost {
+    width: clamp(5rem, 10vw, 10rem);
+    height: auto;
+    display: block;
+  }
+
+  .openly {
+    width: clamp(4rem, 8vw, 8rem);
+    height: auto;
+    display: block;
+  }
+
+  .geico {
+    width: clamp(5rem, 10vw, 10rem);
+    height: auto;
+    display: block;
+  }
+}
+@media (max-width: 700px) {
+  .partners-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+
+    .travelers,
+    .progressive,
+    .erie {
+      width: 7rem;
+      height: auto;
+      display: block;
+    }
+    .foremost,
+    .openly,
+    .geico {
+      width: 8rem;
+      height: auto;
+      display: block;
+    }
+    .openly {
+      width: 6rem;
+    }
+  }
+}

@@ -96,6 +96,12 @@
         "PL": "Obserwuj nasze media!"
       }
     },
+    "partners": {
+      "header": {
+        "EN": "Our Partners",
+        "PL": "Nasi Partnerzy"
+      }
+    },
     "pageNotFound": {
       "body": {
         "EN": {

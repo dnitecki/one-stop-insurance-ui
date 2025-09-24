@@ -6,6 +6,7 @@ import { OverviewMapper } from "../../mappers/overviewMapper";
 import { SeachParamEnum } from "../../enums/languageEnums";
 import OverviewContentMapper from "../../content/overviewContentMapper.json";
 import { ContentMapperType } from "../../types/types";
+import Partners from "../../components/partners/Partners";
 
 const Overview = () => {
   const [searchParams] = useSearchParams();
