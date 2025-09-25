@@ -11,10 +11,6 @@
       }
     },
     "banner": {
-      "header": {
-        "EN": "Let us find the coverage you need.",
-        "PL": "Znajdziemy odpowiednie ubezpieczenie."
-      },
       "body": {
         "EN": {
           "quoteCta": "Get a Quote",
@@ -44,7 +40,7 @@
     },
     "services": {
       "header": {
-        "EN": "Our Services",
+        "EN": "We’ve Got You Covered",
         "PL": "Nasze Usługi"
       },
       "body": {
@@ -72,7 +68,7 @@
     },
     "reviews": {
       "header": {
-        "EN": "What our clients say.",
+        "EN": "What Our Clients Say",
         "PL": "Recenzje"
       },
       "body": {
@@ -92,8 +88,8 @@
     },
     "socialFeed": {
       "header": {
-        "EN": "Give Us a Follow!",
-        "PL": "Obserwuj nasze media!"
+        "EN": "Give Us a Follow",
+        "PL": "Obserwuj nasze media"
       }
     },
     "partners": {

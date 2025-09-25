@@ -7,7 +7,7 @@
   align-items: center;
   gap: 2rem;
   .travelers {
-    width: clamp(5rem, 10vw, 10rem);
+    width: clamp(5rem, 10vw, 11rem);
     height: auto;
     display: block;
   }
@@ -31,7 +31,7 @@
   }
 
   .openly {
-    width: clamp(4rem, 8vw, 8rem);
+    width: clamp(4rem, 8vw, 7rem);
     height: auto;
     display: block;
   }
@@ -50,8 +50,16 @@
     justify-items: center;
     align-items: center;
 
-    .travelers,
-    .progressive,
+    .travelers {
+      width: 9rem;
+      height: auto;
+      display: block;
+    }
+    .progressive {
+      width: 8rem;
+      height: auto;
+      display: block;
+    }
     .erie {
       width: 7rem;
       height: auto;
@@ -65,7 +73,7 @@
       display: block;
     }
     .openly {
-      width: 6rem;
+      width: 5rem;
     }
   }
 }
